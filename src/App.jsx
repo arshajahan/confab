@@ -9,6 +9,7 @@ import Clients from './components/Clients'
 import Testimonial from './components/Testimonial'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Footer from './components/Footer'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
      <Industries/>
      <Clients/>
      <Testimonial/>
+     <Footer/>
     </>
   )
 }
