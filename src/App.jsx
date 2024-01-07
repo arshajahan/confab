@@ -6,6 +6,10 @@ import VM from './components/VM'
 import Services from './components/Services'
 import Industries from './components/Industries'
 import Clients from './components/Clients'
+import Testimonial from './components/Testimonial'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +21,7 @@ function App() {
      <Services/>
      <Industries/>
      <Clients/>
+     <Testimonial/>
     </>
   )
 }
