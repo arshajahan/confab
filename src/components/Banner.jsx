@@ -1,40 +1,107 @@
-import React from 'react'
-import Navbar from './Navbar'
-import WrapperCard from './UI/WrapperCard'
-import videoSrc from '../assets/videos/banvid.webm'
+import React, { useState } from 'react';
+import Navbar from './Navbar';
+import WrapperCard from './UI/WrapperCard';
+import videoSrc from '../assets/videos/banvid.webm';
+import image1 from '../assets/images/image1.webp';
+import image2 from '../assets/images/image2.jpg';
+import image3 from '../assets/images/image3.jpg';
+
+const images = [videoSrc, image1, image2, image3];
+
+const content = [
+  {
+    title: 'Confab International 1',
+    description: 'Delivering Excellence 1',
+    buttonText: 'DISCOVER CONFAB',
+  },
+  {
+    title: 'Enasco International',
+    description: 'Delivering Excellence 2',
+    buttonText: 'DISCOVER ENASCO',
+  },
+  {
+    title: 'Kuwait International',
+    description: 'Delivering Excellence 3',
+    buttonText: 'DISCOVER KUWAIT',
+  },
+  {
+    title: 'Dubai HQ',
+    description: 'Delivering Excellence 4',
+    buttonText: 'DISCOVER DUBAI',
+  },
+];
 
 function Banner() {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => (prevPage === images.length - 1 ? 0 : prevPage + 1));
+  };
+
+  const handlePrev = () => {
+    setCurrentPage((prevPage) => (prevPage === 0 ? images.length - 1 : prevPage - 1));
+  };
+
+  const handlePageClick = (index) => {
+    setCurrentPage(index);
+  };
+
   return (
-    <div>
-        <Navbar/>
-        <div className='relative h-[30rem] bg-gray-100 flex justify-center items-center'>
-            <video className='absolute top-0 left-0 w-full h-full opacity-4  object-cover z-0' autoPlay muted loop>
-                <source src={videoSrc} type='video/mp4' />
-                Your browser does not support the video tag.
-            </video>
-            <WrapperCard className='flex items-center z-20'>
-                <div className='grid gap-10 py-4'>
-                    <h1 className='text-5xl text-blue-950 font-semibold'>Welcome to Confab International</h1>
-                    <p className='text-lg text-white'>
-                        Confab International is a premier sourcing 
-                        and outsourcing company specializing in 
-                        delivering top-tier manpower solutions 
-                        across diverse industries. They excel in 
-                        providing skilled professionals to enhance 
-                        client workforces, fostering productivity 
-                        and success
-                    </p>
-                    <div className='flex mt-4'>
-                        <button className='bg-blue-950 text-white px-4 py-2 rounded-md'>
-                        KNOW MORE
-                        </button>
-                    </div>
-                </div>
-            </WrapperCard>
+    <div className='relative'>
+      <Navbar />
+      <div className='relative h-screen bg-gray-100 flex justify-center items-center'>
+        {currentPage === 0 ? (
+          <video className='absolute top-0 left-0 w-full h-full object-cover z-0' autoPlay muted loop>
+            <source src={images[currentPage]} type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            className='absolute top-0 left-0 w-full h-full object-cover z-0'
+            src={images[currentPage]}
+            alt={`Slide ${currentPage}`}
+          />
+        )}
+        <WrapperCard className='flex items-center z-20'>
+          <div className='grid gap-10 py-4'>
+            <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
+            <p className='text-lg text-white'>{content[currentPage].description}</p>
+            <div className='flex mt-4'>
+              <button className='bg-white text-blue-900 font-semibold px-6 py-3'>
+                {content[currentPage].buttonText}
+              </button>
+            </div>
+          </div>
+        </WrapperCard>
+      </div>
+
+      <WrapperCard className='relative'>
+        <div className='absolute bottom-10 flex space-x-6'>
+            {images.map((_, index) => (
+            <button
+                key={index}
+                onClick={() => handlePageClick(index)}
+                className={`${
+                currentPage === index ? 'bg-white border-black text-gray-700' : 'text-white bg-transparent border-2 border-white'
+                } rounded-full w-12 h-12 flex items-center justify-center`}
+            >
+                {index + 1}
+            </button>
+            ))}
         </div>
 
+        <div className='absolute bottom-10 right-4 flex space-x-4'>
+            <button onClick={handlePrev} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
+            {'<'}
+            </button>
+            <button onClick={handleNext} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
+            {'>'}
+            </button>
+        </div>
+     </WrapperCard>
+
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
