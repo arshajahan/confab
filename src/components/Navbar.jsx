@@ -14,14 +14,15 @@ function Navbar() {
     const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
     const navToggle = () => {
-    setNavClicked(!isNavClicked);
-    if (isNavClicked) {
-        document.body.style.overflow = 'auto'; // Enable scrolling
-    } else {
-        document.body.style.overflow = 'hidden'; // Disable scrolling
+    if (!isNavClicked) {
         window.scrollTo({ top: 0 }); // Scroll to the top when menu opens
     }
+    
+    setNavClicked(!isNavClicked);
+
+    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden'; // Toggle overflow
 };
+
 
       
 
