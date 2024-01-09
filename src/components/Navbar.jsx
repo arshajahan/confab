@@ -82,7 +82,7 @@ function Navbar() {
       <hr className='hidden lg:block'/>
       <WrapperCard className='flex justify-between items-center h-[5em] py-6 bg-transparent'>
         <div className='flex items-center'>
-          <img src={logo} alt='Logo' className='h-14' />
+          <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className='hidden lg:flex justify-between my-auto items-center basis-4/6 text-white font-semibold'>
           <span className=''>ABOUT US</span>
@@ -104,7 +104,7 @@ function Navbar() {
     <div className='fixed top-0 w-full z-30 bg-white'>
         <WrapperCard className='flex justify-between items-center h-[5em] py-6'>
         <div className='flex items-center'>
-            <img src={logo} alt='Logo' className='h-14' />
+            <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-blue-900 lg:font-bold'>
             <span className='mx-4'>Media</span>
@@ -134,7 +134,7 @@ function Navbar() {
             {/* Mobile close button */}
             <div className=" flex justify-between items-center cursor-pointer pt-4">
               <div>
-                <img src={logo} alt='Logo' onClick={navToggle} className='h-14' />
+                <img src={logo} alt='Logo' onClick={navToggle} className='h-10 md:h-14' />
               </div>
               <AiOutlineClose size={26} color="blue" onClick={navToggle} />
             </div>
