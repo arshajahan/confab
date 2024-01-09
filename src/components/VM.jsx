@@ -1,40 +1,62 @@
 import React from 'react'
 import WrapperCard from './UI/WrapperCard'
+import bulb from '../assets/images/bulb.png'
+import expenditure from '../assets/images/expenditure.png'
+import nooil from '../assets/images/nooil.png'
+import zero from '../assets/images/zero.png'
 
 function VM() {
-  return (
-    <div>
-        <WrapperCard className='grid gap-8 py-12 '>
-            <h2 className='text-blue-900 font-semibold text-3xl col-span-2'>
-                Confab International
-            </h2>
-            <div className=' flex gap-28'>
-            <div className=' grid gap-4 basis-1/2'>
-                <h2 className=' text-xl font-semibold'>Our Vision</h2>
-                <p className=' text-lg text-justify'>
-                To be the go-to partner for simplified 
-                talent solutions, streamlining sourcing 
-                and outsourcing processes. We envision 
-                a future where businesses thrive with 
-                the right people in the right roles. 
-                Committed to delivering efficient and 
-                reliable workforce solutions, we 
-                empower organizations to focus on 
-                core objectives.
-                </p>
-            </div>
-            <div className=' flex flex-col gap-4 basis-1/2'>
-                <h2 className=' text-xl font-semibold'>Our Mission</h2>
-                <p className=' text-lg text-justify'>
-                Accelerate business growth through talent, 
-                competitiveness, and client satisfaction.
-                </p>
-            </div>
-            </div>
-        </WrapperCard>
+    const points = [
+        {
+            id: 0,
+            image: bulb,
+            count: '3',
+            title: 'Average contract lifecycle in years'
+        },
+        {
+            id: 1,
+            image: nooil,
+            count: '1500+',
+            title: 'Workforce in projects'
+        },
+        {
+            id: 2,
+            image: zero,
+            count: '4000+',
+            title: 'Talent Pipeline'
+        },
+        {
+            id: 3,
+            image: expenditure,
+            count: '22+',
+            title: 'International Locations'
+        },
+    ];
 
-    </div>
-  )
+    return (
+        <div>
+            <WrapperCard className='py-12 grid gap-12 '>
+                <h2 className='text-blue-900 font-bold text-4xl text-center'>
+                    Engineering - Driven staffing for a sustainable future
+                </h2>
+                <div className=' flex flex-wrap  gap-4 justify-center w-full'>
+                    {points.map((point) => (
+                        <div key={point.id} className='flex basis-[250px] items-center justify-between shadow-lg p-4 gap-2 flex-col text-center'>
+                            <img src={point.image} className='w-20 h-20' alt={point.title} />
+                            <span className='text-3xl font-bold'>{point.count}</span>
+                            <p className=' text-xl'>{point.title}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className='flex justify-center '>
+                    <button className='bg-blue-950 text-white px-4 py-2 '>
+                    DISCOVER CONFAB
+                    </button>
+                </div>
+            </WrapperCard>
+        </div>
+    );
 }
 
-export default VM
+export default VM;
