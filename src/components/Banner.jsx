@@ -2,32 +2,32 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
-import image1 from '../assets/images/image1.webp';
+import image1 from '../assets/images/image1.png';
 import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
+import image3 from '../assets/images/image3.png';
 
 const images = [videoSrc, image1, image2, image3];
 
 const content = [
   {
-    title: 'Confab International 1',
-    description: 'Delivering Excellence 1',
-    buttonText: 'DISCOVER CONFAB',
+    title: 'Confab',
+    description: 'Engineering - Driven Staffing for a sustainable future.',
+    buttonText: 'Discover Confab',
   },
   {
-    title: 'Enasco International',
+    title: 'Enasco',
     description: 'Delivering Excellence 2',
-    buttonText: 'DISCOVER ENASCO',
+    buttonText: 'Discover Our Solutions',
   },
   {
-    title: 'Kuwait International',
+    title: 'Kuwait',
     description: 'Delivering Excellence 3',
-    buttonText: 'DISCOVER KUWAIT',
+    buttonText: 'Discover Our Services',
   },
   {
     title: 'Dubai HQ',
     description: 'Delivering Excellence 4',
-    buttonText: 'DISCOVER DUBAI',
+    buttonText: 'Discover Kuwait',
   },
 ];
 
@@ -49,12 +49,19 @@ function Banner() {
   return (
     <div className='relative'>
       <Navbar />
-      <div className='relative h-screen bg-gray-100 flex justify-center items-center'>
+      <div className='relative h-screen bg-gray-100 flex items-center'>
         {currentPage === 0 ? (
-          <video className='absolute top-0 left-0 w-full h-full object-cover z-0' autoPlay muted loop>
-            <source src={images[currentPage]} type='video/mp4' />
-            Your browser does not support the video tag.
-          </video>
+            <video
+                className='absolute top-0 left-0 w-full h-full object-cover z-0'
+                autoPlay
+                muted
+                loop
+                playsInline  // Adding playsInline can also help on iOS Safari
+                >
+                    <source src={images[currentPage]} type='video/mp4' />
+                    Your browser does not support the video tag.
+            </video>
+        
         ) : (
           <img
             className='absolute top-0 left-0 w-full h-full object-cover z-0'
@@ -62,7 +69,7 @@ function Banner() {
             alt={`Slide ${currentPage}`}
           />
         )}
-        <WrapperCard className='flex items-center z-20'>
+        <WrapperCard className='flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
             <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
             <p className='text-lg text-white'>{content[currentPage].description}</p>
@@ -90,7 +97,7 @@ function Banner() {
             ))}
         </div>
 
-        <div className='absolute bottom-10 right-4 flex space-x-4'>
+        <div className='hidden absolute bottom-10 right-4 lg:flex space-x-4'>
             <button onClick={handlePrev} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
             {'<'}
             </button>

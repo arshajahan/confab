@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.png';
 
 function Footer() {
   return (
-    <footer className="bg-gray-500 py-5">
+    <footer className="bg-gray-500 py-5" id='#footer'>
       <div className="">
         <WrapperCard className="p-4">
           <div className="">
