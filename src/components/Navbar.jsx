@@ -20,7 +20,7 @@ function Navbar() {
     
     setNavClicked(!isNavClicked);
 
-    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden'; // Toggle overflow
+    document.body.style.overflow = isNavClicked ? 'auto' : 'scroll'; // Toggle overflow
 };
 
 
