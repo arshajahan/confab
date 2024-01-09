@@ -85,7 +85,7 @@ function Navbar() {
           <img src={logo} alt='Logo' className='h-14' />
         </div>
         <div className='hidden lg:flex justify-between my-auto items-center basis-4/6 text-white font-semibold'>
-          <span className=''>WHO WE ARE</span>
+          <span className=''>ABOUT US</span>
           <span className=''>SOLUTIONS</span>
           <span className=''>SECTORS</span>
           <span className=''>SERVICES</span>
@@ -110,7 +110,7 @@ function Navbar() {
             <span className='mx-4'>Media</span>
             <span className='mx-4'>People</span>
             <span className='mx-4'>Locations & Contacts</span>
-            <span className='mx-4'>Who We Are</span>
+            <span className='mx-4'>About Us</span>
             <span className='mx-4'>Solutions</span>
             <span className='mx-4'>Sectors</span>
             <span className='mx-4'>Services</span>
