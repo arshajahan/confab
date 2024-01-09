@@ -14,9 +14,9 @@ function Navbar() {
     const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
 const navToggle = () => {
-    window.scrollTo({ top: 0 });
     setNavClicked(!isNavClicked);
     document.body.style.overflow = isNavClicked ? 'auto' : 'hidden'; 
+    window.scrollTo({ top: 0 });
   };
       
 
