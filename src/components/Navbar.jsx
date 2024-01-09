@@ -16,7 +16,7 @@ function Navbar() {
     const navToggle = () => {
         setNavClicked(!isNavClicked);
         if (!isNavClicked) {
-          document.body.style.overflow = 'hidden'; // Disable scrolling
+          document.body.style.overflow = 'auto'; // Disable scrolling
           window.scrollTo({ top: 0 }); // Scroll to the top when menu opens
         } else {
           document.body.style.overflow = 'auto'; // Enable scrolling
