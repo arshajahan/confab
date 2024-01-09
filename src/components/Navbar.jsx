@@ -13,17 +13,11 @@ function Navbar() {
 
     const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
-    const navToggle = () => {
-    if (!isNavClicked) {
-        window.scrollTo({ top: 0 }); // Scroll to the top when menu opens
-    }
-    
+const navToggle = () => {
+    window.scrollTo({ top: 0 });
     setNavClicked(!isNavClicked);
-
-    document.body.style.overflow = isNavClicked ? 'auto' : 'scroll'; // Toggle overflow
-};
-
-
+    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden'; 
+  };
       
 
     const navRef = useRef(null);
