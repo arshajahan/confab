@@ -4,6 +4,7 @@ import bulb from '../assets/images/bulb.png'
 import expenditure from '../assets/images/expenditure.png'
 import nooil from '../assets/images/nooil.png'
 import zero from '../assets/images/zero.png'
+import dots from '../assets/images/dots.svg'
 
 function VM() {
     const points = [
@@ -28,23 +29,31 @@ function VM() {
         {
             id: 3,
             image: expenditure,
-            count: '22+',
+            count: '9',
             title: 'International Locations'
         },
     ];
 
     return (
-        <div>
-            <WrapperCard className='py-12 grid gap-12 '>
+        <div className='relative'>
+            <WrapperCard className='  py-14 grid gap-12 '
+            >
+                <img
+                    className=' opacity-15 absolute top-0 left-0 w-full h-full object-cover z-0'
+                    src={dots}
+                />
                 <h2 className='text-blue-900 font-bold text-4xl text-center'>
                     Engineering - Driven staffing for a sustainable future
                 </h2>
-                <div className=' flex flex-wrap  gap-4 justify-center w-full'>
+                <div className='flex flex-wrap gap-4 justify-center w-full'>
                     {points.map((point) => (
-                        <div key={point.id} className='flex basis-[250px] items-center justify-between shadow-lg p-4 gap-2 flex-col text-center'>
-                            <img src={point.image} className='w-20 h-20' alt={point.title} />
-                            <span className='text-3xl font-bold'>{point.count}</span>
-                            <p className=' text-xl'>{point.title}</p>
+                        <div key={point.id} className='flex basis-[250px] items-center justify-between p-4 gap-2 flex-col text-center'>
+                            <img src={point.image} className='w-28' alt={point.title} />
+                            <span className='text-4xl font-bold'>{point.count}</span>
+                            {/* Apply consistent height to titles */}
+                            <div className='h-20'> {/* Set a fixed height, adjust as needed */}
+                                <p className='text-lg'>{point.title}</p>
+                            </div>
                         </div>
                     ))}
                 </div>

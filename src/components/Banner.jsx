@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
 import image1 from '../assets/images/image1.png';
-import image2 from '../assets/images/image2.jpg';
+import image2 from '../assets/images/image2.webp';
 import image3 from '../assets/images/image3.png';
 
 const images = [videoSrc, image1, image2, image3];

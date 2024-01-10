@@ -69,8 +69,8 @@ function Navbar() {
     {(showFirstNavbar && !isNavClicked) && (
     <div className=' fixed top-0 w-full z-10'>
       <div className='bg-transparent'>
-        <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-sm'>
-          <div className='flex gap-6 font-bold'>
+        <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-md'>
+          <div className='flex gap-6 font-semibold'>
             <span className=''>Media</span>
             <span className=''>People</span>
             <span className=''>Locations & Contacts</span>
@@ -86,7 +86,7 @@ function Navbar() {
         <div className='flex items-center'>
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
-        <div className='hidden lg:flex justify-between my-auto items-center basis-4/6 text-white font-semibold'>
+        <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-4/6 text-white font-medium'>
           <span className=''>About us</span>
           <span className=''>Solutions</span>
           <span className=''>Sectors</span>
@@ -108,7 +108,7 @@ function Navbar() {
         <div className='flex items-center'>
             <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
-        <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-blue-900 lg:font-bold'>
+        <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-blue-900 lg:font-semibold'>
             <span className='mx-4'>Media</span>
             <span className='mx-4'>People</span>
             <span className='mx-4'>Locations & Contacts</span>

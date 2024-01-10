@@ -5,74 +5,42 @@ import logo from '../assets/images/logo.png';
 
 function Footer() {
   return (
-    <footer className="bg-gray-500 py-5" id='#footer'>
-      <div className="">
-        <WrapperCard className="p-4">
-          <div className="">
-            <div className="">
-              <div className="py-3">
-                <h2 className="font-weight-bold">ALREADY A CUSTOMER</h2>
-                <ul>
-                  <li>Reserved Area</li>
-                  <li>Mobile Application</li>
-                  <li>Insurance Renewal</li>
-                  <li>Claims Management</li>
-                  <li>Info & Help</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <div className="py-3">
-                <h2 className="font-weight-bold">ONLINE SUPPORT</h2>
-                <ul>
-                  <li>Car FAQs</li>
-                  <li>Motorcycle FAQs</li>
-                  <li>Home FAQs</li>
-                  <li>Additional guarantees</li>
-                  <li>Insurance glossary</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <div className="py-3">
-                <h2 className="font-weight-bold">INSURANCE GUARANTEES</h2>
-                <ul>
-                  <li>RC Car</li>
-                  <li>Road Assistance</li>
-                  <li>Driver Injuries</li>
-                  <li>Legal Protection</li>
-                  <li>Crystals</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <div className="py-3">
-                <h2 className="font-weight-bold">INFORMATION AND PRIVACY</h2>
-                <ul>
-                  <li>Privacy Disclaimer</li>
-                  <li>Information sets</li>
-                  <li>Reserved area information</li>
-                  <li>Terms of Service</li>
-                  <li>Cookie policy</li>
-                </ul>
-              </div>
-            </div>
+    <div className='bg-[#628e9e] py-16 text-white overflow-hidden'>
+      <WrapperCard className='flex flex-col lg:flex-row justify-between w-full '>
+        <div className='flex flex-col lg:flex-row items-left lg:items-start gap-5 lg:basis-1/4'>
+          <img src={logo} className='w-32' alt='confab'/>
+          <div className='flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
+            <AiFillLinkedin/>
+            <AiFillInstagram/>
+            <AiFillFacebook/>
           </div>
-          <div className=" align-items-center justify-content-center mt-4">
-            <div className="col-md-6 text-center">
-              <img src={logo} className="img-fluid" alt="Logo" style={{ maxWidth: '200px' }} />
-            </div>
-            <div className="col-md-6 text-center">
-              <div>
-                <AiFillInstagram className="" />
-                <AiFillFacebook className="" />
-                <AiFillLinkedin className="" />
-              </div>
-            </div>
-          </div>
-        </WrapperCard>
-      </div>
-    </footer>
+        </div>
+        <div className='mt-6 lg:mt-0 lg:basis-1/4'>
+          <span className='text-gray-300 text-sm'>DISCOVER CONFAB</span>
+          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+            <li>About us</li>
+            <li>Sectors</li>
+            <li>Solutions</li>
+            <li>Sustainability</li>
+          </ul>
+        </div>
+        <div className='mt-6 lg:mt-0 lg:basis-1/4'>
+          <span className='text-gray-300 text-sm'>OTHER LINKS</span>
+          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+            <li>Media</li>
+            <li>People</li>
+            <li>Locations & Contacts</li>
+          </ul>
+        </div>
+        <div className='mt-6 lg:mt-0 lg:basis-1/4'>
+          <span className='text-gray-200'>CAREERS</span>
+        </div>
+      </WrapperCard>
+      <WrapperCard className='mt-9'>
+        <span className='text-xs'>Copyright 2023 Saipem - All right reserved</span>
+        <br/><hr/>
+      </WrapperCard>
+    </div>
   );
 }
 
