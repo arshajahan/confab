@@ -65,9 +65,9 @@ const navToggle = () => {
       <div className='bg-transparent'>
         <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-sm'>
           <div className='flex gap-6 font-bold'>
-            <span className=''>MEDIA</span>
-            <span className=''>PEOPLE</span>
-            <span className=''>LOCATIONS & CONTACTS</span>
+            <span className=''>Media</span>
+            <span className=''>People</span>
+            <span className=''>Locations & Contacts</span>
           </div>
           <div className='flex gap-3'>
             <AiFillLinkedin size={25} />
@@ -81,11 +81,11 @@ const navToggle = () => {
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className='hidden lg:flex justify-between my-auto items-center basis-4/6 text-white font-semibold'>
-          <span className=''>ABOUT US</span>
-          <span className=''>SOLUTIONS</span>
-          <span className=''>SECTORS</span>
-          <span className=''>SERVICES</span>
-          <span className=''>SUSTAINABILITY</span>
+          <span className=''>About us</span>
+          <span className=''>Solutions</span>
+          <span className=''>Sectors</span>
+          <span className=''>Services</span>
+          <span className=''>Sustainability</span>
           <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
         <div className='lg:hidden flex gap-6 text-xl text-white'>
@@ -177,13 +177,13 @@ const navToggle = () => {
             <div className="absolute left-0 w-full">
               <ul className=" px-4 mt-16 mb-8 text-blue-900">
                 <li className="mb-4">
-                  <a to="/#footer" onClick={navToggle}>MEDIA</a>
+                  <a to="/#footer" onClick={navToggle}>Media</a>
                 </li>
                 <li className="mb-4">
-                  <a to="/about" onClick={navToggle}>PEOPLE</a>
+                  <a to="/about" onClick={navToggle}>People</a>
                 </li>
                 <li className="mb-4">
-                  <a to="/sustainability" onClick={navToggle}>LOCATIONS & CONTACTS</a>
+                  <a to="/sustainability" onClick={navToggle}>Locations & Contacts</a>
                 </li>
                 {/* Add other mobile navigation as */}
               </ul>
