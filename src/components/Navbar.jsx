@@ -13,16 +13,22 @@ function Navbar() {
 
     const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
-const navToggle = () => {
-    setNavClicked(!isNavClicked);
-    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden'; 
-    window.scrollTo({ top: 0 });
-  };
+    const navToggle = () => {
+        setNavClicked((isNavClicked) => !isNavClicked);
+        if (!isNavClicked) {
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+          setTimeout(() => {
+            window.scrollTo({ top: 0 }); // Scroll to top after a short delay
+          }, 0); // Adjust the delay as needed
+        } else {
+          document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+      };
       
-
-    const navRef = useRef(null);
-
-    useEffect(() => {
+    
+      const navRef = useRef(null);
+    
+      useEffect(() => {
         const handleNavAnimation = () => {
           if (isNavClicked) {
             navRef.current.style.height = '100vh';
@@ -60,7 +66,7 @@ const navToggle = () => {
 
   return (
     <>    
-    {showFirstNavbar && !isNavClicked && (
+    {(showFirstNavbar && !isNavClicked) && (
     <div className=' fixed top-0 w-full z-10'>
       <div className='bg-transparent'>
         <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-sm'>
@@ -96,7 +102,7 @@ const navToggle = () => {
     </div>
     )}
 
-    {!showFirstNavbar && !isNavClicked && (
+    {(!showFirstNavbar && !isNavClicked) && (
     <div className='fixed top-0 w-full z-30 bg-white'>
         <WrapperCard className='flex justify-between items-center h-[5em] py-6'>
         <div className='flex items-center'>
