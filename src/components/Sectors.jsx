@@ -1,6 +1,14 @@
 import React from 'react'
 import WrapperCard from './UI/WrapperCard'
 import dots from '../assets/images/dots.svg'
+import architect from '../assets/images/architect.png'
+import engineering from '../assets/images/engineering.png'
+import healthcare from '../assets/images/healthcare.png'
+import healthydrink from '../assets/images/healthy-drink.png'
+import logistics from '../assets/images/logistics.png'
+import oilpump from '../assets/images/oil-pump.png'
+import touch from '../assets/images/touch.png'
+import utilities from '../assets/images/utilities.png'
 
 function Sectors() {
   return (
@@ -14,23 +22,68 @@ function Sectors() {
             <h2 className='text-blue-900 font-bold text-4xl text-center'>
                 Sectors
             </h2>
-            <div className='flex flex-col gap-5 justify-center '>
-                <div className='flex gap-5 flex-wrap lg:text-2xl text-lg justify-center text-center py-10'>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>OIL & GAS</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>CONSTRUCTION</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>ENERGY & UTILITIES</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>TECHNOLOGY</span> 
-                    <span className='px-6 py-3 bg-gray-800 text-white'>HEALTHCARE</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>ENGINEERING</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>F & B</span>
-                    <span className='px-6 py-3 bg-gray-800 text-white'>LOGISTICS & TRANSPORTATION</span>
-                </div>
-                {/* <div className='flex justify-center mt-4'>
-                    <button className='bg-blue-950 text-white px-4 py-2 rounded-md'>
-                    VIEW ALL
-                    </button>
-                </div> */}
-            </div>
+            <div class="flex flex-wrap mt-8">
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4 ">
+    <div class="bg-blue-500 p-4 rounded-lg text-center">
+      <img src={architect} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Construction</p>
+    </div>
+  </div>
+
+ 
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-green-500 p-4 rounded-lg text-center">
+        <img src={oilpump} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Oil & Gas</p>
+    </div>
+  </div>
+
+ 
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-red-500 p-4 rounded-lg text-center">
+    <img src={touch} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Technology</p>
+    </div>
+  </div>
+
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-yellow-500 p-4 rounded-lg text-center">
+    <img src={engineering} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Engineering</p>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-purple-500 p-4 rounded-lg text-center">
+    <img src={logistics} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Logistics & Transportation</p>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-orange-500 p-4 rounded-lg text-center">
+    <img src={healthydrink} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">F & B</p>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-pink-500 p-4 rounded-lg text-center">
+    <img src={healthcare} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Healthcare</p>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
+    <div class="bg-teal-500 p-4 rounded-lg text-center">
+    <img src={utilities} className=' w-24 h-24'/>
+      <p class="text-white mt-6 text-sm font-semibold">Utilities</p>
+    </div>
+  </div>
+</div>
+
             </div>
         </WrapperCard>
     </div>

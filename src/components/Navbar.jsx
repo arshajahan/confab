@@ -67,13 +67,13 @@ function Navbar() {
   return (
     <>    
     {(showFirstNavbar && !isNavClicked) && (
-    <div className=' fixed top-0 w-full z-10'>
+    <div className=' absolute top-0 w-full z-10'>
       <div className='bg-transparent'>
         <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-md'>
           <div className='flex gap-6 font-semibold'>
-            <span className=''>Media</span>
-            <span className=''>People</span>
-            <span className=''>Locations & Contacts</span>
+            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Media</span>
+            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>People</span>
+            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Locations & Contacts</span>
           </div>
           <div className='flex gap-3'>
             <AiFillLinkedin size={25} />
@@ -87,11 +87,11 @@ function Navbar() {
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-4/6 text-white font-medium'>
-          <span className=''>About us</span>
-          <span className=''>Solutions</span>
-          <span className=''>Sectors</span>
-          <span className=''>Services</span>
-          <span className=''>Sustainability</span>
+          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>About us</span>
+          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Solutions</span>
+          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sectors</span>
+          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Services</span>
+          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sustainability</span>
           <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
         <div className='lg:hidden flex gap-6 text-xl text-white'>

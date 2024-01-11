@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className='bg-[#628e9e] py-16 text-white overflow-hidden'>
       <WrapperCard className='flex flex-col lg:flex-row justify-between w-full '>
-        <div className='flex flex-col lg:flex-row items-left lg:items-start gap-5 lg:basis-1/4'>
+        <div className='flex flex-col items-left  gap-5 lg:basis-1/4'>
           <img src={logo} className='w-32' alt='confab'/>
           <div className='flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
             <AiFillLinkedin/>
@@ -37,7 +37,7 @@ function Footer() {
         </div>
       </WrapperCard>
       <WrapperCard className='mt-9'>
-        <span className='text-xs'>Copyright 2023 Saipem - All right reserved</span>
+        <span className='text-xs'>Copyright 2024 Confab - All right reserved</span>
         <br/><hr/>
       </WrapperCard>
     </div>
