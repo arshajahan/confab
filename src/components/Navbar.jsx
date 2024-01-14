@@ -90,7 +90,6 @@ function Navbar() {
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>About us</span>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Solutions</span>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sectors</span>
-          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Services</span>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sustainability</span>
           <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
@@ -114,7 +113,6 @@ function Navbar() {
             <span className='mx-4'>Locations & Contacts</span>
             <span className='mx-4'>About Us</span>
             <span className='mx-4'>Solutions</span>
-            <span className='mx-4'>Sectors</span>
             <span className='mx-4'>Services</span>
             <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
