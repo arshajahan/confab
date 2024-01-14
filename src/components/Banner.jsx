@@ -11,7 +11,7 @@ const images = [videoSrc, image1, image2, image3];
 const content = [
   {
     title: 'Confab',
-    description: 'Engineering - Driven Staffing for a sustainable future.',
+    description: 'Engineering Driven Staffing for a sustainable future.',
     buttonText: 'Discover Confab',
   },
   {
