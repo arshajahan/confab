@@ -57,9 +57,9 @@ function Banner() {
                 muted
                 loop
                 playsInline  // Adding playsInline can also help on iOS Safari
-                >
-                    <source src={images[currentPage]} type='video/mp4' />
-                    Your browser does not support the video tag.
+            >
+                  <source src={images[currentPage]} type='video/mp4' />
+                  Your browser does not support the video tag.
             </video>
         
         ) : (

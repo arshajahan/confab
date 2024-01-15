@@ -10,6 +10,7 @@ import Sustainability from './components/Sustainability'
 import Diversity from './components/Diversity'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import LatestBlogs from './components/LatestBlogs'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
      <Sectors/>
      <Sustainability/>
      <Diversity/>
+     <LatestBlogs/>
      <Footer/>
     </div>
   )

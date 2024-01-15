@@ -67,7 +67,7 @@ function Navbar() {
   return (
     <>    
     {(showFirstNavbar && !isNavClicked) && (
-    <div className=' absolute top-0 w-full z-10'>
+    <div className=' fixed top-0 w-full z-10'>
       <div className='bg-transparent'>
         <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-md'>
           <div className='flex gap-6 font-semibold'>
@@ -86,7 +86,7 @@ function Navbar() {
         <div className='flex items-center'>
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
-        <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-4/6 text-white font-medium'>
+        <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-3/6 text-white font-medium'>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>About us</span>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Solutions</span>
           <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sectors</span>
@@ -113,7 +113,7 @@ function Navbar() {
             <span className='mx-4'>Locations & Contacts</span>
             <span className='mx-4'>About Us</span>
             <span className='mx-4'>Solutions</span>
-            <span className='mx-4'>Services</span>
+            <span className='mx-4'>Sectors</span>
             <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
         <div className='lg:hidden flex gap-6 text-xl text-blue-900'>
