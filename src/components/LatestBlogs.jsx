@@ -1,58 +1,104 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
-import { FaChevronCircleRight, FaChevronCircleLeft } from 'react-icons/fa';
 import Slider from 'react-slick';
-
-// Import your blog images
-import blog1 from '../assets/images/blog1.jpeg';
-import blog2 from '../assets/images/blog2.jpg';
-import blog3 from '../assets/images/blog3.png';
-import blog4 from '../assets/images/blog4.jpeg';
+import { FaChevronCircleRight } from 'react-icons/fa';
 
 function LatestBlogs() {
-  const blogs = [
-    {
-      id: 0,
-      image: blog1,
-      title: 'Exploring the Depths of STEM Workforce Management',
-      content: 'Learn about the latest advancements in STEM workforce management strategies.',
-    },
-    {
-      id: 1,
-      image: blog2,
-      title: 'Offshore Platforms: A Project Springboard for Crewing Management',
-      content: 'Discover how offshore platforms serve as a crucial project springboard in crewing management.',
-    },
-    {
-      id: 2,
-      image: blog3,
-      title: 'Reducing Environmental Impact in Project Management',
-      content: 'Explore the objective of minimizing environmental impact in project management.',
-    },
-    {
-      id: 3,
-      image: blog4,
-      title: 'Innovations in Staffing and Workforce Management',
-      content: 'Stay updated on the latest innovations in staffing and workforce management.',
-    },
-    {
-      id: 4,
-      image: blog2,
-      title: 'Effective Project Management Strategies for Success',
-      content: 'Learn about effective project management strategies to ensure project success.',
-    },
-  ];
+    const Images = [
+        {
+          id: 1,
+          src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          alt: "Image 1",
+          title: "Lamborghini Huracan Performante",
+          description:
+            "The Huracán Performante has reworked the concept of super sports cars and taken the notion of performance to levels never seen before.",
+        },
+        {
+          id: 2,
+          src: "https://images.unsplash.com/photo-1594502184342-2e12f877aa73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+          alt: "Image 2 ",
+          title: "Porsche 911 Turbo S",
+          description:
+            "This Turbo S variant comes with an engine putting out 641 bhp @ 6750 rpm and 800 Nm @ 2500 rpm of max power and max torque respectively.",
+        },
+        {
+          id: 3,
+          src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          alt: "Image 3",
+          title: "Ford Mustang",
+          description: 
+            "For offroad lovers. Super fast, Super Comfortable.",
+        },
+        {
+          id: 4,
+          src: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80",
+          alt: "Image 4",
+          title: "Lamborghini Aventador SV",
+          description:
+            "Aventador SV provide thrills unlike anything that has ever been experienced before.",
+        },
+        {
+          id: 5,
+          src: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          alt: "Image 5",
+          title: "Ferrari 458 Speciale",
+          description:
+            "0 to 100 km/h (0 to 62 mph) takes 3.0 seconds and the Spider is capable of a top speed of 400 km/h (249 mph).",
+        },
+        {
+          id: 6,
+          src: "https://images.unsplash.com/photo-1471479917193-f00955256257?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
+          alt: "Image 6",
+          title: "Porsche 911",
+          description:
+            "The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door 2+2 high performance rear-engined sports car.",
+        },
+        {
+          id: 7,
+          src: "https://images.unsplash.com/photo-1555353540-64580b51c258?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=378&q=80",
+          alt: "Image 7",
+          title: "Dodge Challenger",
+          description:
+            "The Challenger has a classic muscle-car interior, with a simple design",
+        },
+        {
+          id: 8,
+          src: "https://i.pinimg.com/750x/88/33/1b/88331be20045f95b28e91e21fa663ad0.jpg",
+          alt: "Image 8",
+          title: "Lamborghini Gallardo",
+          description:
+            "The Gallardo is a 2 seater 10 cylinder car and has length of 4345mm, width of 1900mm and a wheelbase of 2560mm.",
+        },
+        {
+          id: 9,
+          src: "https://i.pinimg.com/564x/2e/40/02/2e40027b9b156589cfbccbf7b33d3bc7.jpg",
+          alt: "Image 9",
+          title: "2021 Mercedes-AMG GLE53 Coupe electrifies",
+          description:
+            "Its electric motor can provide up to 184 pound-feet of torque on demand.",
+        },
+      ];
+
 
   // Settings for the react-slick slider
-  const sliderSettings = {
+  const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    nextArrow: <FaChevronCircleRight className="text-2xl text-blue-900" />,
-    prevArrow: <FaChevronCircleLeft className="text-2xl text-blue-900" />,
+    autoplaySpeed: 1000,
+    nextArrow: (
+        <div className=''>
+          <div className=" hidden lg:block next-slick-arrow"> ⫸ </div>
+        </div>
+      ),
+      prevArrow: (
+        <div className='hidden lg:block '>
+          <div className="hidden lg:block  prev-slick-arrow"> ⫷ </div>
+        </div>
+      ),
     responsive: [
       {
         breakpoint: 1024,
@@ -64,7 +110,7 @@ function LatestBlogs() {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -83,26 +129,24 @@ function LatestBlogs() {
     <div className='bg-gray-100'>
       <WrapperCard className='py-14'>
         <h2 className='text-blue-900 font-bold text-4xl text-center'>Our Latest Blogs</h2>
-        <div className='mt-12'>
-          <Slider {...sliderSettings} className=" flex gap-6 h-max">
-            {blogs.map((blog) => (
-              <div key={blog.id} className='shadow-md h-full'> {/* Added mb-4 for margin-bottom */}
-                <img src={blog.image} className='h-60 3xl:h-72 w-full mb-4' alt='' />
-                <div className=' text-center'>
-                  <div className='text-left flex flex-col gap-4 pr-4'>
-                    <h2 className='text-2xl font-bold mb-2 overflow-hidden max-h-16'>
-                      {blog.title}
-                    </h2>
-                    <p className=''>{blog.content}</p>
-                  </div>
-                  <span className='text-blue-900 font-semibold flex items-center mt-4'>
-                    <FaChevronCircleRight className='mr-2 text-xl' />
-                    Read more
-                  </span>
-                </div>
-              </div>
-            ))}
-          </Slider>
+        <div className="slider-content mt-12">
+            <div className="slider-container">
+                <Slider {...settings} >
+                {Images.map((item) => (
+                    <div key={item.id} className='relative h-[590px]'>
+                        <img src={item.src} alt={item.alt} className="slider-img" />
+                        <div className=' shadow-md mx-2 h-[300px]'>
+                            <h2 className="slider-title text-xl lg:text-2xl font-semibold">{item.title}</h2>
+                            <p className="slider-description">{item.description}</p>
+                            <span className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] font-semibold bg-blue-900 '>
+                                Read more
+                            </span>
+                        </div>
+                    </div>
+                    
+                ))}
+                </Slider>
+            </div>
         </div>
       </WrapperCard>
     </div>

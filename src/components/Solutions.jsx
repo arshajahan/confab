@@ -22,7 +22,7 @@ function Solutions() {
         {
             id: 2,
             image: sol3,
-            title: 'PROJECT MANAGEMENT',
+            title: 'INTEGRATED FACILITY MANAGEMENT',
             content: 'Objective: to reduce environmental impact to the minimum.'
         }
     ];
