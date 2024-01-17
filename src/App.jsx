@@ -11,6 +11,10 @@ import Diversity from './components/Diversity'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import LatestBlogs from './components/LatestBlogs'
+import {
+  BrowserRouter as Router, Routes, Route, Navigate
+} from "react-router-dom";
+import About from './components/Pages/About'
 
 
 function App() {
@@ -18,15 +22,40 @@ function App() {
 
   return (
     <div className=' relative'>
-     <Navbar/>
-     <Banner/>
-     <VM/>
-     <Solutions/>
-     <Sectors/>
-     <Sustainability/>
-     <Diversity/>
-     <LatestBlogs/>
-     <Footer/>
+    <Router>
+      <Navbar/>
+        <Routes>
+
+          <Route exact path='//' 
+            element={
+              <>
+                <Banner/>
+                <VM/>
+                <Solutions/>
+                <Sectors/>
+                <Sustainability/>
+                <Diversity/>
+                <LatestBlogs/>
+              </>
+          } />
+          
+          <Route path='/' 
+            element={
+              <>
+                <Banner/>
+                <VM/>
+                <Solutions/>
+                <Sectors/>
+                <Sustainability/>
+                <Diversity/>
+                <LatestBlogs/>
+              </>
+          } />
+          <Route exact path='/about' element={<About/>} />
+
+        </Routes>
+      <Footer/>
+    </Router>
     </div>
   )
 }

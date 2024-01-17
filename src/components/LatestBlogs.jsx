@@ -134,7 +134,7 @@ function LatestBlogs() {
                 <Slider {...settings} >
                 {Images.map((item) => (
                     <div key={item.id} className='relative h-[590px]'>
-                        <img src={item.src} alt={item.alt} className="slider-img" />
+                        <img src={item.src} alt={item.alt} className="slider-img shadow-md" />
                         <div className=' shadow-md mx-2 h-[300px]'>
                             <h2 className="slider-title text-xl lg:text-2xl font-semibold">{item.title}</h2>
                             <p className="slider-description">{item.description}</p>

@@ -15,11 +15,6 @@ function Sectors() {
   return (
     <div className='relative'>
       <WrapperCard className=' '>
-        <img
-          className='opacity-15 absolute top-0 left-0 w-full h-full object-cover z-0'
-          src={dots}
-          alt="Background Dots"
-        />
         <div className='py-8'>
           <h2 className='text-blue-900 font-bold text-4xl text-center'>
             Sectors

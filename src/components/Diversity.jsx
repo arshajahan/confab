@@ -7,7 +7,7 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Diversity() {
   return (
-    <div className='relative'>
+    <div className='relative '>
       {/* For screen sizes above 'lg' */}
       <WrapperCard className='hidden lg:block relative mx-20 my-8'>
         <img

@@ -39,7 +39,7 @@ function VM() {
             <WrapperCard className='  py-14 grid gap-12 '
             >
                 <img
-                    className=' opacity-15 absolute top-0 left-0 w-full h-full object-cover z-0'
+                    className=' opacity-10 absolute top-0 left-0 w-full h-full object-cover z-0'
                     src={dots}
                 />
                 <h2 className='text-blue-900 font-bold text-xl lg:text-5xl text-center'>

@@ -49,7 +49,7 @@ function Banner() {
   return (
     <div className='relative'>
       {/* <Navbar /> */}
-      <div className='relative h-screen bg-gray-100 flex items-center'>
+      <div className='relative h-screen flex items-center'>
         {currentPage === 0 ? (
             <video
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'

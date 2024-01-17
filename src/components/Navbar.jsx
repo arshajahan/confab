@@ -4,6 +4,7 @@ import WrapperCard from './UI/WrapperCard';
 import logo from '../assets/images/logo.png';
 import { AiFillInstagram, AiFillLinkedin, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import {services} from '../assets/constants';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -67,13 +68,13 @@ function Navbar() {
   return (
     <>    
     {(showFirstNavbar && !isNavClicked) && (
-    <div className=' fixed top-0 w-full z-10'>
+    <div className=' absolute top-0 w-full z-10'>
       <div className='bg-transparent'>
         <WrapperCard className='hidden lg:flex text-white justify-between gap-4 py-3 text-md'>
           <div className='flex gap-6 font-semibold'>
-            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Media</span>
-            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>People</span>
-            <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Locations & Contacts</span>
+            <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Media</span>
+            <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>People</span>
+            <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Locations & Contacts</span>
           </div>
           <div className='flex gap-3'>
             <AiFillLinkedin size={25} />
@@ -87,10 +88,10 @@ function Navbar() {
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-3/6 text-white font-medium'>
-          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>About us</span>
-          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Solutions</span>
-          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sectors</span>
-          <span className=' border-b-4 cursor-pointer border-transparent hover:border-orange-700'>Sustainability</span>
+          <Link to='/about' className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>About us</Link>
+          <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Solutions</span>
+          <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Sectors</span>
+          <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Sustainability</span>
           <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
         <div className='lg:hidden flex gap-6 text-xl text-white'>
@@ -108,12 +109,12 @@ function Navbar() {
             <img src={logo} alt='Logo' className='h-10 md:h-14' />
         </div>
         <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-blue-900 lg:font-semibold'>
-            <span className='mx-4'>Media</span>
-            <span className='mx-4'>People</span>
-            <span className='mx-4'>Locations & Contacts</span>
-            <span className='mx-4'>About Us</span>
-            <span className='mx-4'>Solutions</span>
-            <span className='mx-4'>Sectors</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>Media</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>People</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>Locations & Contacts</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>About Us</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>Solutions</span>
+            <span className='mx-4 cursor-pointer hover:text-white hover:bg-blue-900 p-2'>Sectors</span>
             <span className=' text-2xl'><AiOutlineSearch/></span>
         </div>
         <div className='lg:hidden flex gap-6 text-xl text-blue-900'>

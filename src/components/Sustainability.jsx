@@ -6,7 +6,7 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Sustainability() {
   return (
-    <div className='relative'>
+    <div className='relative '>
       {/* For screen sizes above 'md' */}
       <WrapperCard className='hidden lg:block relative mx-20 my-8'>
         <img
