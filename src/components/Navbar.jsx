@@ -84,9 +84,9 @@ function Navbar() {
       </div>
       <hr className='hidden lg:block'/>
       <WrapperCard className='flex justify-between items-center h-[5em] py-6 bg-transparent'>
-        <div className='flex items-center'>
+        <Link to="/home" className='flex items-center'>
           <img src={logo} alt='Logo' className='h-10 md:h-14' />
-        </div>
+        </Link>
         <div className='hidden lg:flex text-lg justify-between my-auto items-center basis-3/6 text-white font-medium'>
           <Link to='/about' className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>About us</Link>
           <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Solutions</span>
