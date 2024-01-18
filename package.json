@@ -1,6 +1,7 @@
 {
   "name": "confab",
   "private": true,
+  "homepage": "https://arshajahan.github.io/confab/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
