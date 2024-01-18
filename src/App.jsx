@@ -18,7 +18,6 @@ import About from './components/Pages/About'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className=' relative'>
@@ -26,7 +25,7 @@ function App() {
       <Navbar/>
         <Routes>
           
-          <Route path='/' 
+          <Route path='/home' 
             element={
               <>
                 <Banner/>
