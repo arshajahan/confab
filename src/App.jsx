@@ -26,7 +26,7 @@ function App() {
       <Navbar/>
         <Routes>
 
-          <Route exact path='//' 
+          {/* <Route exact path='//' 
             element={
               <>
                 <Banner/>
@@ -37,9 +37,9 @@ function App() {
                 <Diversity/>
                 <LatestBlogs/>
               </>
-          } />
+          } /> */}
           
-          <Route path='/home' 
+          <Route path='/' 
             element={
               <>
                 <Banner/>
