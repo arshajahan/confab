@@ -25,7 +25,7 @@ function App() {
       <Navbar/>
         <Routes>
           
-          <Route path='/home' 
+          <Route path='/' 
             element={
               <>
                 <Banner/>
