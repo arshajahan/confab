@@ -39,7 +39,7 @@ function App() {
               </>
           } />
           
-          <Route path='/' 
+          <Route path='/home' 
             element={
               <>
                 <Banner/>
