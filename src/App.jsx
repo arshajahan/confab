@@ -25,7 +25,7 @@ function App() {
       <Navbar/>
         <Routes>
           
-          <Route path='/' 
+          <Route path='/confab' 
             element={
               <>
                 <Banner/>
