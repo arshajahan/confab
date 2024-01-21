@@ -9,6 +9,7 @@ import WrapperCard from './UI/WrapperCard';
 const Navbar = () => {
   const location = useLocation();
   const isAboutUsPage = location.pathname !== ('/confab') || ('');
+  console.log(location.pathname)
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);

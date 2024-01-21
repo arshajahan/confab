@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
-import image1 from '../assets/images/image1.png';
+import subImg from '../assets/images/image1.jpg';
+import image1 from '../assets/images/image2.webp';
 import image2 from '../assets/images/image2.jpg';
 import image3 from '../assets/images/image4.jpg';
 
@@ -61,16 +62,21 @@ function Banner() {
       {/* <Navbar /> */}
       <div className='relative h-screen flex items-center'>
         {currentPage === 0 ? (
-            <video
-                className='absolute top-0 left-0 w-full h-full object-cover z-0'
-                autoPlay
-                muted
-                loop
-                playsInline  // Adding playsInline can also help on iOS Safari
-            >
-                  <source src={images[currentPage]} type='video/mp4' />
-                  Your browser does not support the video tag.
-            </video>
+            // <video
+            //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
+            //     autoPlay
+            //     muted
+            //     loop
+            //     playsInline  // Adding playsInline can also help on iOS Safari
+            // >
+            //       <source src={images[currentPage]} type='video/mp4' />
+            //       Your browser does not support the video tag.
+            // </video>
+            <img
+            className='absolute top-0 left-0 w-full h-full object-cover z-0'
+            src={subImg}
+            alt={`Slide ${currentPage}`}
+          />
         
         ) : (
           <img
