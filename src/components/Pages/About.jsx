@@ -7,21 +7,19 @@ import VM from '../VM'
 
 
 function About() {
+
+    
+
   return (
     <div className='relative'>
-        <div className='relative h-[550px] flex items-center'>
+        <div className='relative h-screen flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}
                 alt="About confab"
             />
             <WrapperCard className=' z-10 text-white'>
-                <div className='mt-40 md:mt-0    md:absolute shadow-lg shadow-white bottom-20 p-4 md:p-10 flex flex-col  gap-6 border-4 border-white'>
-                    <h2 className=' text-5xl font-semibold '>About Us</h2>
-                    <p className=' max-w-[400px]'>
-                        Our commitment to excellence is driven by the vision of "Engineering Excellence, Empowering Futures," ensuring that our clients in the Oil and Gas, Power, and broader Energy industries receive tailored and flexible staffing solutions.
-                    </p>
-                </div>
+                <h2 className=' text-5xl font-semibold '>About Us</h2>
             </WrapperCard>
             
         </div>

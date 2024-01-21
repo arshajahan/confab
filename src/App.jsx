@@ -37,7 +37,19 @@ function App() {
                 <LatestBlogs/>
               </>
           } />
-          <Route exact path='/about' element={<About/>} />
+          <Route path='/' 
+            element={
+              <>
+                <Banner/>
+                <VM/>
+                <Solutions/>
+                <Sectors/>
+                <Sustainability/>
+                <Diversity/>
+                <LatestBlogs/>
+              </>
+          } />
+          <Route exact path='/about-us' element={<About/>} />
 
         </Routes>
       <Footer/>
