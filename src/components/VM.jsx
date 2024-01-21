@@ -42,7 +42,7 @@ function VM() {
                     className=' opacity-10 absolute top-0 left-0 w-full h-full object-cover z-0'
                     src={dots}
                 />
-                <h2 className='text-blue-900 font-bold text-xl lg:text-5xl text-center'>
+                <h2 className='text-blue-900 font-bold text-xl lg:text-4xl text-center'>
                     Engineering Driven staffing for a sustainable future
                 </h2>
                 <div className='flex flex-wrap gap-4 justify-center w-full'>

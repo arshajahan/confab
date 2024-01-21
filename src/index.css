@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 *{
-  font-family: 'Ubuntu', sans-serif;
-  /* font-family: 'Ubuntu Condensed', sans-serif; */
+  font-family: 'Chakra Petch', sans-serif;
+
+  /* font-family: 'Changa', sans-serif; */
 }
 
   .slider-img {
