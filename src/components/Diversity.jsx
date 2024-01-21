@@ -6,15 +6,10 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Diversity() {
   return (
-    <div className='relative'>
+    <div className='relative bg-gray-100'>
       {/* For screen sizes above 'lg' */}
-      <WrapperCard className='hidden lg:block relative mx-20 my-8'>
+      <WrapperCard className='hidden lg:block relative mx-20 py-8'>
         <div className='flex'>
-          <img
-            className='w-1/2  h-[500px] object-cover z-0'
-            src={diversity}
-            alt='Diversity'
-          />
           <div
             className='w-1/2 grid gap-6 bg-[#db7c00] px-12 py-8 text-white'
             style={{
@@ -33,6 +28,11 @@ function Diversity() {
               DISCOVER MORE
             </span>
           </div>
+          <img
+            className='w-1/2  h-[500px] object-cover z-0'
+            src={diversity}
+            alt='Diversity'
+          />
         </div>
       </WrapperCard>
       {/* For screen sizes below 'lg' */}
