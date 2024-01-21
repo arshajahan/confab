@@ -8,7 +8,7 @@ import WrapperCard from './UI/WrapperCard';
 
 const Navbar = () => {
   const location = useLocation();
-  const isAboutUsPage = location.pathname === '/about-us';
+  const isAboutUsPage = location.pathname !== ('/confab') || ('');
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
@@ -66,7 +66,7 @@ const Navbar = () => {
               <Link to='/about-us' className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>About us</Link>
               <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Solutions</span>
               <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Sectors</span>
-              <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Sustainability</span>
+              <Link to='/sustainability' className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Sustainability</Link>
               <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
@@ -161,6 +161,9 @@ const Navbar = () => {
                 </li>
                 <li className="mb-4">
                   <a to="/about" onClick={navToggle}>People</a>
+                </li>
+                <li className="mb-4">
+                  <Link to="/sustainability" onClick={navToggle}>Sustainability</Link>
                 </li>
                 <li className="mb-4">
                   <a to="/sustainability" onClick={navToggle}>Locations & Contacts</a>

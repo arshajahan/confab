@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Sectors from './components/Sectors'
 import Sustainability from './components/Sustainability'
+import SustainabilityPage from './components/Pages/Sustainability'
 import Diversity from './components/Diversity'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -50,6 +51,7 @@ function App() {
               </>
           } />
           <Route exact path='/about-us' element={<About/>} />
+          <Route exact path='/sustainability' element={<SustainabilityPage/>} />
 
         </Routes>
       <Footer/>
