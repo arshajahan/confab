@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Ubuntu', sans-serif;
+  /* font-family: 'Ubuntu Condensed', sans-serif; */
+}
+
   .slider-img {
     display: flex;
     margin: 0 auto;

@@ -1,14 +1,9 @@
 import React from 'react'
 import about from '../../assets/images/image0.jpg'
-import { FaRegEye } from "react-icons/fa";
-import { MdRocketLaunch } from "react-icons/md";
+import dots from '../../assets/images/dots.svg'
 import WrapperCard from '../UI/WrapperCard'
-import VM from '../VM'
-
 
 function About() {
-
-    
 
   return (
     <div className='relative'>
@@ -23,39 +18,105 @@ function About() {
             </WrapperCard>
             
         </div>
-        <VM/>
 
-        <div className='bg-gray-100 py-16'>
-            <h2 className=' text-center text-blue-900 text-2xl md:text-5xl font-bold'>OUR VISION & MISSION</h2>
-            <WrapperCard className='flex flex-col items-center gap-24 mt-20'>
-                {/* Vision Section */}
-                <div className='w-full max-w-4xl'>
-                    <div className='flex items-center gap-4'>
-                    <div className='hidden md:block basis-1/5'>
-                        <FaRegEye className='text-[180px] border-4 p-6 text-blue-900 rounded-full border-blue-900' />
-                    </div>
-                    <div className='basis-auto md:basis-3/5 mx-auto'>
-                        <h2 className='font-bold text-4xl'>VISION</h2>
-                        <p className='text-sm '>At Confab, our visionary outlook propels us towards a future defined by sustainability and innovation. Our steadfast vision is 'Engineering Excellence, Empowering Futures,' inspiring us to lead the way in shaping a dynamic and sustainable world through the transformative power of STEM talent and cutting-edge solutions.</p>
-                    </div>
-                    </div>
+        <WrapperCard className=' text-gray-600'>
+           <div className=' py-12 lg:px-24'>
+                <p className=' font-semibold '>
+                As a distinguished staffing and recruitment company specializing in STEM-driven solutions, we take pride in our comprehensive services that encompass both the sourcing and outsourcing of manpower within the Science, Technology, Engineering, and Mathematics (STEM) sectors. Our commitment to excellence is driven by the vision of "Engineering Excellence, Empowering Futures," ensuring that our clients in the Oil and Gas, Power, and broader Energy industries receive tailored and flexible staffing solutions.
+                <br/><br/>Our core services include:</p><br/>
+
+                <ul className=' custom-list'>
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>STEM Manpower Sourcing Solutions: </span>
+                    We specialize in identifying, attracting, and procuring top-tier STEM talent for our clients within the Oil and Gas, Power, and Energy sectors. Our rigorous sourcing process ensures that we provide the right professionals with the specific skills and expertise required for diverse projects.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>STEM Manpower Outsourcing Solutions: </span>
+                    Recognizing the dynamic nature of the industry, we offer flexible and efficient outsourcing solutions for STEM professionals. Whether our clients require short-term project support or long-term staffing solutions, we provide a seamless outsourcing experience that aligns with their unique needs.
+                    </li>
+            
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Power Generation Manpower Solutions: </span>
+                    For the Power sector, we offer sourcing and outsourcing solutions tailored to the needs of power generation projects, encompassing conventional and renewable energy sources. Our services contribute to the efficiency and success of power-related initiatives.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Oil and Gas Manpower Services: </span>
+                    In the Oil and Gas sector, our sourcing and outsourcing services cover a wide range of roles, from exploration and production to refining and distribution. We deliver skilled professionals who contribute to the success of projects within this complex industry.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Renewable Energy Manpower Services: </span>
+                    In the ever-expanding field of renewable energy, our STEM-driven solutions include both sourcing and outsourcing services to support the development and execution of wind, solar, hydropower, and other sustainable energy projects.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Offshore Wind Manpower Solutions: </span>
+                    Our specialized services extend to the offshore wind sector, providing sourcing and outsourcing solutions for STEM professionals engaged in offshore wind projects.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Sustainable Infrastructures Staffing for Energy: </span>
+                    With a focus on sustainable practices, our manpower solutions for sustainable infrastructures in the energy sector include both sourcing and outsourcing services, promoting diversity and inclusivity.
+                    </li>
+
+                    <li>
+                    <span className=' font-semibold text-black text-lg'>Robotics & Industrialized Solutions Manpower Services for Energy: </span>
+                    Collaborating with robotics and industrialized solutions, we provide both sourcing and outsourcing solutions for STEM experts, contributing to the development of cutting-edge technologies across the energy sector.
+                    </li>
+
+
+                </ul>
+
+                <p className=' font-semibold mt-12'>
+                With a global presence in around 9 countries and a diverse team of over 1500+ employees and 4000+ pipeline. Representing more than 9 nationalities, our sourcing and outsourcing solutions in the STEM sector are designed to meet the evolving needs of the Oil and Gas, Power, and broader Energy industries. Join us in empowering these sectors with flexible and transformative manpower solutions.
+                </p>
+           </div>
+        </WrapperCard>
+
+        <WrapperCard className=' mb-12'>
+            <div className=' flex flex-col lg:flex-row gap-8'>
+                <div
+                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 pt-20 pb-8 text-white'
+                    style={{
+                    backgroundImage: `url(${dots})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    }}
+                >
+                    
+                    <h2 className=' text-4xl font-bold'>OUR MISSION</h2>
+                    <p className='  mt-3'>
+                    We are on a mission to provide unparalleled staffing and recruitment solutions, specializing in the Science, Technology, Engineering, and Mathematics (STEM) sectors within the Oil and Gas, Power, and broader Energy industries. With an unwavering commitment to excellence, our mission is to be the preferred partner for our clients, delivering top-tier STEM professionals and fostering an environment where innovation and sustainability thrive. Through meticulous sourcing and outsourcing services, we aim to empower our clients, contribute to the success of their projects, and build a diverse and inclusive workforce that reflects the global nature of our industry.
+                    </p>
+                    <span className='font-semibold bg-white w-fit p-4 text-blue-900 flex items-center'>
+                    DISCOVER MORE
+                    </span>
                 </div>
 
-                 {/* Mission Section */}
-                <div className='w-full max-w-4xl'>
-                    <div className='flex items-center gap-4'>
-                    <div className='basis-auto md:basis-3/5'>
-                        <h2 className='font-bold text-4xl'>MISSION</h2>
-                        <p className='text-sm '>We are on a mission to provide unparalleled staffing and recruitment solutions, specializing in the Science, Technology, Engineering, and Mathematics (STEM) sectors within the Oil and Gas, Power, and broader Energy industries. With an unwavering commitment to excellence, our mission is to be the preferred partner for our clients, delivering top-tier STEM professionals and fostering an environment where innovation and sustainability thrive. Through meticulous sourcing and outsourcing services, we aim to empower our clients, contribute to the success of their projects, and build a diverse and inclusive workforce that reflects the global nature of our industry.</p>
-                    </div>
-                    <div className='hidden md:block basis-1/5 mx-auto '>
-                        <MdRocketLaunch className='text-[180px] border-4 p-6 text-blue-900 rounded-full border-blue-900' />
-                    </div>
-                    </div>
+                <div
+                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 pt-20 pb-8 text-white'
+                    style={{
+                    backgroundImage: `url(${dots})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    }}
+                >
+                    
+                    <h2 className=' text-4xl font-bold'>OUR VISION</h2>
+                    <p className='  mt-3 flex-grow'>
+                    At Confab, our visionary outlook propels us towards a future defined by sustainability and innovation. Our steadfast vision is 'Engineering Excellence, Empowering Futures,' inspiring us to lead the way in shaping a dynamic and sustainable world through the transformative power of STEM talent and cutting-edge solutions.
+                    </p>
+                    <span className=' font-semibold bg-white w-fit p-4 text-blue-900 flex items-center'>
+                    DISCOVER MORE
+                    </span>
                 </div>
-            </WrapperCard>
 
-        </div>
+                
+            </div>
+      </WrapperCard>
+
     </div>
   )
 }
