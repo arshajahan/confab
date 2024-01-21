@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar';
+import React, { useEffect, useState } from 'react';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
 import image1 from '../assets/images/image1.png';
@@ -46,6 +45,17 @@ function Banner() {
     setCurrentPage(index);
   };
 
+  useEffect(() => {
+    // Automatically move to the next slide after 5000ms
+    const autoMoveInterval = setInterval(() => {
+      handleNext();
+    }, 5000);
+  
+    // Clear the interval when the component unmounts
+    return () => clearInterval(autoMoveInterval);
+  }, [currentPage]);
+
+ 
   return (
     <div className='relative'>
       {/* <Navbar /> */}

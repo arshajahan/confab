@@ -1,7 +1,6 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
 import Slider from 'react-slick';
-import { FaChevronCircleRight } from 'react-icons/fa';
 
 function LatestBlogs() {
     const Images = [

@@ -52,7 +52,7 @@ const Navbar = () => {
                 <span className=' cursor-pointer hover:text-blue-900 hover:bg-white p-2'>Locations & Contacts</span>
               </div>
               <div className='flex gap-3'>
-                <AiFillLinkedin className=' cursor-pointer' size={25} />
+                <AiFillLinkedin className=' cursor-pointer ' size={25} />
                 <AiFillInstagram className=' cursor-pointer' size={25} />
               </div>
             </WrapperCard>

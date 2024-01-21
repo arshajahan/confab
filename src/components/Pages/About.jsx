@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import about from '../../assets/images/image0.jpg'
 import dots from '../../assets/images/dots.svg'
 import WrapperCard from '../UI/WrapperCard'
 
 function About() {
+
+    useEffect(() => {
+        // Add a class to trigger the animation on mount
+        const aboutElement = document.querySelector('.about-animation');
+        if (aboutElement) {
+          aboutElement.classList.add('animate-about');
+        }
+    
+        // Clean up the animation class on component unmount
+        return () => {
+          if (aboutElement) {
+            aboutElement.classList.remove('animate-about');
+          }
+        };
+      }, []);
+    
 
   return (
     <div className='relative'>
@@ -13,8 +29,8 @@ function About() {
                 src={about}
                 alt="About confab"
             />
-            <WrapperCard className=' z-10 text-white'>
-                <h2 className=' text-5xl font-semibold '>About Us</h2>
+            <WrapperCard className='z-10 text-white'>
+                <h2 className='text-5xl font-semibold about-animation'>About Us</h2>
             </WrapperCard>
             
         </div>
