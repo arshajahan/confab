@@ -84,7 +84,7 @@ function Banner() {
             <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
             <p className='text-lg text-white'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
-              <button className='bg-white text-blue-900 font-semibold px-6 py-3'>
+              <button className='bg-white text-[#2b495a] font-semibold px-6 py-3'>
                 {content[currentPage].buttonText}
               </button>
             </div>
