@@ -34,7 +34,7 @@ const Clients = () => {
     <div className='bg-gray-100'>
       <WrapperCard className=''>
         <div className='py-8'>
-          <h2 className='text-center text-xl font-bold text-[#2b495a]'>OUR CLIENTS</h2>
+          <h2 className='text-center text-xl font-bold text-main'>OUR CLIENTS</h2>
           <div className='flex flex-wrap gap-8 justify-center mt-8'>
             {clientLogos.map((logo, index) => (
               <div key={index} className='m-2'>

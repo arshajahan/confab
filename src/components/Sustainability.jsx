@@ -29,7 +29,7 @@ function Sustainability() {
               Our commitment is to generate sustainable value for all our stakeholders, integrating environmental, social, and governance
             </p>
             <span className='font-semibold flex items-center mt-12'>
-              <FaChevronCircleRight className='mr-2 text-xl text-[#2b495a]' />
+              <FaChevronCircleRight className='mr-2 text-xl text-main' />
               DISCOVER MORE
             </span>
           </div>

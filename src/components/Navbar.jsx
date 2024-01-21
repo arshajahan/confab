@@ -45,11 +45,11 @@ const Navbar = () => {
       {showFirstNavbar && !isNavClicked && (
         <div className={`absolute top-0 w-full z-10 ${isAboutUsPage ? 'bg-white' : 'bg-transparent'}`}>
           <div className={``}>
-            <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-[#2b495a]' : 'text-white'} justify-between gap-4 py-3 text-md`}>
+            <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
-                <span className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>Media</span>
-                <span className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>People</span>
-                <span className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>Locations & Contacts</span>
+                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</span>
+                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</span>
+                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Locations & Contacts</span>
               </div>
               <div className='flex gap-3'>
                 <AiFillLinkedin className=' cursor-pointer ' size={25} />
@@ -58,15 +58,15 @@ const Navbar = () => {
             </WrapperCard>
           </div>
           <hr className='hidden lg:block' />
-          <WrapperCard className={`flex ${isAboutUsPage ? 'text-[#2b495a]' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
+          <WrapperCard className={`flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link to="/confab" className='flex items-center'>
               <img src={logo} alt='Logo' className='h-10 md:h-14' />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
-              <Link to='/about-us' className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>About us</Link>
-              <span className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>Solutions</span>
-              <span className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>Sectors</span>
-              <Link to='/sustainability' className=' cursor-pointer hover:text-[#2b495a] hover:bg-white p-2'>Sustainability</Link>
+              <Link to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
+              <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</span>
+              <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</span>
+              <Link to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
               <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
@@ -83,16 +83,16 @@ const Navbar = () => {
             <Link to='/confab' className='flex items-center'>
               <img src={logo} alt='Logo' className='h-10 md:h-14' />
             </Link>
-            <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-[#2b495a] lg:font-semibold'>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>Media</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>People</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>Locations & Contacts</span>
-              <Link to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>About Us</Link>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>Solutions</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-[#2b495a] p-2'>Sectors</span>
+            <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>
+              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</span>
+              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</span>
+              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Locations & Contacts</span>
+              <Link to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
+              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</span>
+              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</span>
               <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
             </div>
-            <div className='lg:hidden flex gap-6 text-xl text-[#2b495a]'>
+            <div className='lg:hidden flex gap-6 text-xl text-main'>
               <span className=' text-2xl'><AiOutlineSearch /></span>
               <GiHamburgerMenu className=' cursor-pointer' onClick={() => navToggle()} />
             </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
               {services.map((item, i) => (
                 <div className="mt-4 " key={item.id}>
                   <button
-                    className={`relative w-full py-2 px-4 text-left text-lg font-semibold hover:bg-[#2b495a] hover:text-white  ${collapsed === i ? 'bg-[#2b495a] text-white' : ''}`}
+                    className={`relative w-full py-2 px-4 text-left text-lg font-semibold hover:bg-main hover:text-white  ${collapsed === i ? 'bg-main text-white' : ''}`}
                     onClick={() => toggle(i)}
                   >
                     <span className="absolute inset-y-0 right-2 flex items-center">{collapsed === i ? '^' : '>'}</span>
@@ -155,7 +155,7 @@ const Navbar = () => {
 
             {/* Additional mobile as */}
             <div className="absolute left-0 w-full">
-              <ul className=" px-4 mt-16 mb-8 text-[#2b495a]">
+              <ul className=" px-4 mt-16 mb-8 text-main">
                 <li className="mb-4">
                   <a to="/#footer" onClick={navToggle}>Media</a>
                 </li>

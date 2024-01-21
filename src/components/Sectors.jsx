@@ -14,7 +14,7 @@ function Sectors() {
     <div className='relative'>
       <WrapperCard className=' '>
         <div className='py-8'>
-          <h2 className='text-blue-900 font-bold text-4xl text-center'>
+          <h2 className='text-main font-bold text-4xl text-center'>
             Sectors
           </h2>
           <div className="flex flex-wrap mt-8">

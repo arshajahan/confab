@@ -11,6 +11,9 @@ export default {
         '2xl': '1536px',
         '3xl': '1920px', 
       },
+      colors: {
+        main: '#2b495a',
+      },
     },
   },
   plugins: [],

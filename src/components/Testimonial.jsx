@@ -97,7 +97,7 @@ const Testimonial = () => {
     <div className=''>
       <WrapperCard className=''>
         <div className='py-8'>
-          <h2 className='text-center text-xl font-bold text-[#2b495a]'>TESTIMONIALS</h2>
+          <h2 className='text-center text-xl font-bold text-main'>TESTIMONIALS</h2>
           <div className='mt-8'>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (

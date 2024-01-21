@@ -127,7 +127,7 @@ function LatestBlogs() {
   return (
     <div className='bg-gray-100'>
       <WrapperCard className='py-14'>
-        <h2 className='text-[#2b495a] font-bold text-4xl text-center'>Our Latest Blogs</h2>
+        <h2 className='text-main font-bold text-4xl text-center'>Our Latest Blogs</h2>
         <div className="slider-content mt-12">
             <div className="slider-container">
                 <Slider {...settings} >
@@ -137,7 +137,7 @@ function LatestBlogs() {
                         <div className=' shadow-md mx-2 h-[300px]'>
                             <h2 className="slider-title text-xl lg:text-2xl font-semibold">{item.title}</h2>
                             <p className="slider-description">{item.description}</p>
-                            <span className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] font-semibold bg-[#2b495a] '>
+                            <span className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] font-semibold bg-main '>
                                 Read more
                             </span>
                         </div>
