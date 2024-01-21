@@ -88,7 +88,7 @@ function Banner() {
         <WrapperCard className='flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
             <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
-            <p className='text-lg text-white'>{content[currentPage].description}</p>
+            <p className='text-lg text-main'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
               <button className='bg-white text-main font-semibold px-6 py-3'>
                 {content[currentPage].buttonText}
