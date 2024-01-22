@@ -38,3 +38,7 @@
     color: #000000;
     font-size: 25px;
   }
+
+  html {
+  scroll-behavior: smooth;
+}

@@ -28,7 +28,7 @@ function Solutions() {
     ];
 
     return (
-        <div className='bg-gray-100'>
+        <div id='solutions' className='bg-gray-100'>
             <WrapperCard className='py-14'>
                 <h2 className='text-main font-bold text-4xl text-center'>
                     Our Solutions

@@ -8,17 +8,20 @@
     text-align: left;
   }
 
-  .about-animation {
+
+/* Banner.css */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .banner {
     opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    animation: fadeIn 2s ease-in-out forwards;
   }
-  
-  .about-animation.animate-about {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  
-
   

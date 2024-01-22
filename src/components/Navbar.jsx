@@ -5,11 +5,11 @@ import { services } from '../assets/constants';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import WrapperCard from './UI/WrapperCard';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const location = useLocation();
   const isAboutUsPage = location.pathname !== '/confab' && location.pathname !== '' && location.pathname !== '/confab/';
-  console.log(location.pathname)
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
@@ -41,6 +41,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const menuClicked = () => {
+    if (isNavClicked) navToggle();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       {showFirstNavbar && !isNavClicked && (
@@ -49,8 +54,8 @@ const Navbar = () => {
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
                 <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</span>
-                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</span>
-                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Locations & Contacts</span>
+                <Link onClick={() => menuClicked()} to='/diversity' className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</Link>
+                <Link onClick={() => menuClicked()} to='/contact-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Contact us</Link>
               </div>
               <div className='flex gap-3'>
                 <AiFillLinkedin className=' cursor-pointer ' size={25} />
@@ -60,18 +65,18 @@ const Navbar = () => {
           </div>
           <hr className='hidden lg:block' />
           <WrapperCard className={`flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
-            <Link to="/confab" className='flex items-center'>
+            <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
               <img src={logo} alt='Logo' className='h-10 md:h-14' />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
-              <Link to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
-              <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</span>
-              <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</span>
-              <Link to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
-              <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
+              <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
+              <HashLink to='/#solutions' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</HashLink>
+              <HashLink to='/#sectors' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
+              <Link onClick={() => menuClicked()} to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
+              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
-              <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
+              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
               <GiHamburgerMenu className='cursor-pointer' onClick={() => navToggle()} />
             </div>
           </WrapperCard>
@@ -81,16 +86,16 @@ const Navbar = () => {
       {!showFirstNavbar && !isNavClicked && (
         <div className='fixed top-0 w-full z-30 bg-white'>
           <WrapperCard className='flex justify-between items-center h-[5em] py-6'>
-            <Link to='/confab' className='flex items-center'>
+            <Link onClick={() => menuClicked()} to='/confab' className='flex items-center'>
               <img src={logo} alt='Logo' className='h-10 md:h-14' />
             </Link>
             <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>
               <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Locations & Contacts</span>
-              <Link to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</span>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</span>
+              <Link onClick={() => menuClicked()} to='/diversity' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</Link>
+              <Link onClick={() => menuClicked()} to='/contact-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Contact us</Link>
+              <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
+              <HashLink to='/#solutions' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</HashLink>
+              <HashLink to='/#sectors' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
               <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
@@ -111,9 +116,9 @@ const Navbar = () => {
             {/* Mobile close button */}
             <div className=" flex justify-between items-center cursor-pointer pt-4">
               <div>
-                <img src={logo} alt='Logo' onClick={navToggle} className='h-10 md:h-14' />
+                <img src={logo} alt='Logo' className='h-10 md:h-14' />
               </div>
-              <AiOutlineClose className='cursor-pointer' size={26} color="blue" onClick={navToggle} />
+              <AiOutlineClose onClick={navToggle} className='cursor-pointer' size={26} color="blue" />
             </div>
 
             {/* Mobile navigation as */}
@@ -140,7 +145,7 @@ const Navbar = () => {
                             to={`/service/${item.path+':'+answer.split(" ")[0]}`}
                             key={j}
                             className="block py-2 px-8 text-[#2d3540] "
-                            onClick={navToggle}
+                          
                           >
                             {answer}
                           </a>
@@ -158,16 +163,16 @@ const Navbar = () => {
             <div className="absolute left-0 w-full">
               <ul className=" px-4 mt-16 mb-8 text-main">
                 <li className="mb-4">
-                  <a to="/#footer" onClick={navToggle}>Media</a>
+                  <Link onClick={() => menuClicked()} to="/#contact-us">Media</Link>
                 </li>
                 <li className="mb-4">
-                  <a to="/about" onClick={navToggle}>People</a>
+                  <Link onClick={() => menuClicked()} to="/diversity">People</Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/sustainability" onClick={navToggle}>Sustainability</Link>
+                  <Link onClick={() => menuClicked()} to="/sustainability">Sustainability</Link>
                 </li>
                 <li className="mb-4">
-                  <a to="/sustainability" onClick={navToggle}>Locations & Contacts</a>
+                  <Link onClick={() => menuClicked()} to="/contact-us">Contact us</Link>
                 </li>
                 {/* Add other mobile navigation as */}
               </ul>

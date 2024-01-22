@@ -1,14 +1,14 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
-import sustainability from '../assets/images/sustainability.jpg';
+import sustainability from '../assets/images/sustainability.webp';
 import dots from '../assets/images/dots.svg';
 import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Sustainability() {
   return (
-    <div className='relative bg-gray-100 '>
+    <div className='relative bg-green-50 '>
       {/* For screen sizes above 'md' */}
-      <WrapperCard className='hidden lg:block relative mx-20 py-8'>
+      <WrapperCard className='hidden lg:block relative mx-20 py-14'>
         <div className='flex'>
           <img
             className='w-1/2 h-[500px] object-cover z-0 shadow-xl'

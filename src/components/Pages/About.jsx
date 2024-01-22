@@ -23,43 +23,53 @@ function About() {
 
   return (
     <div className='relative'>
-        <WrapperCard className='relative h-screen flex items-center'>
+        <WrapperCard className='relative h-screen hidden lg:flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}
                 alt="About confab"
             />
             <WrapperCard className='z-10 text-white'>
-                <h2 className='text-5xl font-semibold about-animation'>About Us</h2>
+                <h2 className='text-5xl font-semibold'>About Us</h2>
             </WrapperCard>
             
         </WrapperCard>
 
+        <div className='lg:hidden relative h-screen flex items-center'>
+            <img
+                className='absolute top-0 left-0 w-full h-full object-cover z-0'
+                src={about}
+                alt="About confab"
+            />
+            <WrapperCard className='z-50 mt-52 text-white'>
+                <h2 className='text-5xl font-semibold'>About Us</h2>
+            </WrapperCard>
+        </div>
+
         <WrapperCard className=' text-gray-600'>
            <div className=' py-12 lg:px-48'>
                 <p className=' font-semibold '>
-                As a distinguished staffing and recruitment company specializing in STEM-driven solutions, we take pride in our comprehensive services that encompass both the sourcing and outsourcing of manpower within the Science, Technology, Engineering, and Mathematics (STEM) sectors. Our commitment to excellence is driven by the vision of "Engineering Excellence, Empowering Futures," ensuring that our clients in the Oil and Gas, Power, and broader Energy industries receive tailored and flexible staffing solutions.
-                <br/><br/>Our core services include:</p><br/>
-
+                As a distinguished staffing and recruitment firm specializing in STEM-driven solutions, including integrated facility management, we take pride in offering comprehensive services that cover both the sourcing and outsourcing of manpower within the Science, Technology, Engineering, and Mathematics (STEM) sectors. Our dedication to excellence is guided by the vision of "Engineering Excellence, Empowering Futures," ensuring that clients in the Oil and Gas, Power, and broader Energy industries receive tailored and adaptable staffing solutions.                
+                <br/><br/>Our core services encompass:</p><br/>
                 <ul className=' custom-list'>
                     <li>
                     <span className=' font-semibold text-black text-lg'>STEM Manpower Sourcing Solutions: </span>
-                    We specialize in identifying, attracting, and procuring top-tier STEM talent for our clients within the Oil and Gas, Power, and Energy sectors. Our rigorous sourcing process ensures that we provide the right professionals with the specific skills and expertise required for diverse projects.
+                    We excel in identifying, attracting, and securing top-tier STEM talent for clients in the Oil and Gas, Power, and Energy sectors. Our stringent sourcing process guarantees the provision of professionals with the specific skills and expertise required for diverse projects.
                     </li>
 
                     <li>
                     <span className=' font-semibold text-black text-lg'>STEM Manpower Outsourcing Solutions: </span>
-                    Recognizing the dynamic nature of the industry, we offer flexible and efficient outsourcing solutions for STEM professionals. Whether our clients require short-term project support or long-term staffing solutions, we provide a seamless outsourcing experience that aligns with their unique needs.
+                    Acknowledging the dynamic nature of the industry, we provide flexible and efficient outsourcing solutions for STEM professionals. Whether clients need short-term project support or long-term staffing solutions, we offer a seamless outsourcing experience aligned with their unique requirements.
                     </li>
             
                     <li>
                     <span className=' font-semibold text-black text-lg'>Power Generation Manpower Solutions: </span>
-                    For the Power sector, we offer sourcing and outsourcing solutions tailored to the needs of power generation projects, encompassing conventional and renewable energy sources. Our services contribute to the efficiency and success of power-related initiatives.
+                    Tailored to the Power sector, our sourcing and outsourcing solutions cater to the needs of power generation projects, covering both conventional and renewable energy sources. Our services contribute to the efficiency and success of power-related initiatives.
                     </li>
 
                     <li>
                     <span className=' font-semibold text-black text-lg'>Oil and Gas Manpower Services: </span>
-                    In the Oil and Gas sector, our sourcing and outsourcing services cover a wide range of roles, from exploration and production to refining and distribution. We deliver skilled professionals who contribute to the success of projects within this complex industry.
+                    In the Oil and Gas sector, our sourcing and outsourcing services span a wide range of roles, from exploration and production to refining and distribution. We deliver skilled professionals who significantly contribute to the success of projects within this complex industry.
                     </li>
 
                     <li>
@@ -86,8 +96,7 @@ function About() {
                 </ul>
 
                 <p className=' font-semibold mt-12'>
-                With a global presence in around 9 countries and a diverse team of over 1500+ employees and 4000+ pipeline. Representing more than 9 nationalities, our sourcing and outsourcing solutions in the STEM sector are designed to meet the evolving needs of the Oil and Gas, Power, and broader Energy industries. Join us in empowering these sectors with flexible and transformative manpower solutions.
-                </p>
+                With a global presence in approximately 9 countries and a diverse team of over 1500+ employees and a pipeline of 4000+, representing more than 9 nationalities, our sourcing and outsourcing solutions in the STEM sector are designed to meet the evolving needs of the Oil and Gas, Power, and broader Energy industries. Join us in empowering these sectors with flexible and transformative manpower solutions, including integrated facility management, staffing, and recruitment.                </p>
            </div>
         </WrapperCard>
 

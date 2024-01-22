@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Sectors from './components/Sectors'
 import Sustainability from './components/Sustainability'
 import SustainabilityPage from './components/Pages/Sustainability'
+import DiversityPage from './components/Pages/Diversity'
 import Diversity from './components/Diversity'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -16,6 +17,7 @@ import {
   BrowserRouter as Router, Routes, Route
 } from "react-router-dom";
 import About from './components/Pages/About'
+import Contact from './components/Pages/Contact'
 
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
           } />
           <Route exact path='/about-us' element={<About/>} />
           <Route exact path='/sustainability' element={<SustainabilityPage/>} />
+          <Route exact path='/diversity' element={<DiversityPage/>} />
+          <Route exact path='/contact-us' element={<Contact/>} />
 
         </Routes>
       <Footer/>

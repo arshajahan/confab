@@ -6,9 +6,9 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Diversity() {
   return (
-    <div className='relative bg-gray-100'>
+    <div className='relative bg-green-50'>
       {/* For screen sizes above 'lg' */}
-      <WrapperCard className='hidden lg:block relative mx-20 py-8'>
+      <WrapperCard className='hidden lg:block relative mx-20 pb-14'>
         <div className='flex'>
           <div
             className='w-1/2 grid gap-6 bg-[#db7c00] px-12 py-8 text-white'

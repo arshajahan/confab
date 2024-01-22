@@ -1,33 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
-import subImg from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.webp';
-import image1 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image4.jpg';
+import subImg from '../assets/images/image1.webp';
+import image2 from '../assets/images/image5.webp';
+import image1 from '../assets/images/image2.webp';
+import image3 from '../assets/images/image4.webp';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
-const images = [videoSrc, image1, image2, image3];
+// const images = [videoSrc, image1, image2, image3];
+const images = [image1, subImg, image2, image3];
 
 const content = [
   {
     title: 'Confab',
     description: 'Engineering Driven Staffing for a sustainable future.',
     buttonText: 'Discover Confab',
+    to: '/about-us',
+    type: 'page'
   },
   {
     title: 'Enasco',
     description: 'Delivering Excellence 2',
     buttonText: 'Discover Our Solutions',
+    to: '/#solutions',
+    type: 'hash'
   },
   {
     title: 'Kuwait',
     description: 'Delivering Excellence 3',
-    buttonText: 'Discover Our Services',
+    buttonText: 'Discover Our Sectors',
+    to: '/#sectors',
+    type: 'hash'
   },
   {
     title: 'Dubai HQ',
     description: 'Delivering Excellence 4',
-    buttonText: 'Discover Kuwait',
+    buttonText: 'Contact Us',
+    to: '/contact-us',
+    type: 'page'
   },
 ];
 
@@ -60,7 +71,7 @@ function Banner() {
   return (
     <div className='relative'>
       {/* <Navbar /> */}
-      <div className='relative h-screen flex items-center'>
+      <div className=' relative h-screen flex items-center'>
         {currentPage === 0 ? (
             // <video
             //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
@@ -74,7 +85,7 @@ function Banner() {
             // </video>
             <img
             className='absolute top-0 left-0 w-full h-full object-cover z-0'
-            src={subImg}
+            src={image1}
             alt={`Slide ${currentPage}`}
           />
         
@@ -85,20 +96,23 @@ function Banner() {
             alt={`Slide ${currentPage}`}
           />
         )}
-        <WrapperCard className='flex items-center z-20 '>
+        <WrapperCard className='banner flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
             <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
-            <p className='text-lg font-bold text-main'>{content[currentPage].description}</p>
+            <p className='text-xl font-extrabold text-white'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
-              <button className='bg-white text-main font-semibold px-6 py-3'>
+              <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
                 {content[currentPage].buttonText}
-              </button>
+              </Link>
+              <HashLink to={content[currentPage].to} className={` ${content[currentPage].type === 'page' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
+                {content[currentPage].buttonText}
+              </HashLink>
             </div>
           </div>
         </WrapperCard>
       </div>
 
-      <WrapperCard className='relative'>
+      <WrapperCard className='banner relative'>
         <div className='absolute bottom-10 flex space-x-6'>
             {images.map((_, index) => (
             <button
@@ -113,7 +127,7 @@ function Banner() {
             ))}
         </div>
 
-        <div className='hidden absolute bottom-10 right-4 lg:flex space-x-4'>
+        <div className=' banner hidden absolute bottom-10 right-4 lg:flex space-x-4'>
             <button onClick={handlePrev} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
             {'<'}
             </button>
