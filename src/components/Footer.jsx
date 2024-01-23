@@ -65,8 +65,8 @@ function Footer() {
         <div className=' flex justify-between'>
           <span className=''>Copyright 2024 Confab - All right reserved</span>
           <div className=' hidden lg:flex gap-7 text-sm'>
-            <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
-            <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>
+            <Link onClick={() => menuClicked()} to='/security-phishing'>Privacy</Link>
+            <Link onClick={() => menuClicked()} to='/security-phishing'>Terms & Conditions</Link>
             <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
           </div>
         </div>
