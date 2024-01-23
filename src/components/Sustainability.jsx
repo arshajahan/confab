@@ -6,7 +6,7 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 
 function Sustainability() {
   return (
-    <div className='relative bg-green-50 '>
+    <div className='relative bg-green-100 '>
       {/* For screen sizes above 'md' */}
       <WrapperCard className='hidden lg:block relative mx-20 py-14'>
         <div className='flex'>
@@ -43,7 +43,7 @@ function Sustainability() {
           alt='Sustainability'
         />
         <div
-          className='bg-[#628e9e] grid gap-6 px-6 py-10 text-white mt-4'
+          className='bg-[#628e9e] grid gap-6 px-6 py-10 text-white lg:mt-4'
           style={{
             backgroundImage: `url(${dots})`,
             backgroundSize: 'cover',

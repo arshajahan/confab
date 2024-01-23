@@ -11,7 +11,7 @@ import bank from '../assets/images/bank.png';
 
 function Sectors() {
   return (
-    <div id='sectors' className='relative'>
+    <div className='relative'>
       <WrapperCard className=' '>
         <div className='py-8'>
           <h2 className='text-main font-bold text-4xl text-center'>

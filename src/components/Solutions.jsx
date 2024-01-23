@@ -1,34 +1,13 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
-import sol1 from '../assets/images/sol1.jpg';
-import sol2 from '../assets/images/sol2.jpg';
-import sol3 from '../assets/images/sol3.jpg';
 import { FaChevronCircleRight } from "react-icons/fa";
+import { solutions } from '../assets/constants'
+import { Link } from 'react-router-dom';
 
 function Solutions() {
-    const solutions = [
-        {
-            id: 0,
-            image: sol1,
-            title: 'STAFFING & WORKFORCE MANAGEMENT',
-            content: 'Advance STEM workforce management strategies.'
-        },
-        {
-            id: 1,
-            image: sol2,
-            title: 'CREWING MANAGEMENT',
-            content: 'Offshore platforms, a project springboard.'
-        },
-        {
-            id: 2,
-            image: sol3,
-            title: 'INTEGRATED FACILITY MANAGEMENT',
-            content: 'Objective: to reduce environmental impact to the minimum.'
-        }
-    ];
 
     return (
-        <div id='solutions' className='bg-gray-100'>
+        <div className='bg-gray-100'>
             <WrapperCard className='py-14'>
                 <h2 className='text-main font-bold text-4xl text-center'>
                     Our Solutions
@@ -42,10 +21,19 @@ function Solutions() {
                                     <h2 className='text-2xl font-bold my-6'>{solution.title}</h2>
                                     <p className='text-lg'>{solution.content}</p>
                                 </div>
-                                <span className='text-main font-semibold flex items-center mt-auto'>
+                                <Link 
+
+                                    onClick={() => {
+                                    window.scrollTo({
+                                        top: 0,
+                                        behavior: 'smooth',
+                                    });
+                                    }} 
+                                    
+                                    to={`/${solution.path}`} id='sectors' className='text-main font-semibold flex items-center mt-auto'>
                                     <FaChevronCircleRight className='mr-2 text-xl' />
                                     DISCOVER MORE
-                                </span>
+                                </Link>
                             </div>
                         </div>
                     ))}

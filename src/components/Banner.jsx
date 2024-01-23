@@ -5,11 +5,12 @@ import subImg from '../assets/images/image1.webp';
 import image2 from '../assets/images/image5.webp';
 import image1 from '../assets/images/image2.webp';
 import image3 from '../assets/images/image4.webp';
+import diversity from '../assets/images/diversity.jpg';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 // const images = [videoSrc, image1, image2, image3];
-const images = [image1, subImg, image2, image3];
+const images = [image1, subImg, diversity, image3];
 
 const content = [
   {
@@ -20,23 +21,23 @@ const content = [
     type: 'page'
   },
   {
-    title: 'Enasco',
-    description: 'Delivering Excellence 2',
+    title: 'Discover how we generate shared value',
+    description: "Discover Confab's solutions",
     buttonText: 'Discover Our Solutions',
     to: '/#solutions',
     type: 'hash'
   },
   {
-    title: 'Kuwait',
-    description: 'Delivering Excellence 3',
-    buttonText: 'Discover Our Sectors',
+    title: 'Diversity, Equity, Inclusion',
+    description: 'Explore our commitment to diversity, equity, and inclusion.',
+    buttonText: 'Discover More',
     to: '/#sectors',
     type: 'hash'
   },
   {
-    title: 'Dubai HQ',
-    description: 'Delivering Excellence 4',
-    buttonText: 'Contact Us',
+    title: 'Media',
+    description: 'Read our blogs and press releases',
+    buttonText: 'Explore',
     to: '/contact-us',
     type: 'page'
   },
@@ -98,7 +99,7 @@ function Banner() {
         )}
         <WrapperCard className='banner flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
-            <h1 className='text-7xl text-white font-semibold'>{content[currentPage].title}</h1>
+            <h1 className='text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
             <p className='text-xl font-extrabold text-white'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
               <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>

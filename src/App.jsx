@@ -18,6 +18,8 @@ import {
 } from "react-router-dom";
 import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
+import Solution from './components/Pages/Solution'
+import SecurityPhishing from './components/Pages/SecurityPhishing'
 
 
 function App() {
@@ -56,6 +58,9 @@ function App() {
           <Route exact path='/sustainability' element={<SustainabilityPage/>} />
           <Route exact path='/diversity' element={<DiversityPage/>} />
           <Route exact path='/contact-us' element={<Contact/>} />
+          <Route exact path='/:id' element={<Solution/>} />
+          <Route exact path='/security-phishing' element={<SecurityPhishing/>} />
+          
 
         </Routes>
       <Footer/>

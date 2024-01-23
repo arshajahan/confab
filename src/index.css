@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 *{
-  font-family: 'Chakra Petch', sans-serif;
+  /* font-family: 'Chakra Petch', sans-serif; */
 
-  /* font-family: 'Changa', sans-serif; */
+  font-family: 'Changa', sans-serif;
 }
 
   .slider-img {

@@ -59,7 +59,7 @@ function VM() {
                 </div>
 
                 <div className='flex justify-center '>
-                    <button className='bg-blue-950 text-white px-6 py-4 '>
+                    <button id='solutions' className='bg-blue-950 text-white px-6 py-4 '>
                     DISCOVER CONFAB
                     </button>
                 </div>

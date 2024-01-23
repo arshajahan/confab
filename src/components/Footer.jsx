@@ -12,20 +12,26 @@ function Footer() {
   };
 
   return (
-    <div id='footer' className='bg-[#628e9e] py-16 text-white overflow-hidden'>
+    <div id='footer' className='bg-[#628e9e] py-14 text-white overflow-hidden'>
       <WrapperCard className='flex flex-col lg:flex-row justify-between w-full '>
         <div className='flex flex-col items-left  gap-5 lg:basis-1/4'>
           <Link to='/confab' onClick={() => menuClicked()}>
             <img src={logo} className='w-32' alt='confab'/>
           </Link>
           <div className='flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
-            <AiFillLinkedin/>
-            <AiFillInstagram/>
-            <AiFillFacebook/>
+            <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
+              <AiFillLinkedin />
+            </a>
+            <a href='https://www.instagram.com/confabint/' target="_blank" rel="noopener noreferrer" >
+              <AiFillInstagram/>  
+            </a>
+            {/* <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
+              <AiFillFacebook/>
+            </a> */}
           </div>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-gray-300 text-sm'>DISCOVER CONFAB</span>
+          <span className='text-main text-sm font-semibold'>DISCOVER CONFAB</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/about-us'>About us</Link>
             <HashLink to='/#sectors'>Sectors</HashLink>
@@ -34,7 +40,7 @@ function Footer() {
           </ul>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-gray-300 text-sm'>OTHER LINKS</span>
+          <span className='text-main text-sm font-semibold'>OTHER LINKS</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <li>Media</li>
             <Link onClick={() => menuClicked()} to='/diversity'>People</Link>
@@ -42,12 +48,33 @@ function Footer() {
           </ul>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-gray-200'>CAREERS</span>
+          <span className='text-main text-sm font-semibold'>CAREERS</span>
+          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+              <a href={`mailto:jobs@confabint.com`}>
+                Send resume to <span className='text-sm text-yellow-300'>"jobs@confabint.com"</span>
+              </a>
+              <div className=' lg:hidden flex flex-col gap-7'>
+              <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
+              <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>
+              <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
+          </div>
+          </ul>
         </div>
       </WrapperCard>
-      <WrapperCard className='mt-9'>
-        <span className='text-xs'>Copyright 2024 Confab - All right reserved</span>
-        <br/><hr/>
+      <WrapperCard className='mt-9 text-xs'>
+        <div className=' flex justify-between'>
+          <span className=''>Copyright 2024 Confab - All right reserved</span>
+          <div className=' hidden lg:flex gap-7 text-sm'>
+            <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
+            <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>
+            <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
+          </div>
+        </div>
+        <br/><hr/><br/>
+        <div className=' flex flex-col gap-3 text-center'>
+          <p className=' text-main font-semibold text-base'>Confab International</p>
+          <span className=''>Head Office: Block 7, Street 400, East Al-Ahmadi - 64018, Ahmadi, Kuwait.</span>
+        </div>
       </WrapperCard>
     </div>
   );

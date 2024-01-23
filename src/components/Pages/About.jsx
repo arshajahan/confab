@@ -103,7 +103,7 @@ function About() {
         <WrapperCard className=' mb-12'>
             <div className=' flex flex-col lg:flex-row gap-8'>
                 <div
-                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 pt-20 pb-8 text-white'
+                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 py-20 text-white'
                     style={{
                     backgroundImage: `url(${dots})`,
                     backgroundSize: 'cover',
@@ -113,15 +113,12 @@ function About() {
                     
                     <h2 className=' text-4xl font-bold'>OUR MISSION</h2>
                     <p className='  mt-3'>
-                    We are on a mission to provide unparalleled staffing and recruitment solutions, specializing in the Science, Technology, Engineering, and Mathematics (STEM) sectors within the Oil and Gas, Power, and broader Energy industries. With an unwavering commitment to excellence, our mission is to be the preferred partner for our clients, delivering top-tier STEM professionals and fostering an environment where innovation and sustainability thrive. Through meticulous sourcing and outsourcing services, we aim to empower our clients, contribute to the success of their projects, and build a diverse and inclusive workforce that reflects the global nature of our industry.
+                        To empower the STEM sector through innovative and strategic workforce solutions, delivering unparalleled staffing and recruitment services while pioneering integrated facility management to create sustainable success for our clients, candidates, and communities.
                     </p>
-                    <span className='font-semibold bg-white w-fit p-4 text-blue-900 flex items-center'>
-                    DISCOVER MORE
-                    </span>
                 </div>
 
                 <div
-                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 pt-20 pb-8 text-white'
+                    className='lg:w-1/2 flex flex-col gap-6 bg-[#628e9e] px-8 lg:px-12 py-20 text-white'
                     style={{
                     backgroundImage: `url(${dots})`,
                     backgroundSize: 'cover',
@@ -131,11 +128,9 @@ function About() {
                     
                     <h2 className=' text-4xl font-bold'>OUR VISION</h2>
                     <p className='  mt-3 flex-grow'>
-                    At Confab, our visionary outlook propels us towards a future defined by sustainability and innovation. Our steadfast vision is 'Engineering Excellence, Empowering Futures,' inspiring us to lead the way in shaping a dynamic and sustainable world through the transformative power of STEM talent and cutting-edge solutions.
+                        To be the leading staffing, recruitment, and integrated facility management partner for the STEM sector, driving excellence, diversity, and growth. We aspire to be the catalyst for transformative talent solutions, shaping the future of the industry and contributing to global advancements in science, technology, engineering, and mathematics.
                     </p>
-                    <span className=' font-semibold bg-white w-fit p-4 text-blue-900 flex items-center'>
-                    DISCOVER MORE
-                    </span>
+                    
                 </div>
 
                 

@@ -4,12 +4,13 @@ import { AiFillInstagram, AiFillLinkedin, AiOutlineClose, AiOutlineSearch } from
 import { services } from '../assets/constants';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
+import whitelogo from '../assets/images/whitelogo.png';
 import WrapperCard from './UI/WrapperCard';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const location = useLocation();
-  const isAboutUsPage = location.pathname !== '/confab' && location.pathname !== '' && location.pathname !== '/confab/';
+  const isAboutUsPage = location.pathname !== '/confab' && location.pathname !== '/' && location.pathname !== '/confab/';
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
@@ -58,15 +59,19 @@ const Navbar = () => {
                 <Link onClick={() => menuClicked()} to='/contact-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Contact us</Link>
               </div>
               <div className='flex gap-3'>
-                <AiFillLinkedin className=' cursor-pointer ' size={25} />
-                <AiFillInstagram className=' cursor-pointer' size={25} />
+                <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
+                  <AiFillLinkedin size={25}/>
+                </a>
+                <a href='https://www.instagram.com/confabint/' target="_blank" rel="noopener noreferrer" >
+                  <AiFillInstagram size={25}/>  
+                </a>
               </div>
             </WrapperCard>
           </div>
           <hr className='hidden lg:block' />
           <WrapperCard className={`flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
-              <img src={logo} alt='Logo' className='h-10 md:h-14' />
+              <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className='h-10 md:h-14' />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
               <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
@@ -96,7 +101,7 @@ const Navbar = () => {
               <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
               <HashLink to='/#solutions' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</HashLink>
               <HashLink to='/#sectors' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
-              <span className=' cursor-pointer text-2xl'><AiOutlineSearch /></span>
+              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
               <span className=' text-2xl'><AiOutlineSearch /></span>
