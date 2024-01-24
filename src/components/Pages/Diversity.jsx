@@ -12,19 +12,19 @@ function Diversity() {
                 alt="About confab"
             />
             <WrapperCard className='z-10 text-white'>
-                <h2 className=' text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Diversity, Equity, Inclusion</h2>
+                <h2 className='  text-5xl font-semibold w-3/4 '>Diversity, Equity, Inclusion</h2>
                 <p className='w-2/3 text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
             </WrapperCard>
         </WrapperCard>
 
-        <div className='lg:hidden relative h-screen flex items-center'>
+        <div className='lg:hidden relative h-[600px] flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={diversity}
                 alt="About confab"
             />
             <WrapperCard className='z-10 text-white'>
-                <h2 className=' text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Diversity, Equity, Inclusion</h2>
+                <h2 className=' text-4xl font-semibold '>Diversity, Equity, Inclusion</h2>
                 <p className='w-2/3 text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
             </WrapperCard>
         </div>

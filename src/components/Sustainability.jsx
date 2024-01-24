@@ -6,6 +6,9 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Sustainability() {
+  const menuClicked = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className='relative bg-green-100 '>
       {/* For screen sizes above 'md' */}
@@ -29,10 +32,10 @@ function Sustainability() {
             <p className='text-lg mt-3'>
               Our commitment is to generate sustainable value for all our stakeholders, integrating environmental, social, and governance
             </p>
-            <span className='font-semibold flex items-center mt-12'>
+            <Link onClick={() => menuClicked()} to='/sustainability' className='font-semibold flex items-center mt-12'>
               <FaChevronCircleRight className='mr-2 text-xl text-main' />
               DISCOVER MORE
-            </span>
+            </Link>
           </div>
         </div>
       </WrapperCard>
@@ -56,7 +59,7 @@ function Sustainability() {
           <p className='text-base mt-3'>
             Our commitment is to generate sustainable value for all our stakeholders, integrating environmental, social, and governance
           </p>
-          <Link to='/sustainability' className='font-semibold flex items-center mt-6'>
+          <Link onClick={() => menuClicked()} to='/sustainability' className='font-semibold flex items-center mt-6'>
             <FaChevronCircleRight className='mr-2 text-xl ' />
             DISCOVER MORE
           </Link>

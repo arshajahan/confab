@@ -6,6 +6,11 @@ import { FaChevronCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Diversity() {
+
+  const menuClicked = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className='relative bg-green-100'>
       {/* For screen sizes above 'lg' */}
@@ -24,10 +29,10 @@ function Diversity() {
             <p className='text-lg mt-3'>
               Our commitment is to generate sustainable value for all our stakeholders, integrating environmental, social, and governance
             </p>
-            <span className='font-semibold flex items-center mt-12'>
+            <Link to='/diversity' onClick={() => menuClicked()} className='font-semibold flex items-center mt-12'>
               <FaChevronCircleRight className='mr-2 text-xl text-main' />
               DISCOVER MORE
-            </span>
+            </Link>
           </div>
           <img
             className='w-1/2  h-[500px] object-cover z-0'
@@ -51,7 +56,7 @@ function Diversity() {
           <p className='text-base mt-3'>
             Confab believes in people's value, backgrounds, their leadership styles and conduct, because each individual has the potential to generate value for our company.
           </p>
-          <Link to='/diversity' className='font-semibold flex items-center mt-6'>
+          <Link to='/diversity' onClick={() => menuClicked()} className='font-semibold flex items-center mt-6'>
             <FaChevronCircleRight className='mr-2 text-xl' />
             DISCOVER MORE
           </Link>

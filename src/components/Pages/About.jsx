@@ -35,7 +35,7 @@ function About() {
             
         </WrapperCard>
 
-        <div className='lg:hidden relative h-screen flex items-center'>
+        <div className='lg:hidden relative h-[600px] flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}

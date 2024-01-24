@@ -12,7 +12,7 @@ function Solution() {
 
   return (
     <div className='relative'>
-        <div className='relative h-screen flex items-center'>
+        <div className='relative h-[600px] lg:h-screen flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={selectedSolution.image}
