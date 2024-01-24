@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <>
       {showFirstNavbar && !isNavClicked && (
-        <div className={`absolute top-0 w-full z-10 ${isAboutUsPage ? 'bg-white' : 'bg-transparent'}`}>
+        <div className={` absolute top-0 w-full z-10 ${isAboutUsPage ? 'bg-white shadow-md' : 'bg-transparent'}`}>
           <div className={``}>
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>

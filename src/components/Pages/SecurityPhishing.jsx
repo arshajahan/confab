@@ -25,7 +25,7 @@ function SecurityPhishing() {
             <div className='lg:w-1/2 p-8 bg-gray-100 grid gap-7'>
                 <p className=' text-main'>Latest update: January 2024</p>
                 
-                <p>Multiple fraud attempts using the CONFAB name and trademark have been reported in several countries. Please be aware that CONFAB or representative will NEVER request payment of any kind from a candidate or an associate during a job search or a selection process.</p>
+                <p className=' font-semibold text-main'>Multiple fraud attempts using the CONFAB name and trademark have been reported in several countries. Please be aware that CONFAB or representative will NEVER request payment of any kind from a candidate or an associate during a job search or a selection process.</p>
 
                 <p>
                 We have been informed that the CONFAB name and trademark are being used in several countries by persons who are in no way related to the CONFAB Group. These persons place job adverts on general market websites using the name ‘CONFAB’ without our permission. We also have reason to believe that e-mails, letters, telephone calls, and other actions taken by these persons are nothing but illegitimate attempts to obtain money and access to job seekers’ and associates’ personal and confidential information.

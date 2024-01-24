@@ -5,6 +5,7 @@ import expenditure from '../assets/images/expenditure.png'
 import nooil from '../assets/images/nooil.png'
 import zero from '../assets/images/zero.png'
 import dots from '../assets/images/dots.svg'
+import { Link } from 'react-router-dom'
 
 function VM() {
     const points = [
@@ -59,9 +60,9 @@ function VM() {
                 </div>
 
                 <div className='flex justify-center '>
-                    <button id='solutions' className='bg-blue-950 text-white px-6 py-4 '>
+                    <Link to='/about-us' id='solutions' className='bg-blue-950 text-white px-6 py-4 '>
                     DISCOVER CONFAB
-                    </button>
+                    </Link>
                 </div>
             </WrapperCard>
         </div>

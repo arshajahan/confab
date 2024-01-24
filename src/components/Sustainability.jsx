@@ -3,6 +3,7 @@ import WrapperCard from './UI/WrapperCard';
 import sustainability from '../assets/images/sustainability.webp';
 import dots from '../assets/images/dots.svg';
 import { FaChevronCircleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Sustainability() {
   return (
@@ -55,10 +56,10 @@ function Sustainability() {
           <p className='text-base mt-3'>
             Our commitment is to generate sustainable value for all our stakeholders, integrating environmental, social, and governance
           </p>
-          <span className='font-semibold flex items-center mt-6'>
+          <Link to='/sustainability' className='font-semibold flex items-center mt-6'>
             <FaChevronCircleRight className='mr-2 text-xl ' />
             DISCOVER MORE
-          </span>
+          </Link>
         </div>
       </div>
     </div>
