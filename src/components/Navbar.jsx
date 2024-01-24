@@ -123,7 +123,7 @@ const Navbar = () => {
               <div>
                 <img src={logo} alt='Logo' className='h-10 md:h-14' />
               </div>
-              <AiOutlineClose onClick={navToggle} className='cursor-pointer' size={26} color="blue" />
+              <AiOutlineClose onClick={navToggle} className='cursor-pointer text-main' size={20} />
             </div>
 
             {/* Mobile navigation as */}
@@ -131,7 +131,7 @@ const Navbar = () => {
               {services.map((item, i) => (
                 <div className="mt-4 " key={item.id}>
                   <button
-                    className={`relative w-full py-2 px-4 text-left text-lg font-semibold hover:bg-main hover:text-white  ${collapsed === i ? 'bg-main text-white' : ''}`}
+                    className={`relative w-full py-2 px-2 text-left text-lg hover:bg-main hover:text-white  ${collapsed === i ? 'bg-main text-white' : ''}`}
                     onClick={() => toggle(i)}
                   >
                     <span className="absolute inset-y-0 right-2 flex items-center">{collapsed === i ? '^' : '>'}</span>
@@ -149,7 +149,7 @@ const Navbar = () => {
                           <a
                             to={`/service/${item.path+':'+answer.split(" ")[0]}`}
                             key={j}
-                            className="block py-2 px-8 text-[#2d3540] "
+                            className="block py-2 px-6 text-main "
                           
                           >
                             {answer}
@@ -161,12 +161,12 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-
+            <br/>
             <hr/>
 
             {/* Additional mobile as */}
             <div className="absolute left-0 w-full">
-              <ul className=" px-4 mt-16 mb-8 text-main">
+              <ul className=" px-2 mt-16 mb-8 text-main">
                 <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/#contact-us">Media</Link>
                 </li>
