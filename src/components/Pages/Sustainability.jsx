@@ -13,7 +13,7 @@ function Sustainability() {
             />
             <WrapperCard className='z-10 text-white'>
                 <h2 className=' text-4xl lg:text-6xl font-semibold lg:w-1/2 '>Confab's drive for sustainability</h2>
-                <p className='w-2/3 text-lg mt-8'>Energy infrastructure is the most important driver for sustainable development. Confab wants to be at the forefront of this evolution, playing an enabling role in the energy transition.</p>
+                <p className='lg:w-2/3 text-lg mt-8'>Energy infrastructure is the most important driver for sustainable development. Confab wants to be at the forefront of this evolution, playing an enabling role in the energy transition.</p>
             </WrapperCard>
         </WrapperCard>
 

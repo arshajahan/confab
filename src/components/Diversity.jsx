@@ -3,6 +3,7 @@ import WrapperCard from './UI/WrapperCard';
 import diversity from '../assets/images/diversity.jpg';
 import dots from '../assets/images/dots.svg';
 import { FaChevronCircleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Diversity() {
   return (
@@ -50,10 +51,10 @@ function Diversity() {
           <p className='text-base mt-3'>
             Confab believes in people's value, backgrounds, their leadership styles and conduct, because each individual has the potential to generate value for our company.
           </p>
-          <span className='font-semibold flex items-center mt-6'>
+          <Link to='/diversity' className='font-semibold flex items-center mt-6'>
             <FaChevronCircleRight className='mr-2 text-xl' />
             DISCOVER MORE
-          </span>
+          </Link>
         </div>
         <img
           className='w-full h-auto object-cover z-0'
