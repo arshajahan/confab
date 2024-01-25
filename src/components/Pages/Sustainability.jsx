@@ -5,7 +5,7 @@ import sustainability from '../../assets/images/sustainability1.webp'
 function Sustainability() {
   return (
     <div>
-        <WrapperCard className='lg:flex hidden relative h-screen object-cover items-center'>
+        <div className='lg:flex hidden relative h-screen object-cover items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full z-0'
                 src={sustainability}
@@ -15,7 +15,7 @@ function Sustainability() {
                 <h2 className=' text-4xl lg:text-6xl font-semibold lg:w-1/2 '>Confab's drive for sustainability</h2>
                 <p className='lg:w-2/3 text-lg mt-8'>Energy infrastructure is the most important driver for sustainable development. Confab wants to be at the forefront of this evolution, playing an enabling role in the energy transition.</p>
             </WrapperCard>
-        </WrapperCard>
+        </div>
 
         <div className='lg:hidden relative h-[600px] object-cover flex items-center'>
             <img

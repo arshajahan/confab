@@ -5,7 +5,7 @@ import WrapperCard from '../UI/WrapperCard'
 function Diversity() {
   return (
     <div>
-      <WrapperCard className='lg:flex hidden relative h-screen  items-center'>
+      <div className='lg:flex hidden relative h-screen  items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={diversity}
@@ -15,7 +15,7 @@ function Diversity() {
                 <h2 className='  text-5xl font-semibold w-3/4 '>Diversity, Equity, Inclusion</h2>
                 <p className='w-2/3 text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
             </WrapperCard>
-        </WrapperCard>
+        </div>
 
         <div className='lg:hidden relative h-[600px] flex items-center'>
             <img
@@ -40,8 +40,8 @@ function Diversity() {
                     Our daily efforts are dedicated to the creation of a work environment that not only acknowledges but actively involves individuals in shaping the trajectory of Confab's future. With a resolute focus on diversity and inclusivity, we foster a culture that not only acknowledges differences but celebrates them as strengths. This commitment is especially vital given our strong international focus, recognizing that a variety of perspectives and experiences contribute to our collective success.
                 </p>
                 <p className=' lg:text-4xl text-xl text-main font-semibold'>
-                    <span className=' lg:text-4xl text-yellow-500'>`` </span>Confab recognizes that our success is a collective endeavor, and as such, we invest in the creation of beneficial, transparent work environments. These environments are designed to facilitate collaboration among people and teams hailing from different countries, genders, and departments. We believe that by promoting open communication and understanding, we can harness the power of diverse talents to propel Confab to new heights.
-                    <span className=' lg:text-4xl text-yellow-500'> ``</span>
+                    Confab recognizes that our success is a collective endeavor, and as such, we invest in the creation of beneficial, transparent work environments. These environments are designed to facilitate collaboration among people and teams hailing from different countries, genders, and departments. We believe that by promoting open communication and understanding, we can harness the power of diverse talents to propel Confab to new heights.
+                    
                 </p>
                 <p>
                     Empowering women is a cornerstone of our commitment to diversity and inclusion. At Confab, we actively champion female empowerment through the establishment of a pool of Confab Role Models. These role models serve as inspirational figures, motivating and guiding young students at schools and universities. Our focus is particularly dedicated to supporting the development paths within STEM disciplines, ensuring that we play a crucial role in shaping a more inclusive and diverse future workforce.

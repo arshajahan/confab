@@ -31,8 +31,8 @@ const content = [
     title: 'Diversity, Equity, Inclusion',
     description: 'Explore our commitment to diversity, equity, and inclusion.',
     buttonText: 'Discover More',
-    to: '/#sectors',
-    type: 'hash'
+    to: '/diversity',
+    type: 'page'
   },
   {
     title: 'Media',
@@ -99,8 +99,8 @@ function Banner() {
         )}
         <WrapperCard className='banner flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
-            <h1 className='text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
-            <p className='text-xl font-extrabold text-white'>{content[currentPage].description}</p>
+            <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
+            <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
               <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
                 {content[currentPage].buttonText}

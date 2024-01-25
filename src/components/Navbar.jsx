@@ -71,7 +71,7 @@ const Navbar = () => {
           <hr className='hidden lg:block' />
           <WrapperCard className={`flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
-              <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className='h-10 md:h-14' />
+              <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className={` ${isAboutUsPage ? 'h-10 md:h-14' : 'h-20 md:h-24'}`} />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
               <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>

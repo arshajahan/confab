@@ -48,11 +48,8 @@ function Footer() {
           </ul>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-main text-sm font-semibold'>CAREERS</span>
+          <Link to='/careers' onClick={() => menuClicked()} className=' text-sm '>CAREERS</Link>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
-              <a href={`mailto:jobs@confabint.com`}>
-                Send resume to <span className='text-sm text-yellow-300'>"jobs@confabint.com"</span>
-              </a>
               <div className=' lg:hidden flex flex-col gap-7'>
               <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
               <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>

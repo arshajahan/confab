@@ -23,7 +23,7 @@ function About() {
 
   return (
     <div className='relative'>
-        <WrapperCard className='relative h-screen hidden lg:flex items-center'>
+        <div className='relative h-screen hidden lg:flex items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}
@@ -33,7 +33,7 @@ function About() {
                 <h2 className='text-5xl font-semibold'>About Us</h2>
             </WrapperCard>
             
-        </WrapperCard>
+        </div>
 
         <div className='lg:hidden relative h-[600px] flex items-center'>
             <img
@@ -46,7 +46,7 @@ function About() {
             </WrapperCard>
         </div>
 
-        <WrapperCard className=' text-gray-600'>
+        <WrapperCard className=' '>
            <div className=' py-12 lg:px-48'>
                 <p className=' font-semibold '>
                 As a distinguished staffing and recruitment firm specializing in STEM-driven solutions, including integrated facility management, we take pride in offering comprehensive services that cover both the sourcing and outsourcing of manpower within the Science, Technology, Engineering, and Mathematics (STEM) sectors. Our dedication to excellence is guided by the vision of "Engineering Excellence, Empowering Futures," ensuring that clients in the Oil and Gas, Power, and broader Energy industries receive tailored and adaptable staffing solutions.                

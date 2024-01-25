@@ -20,6 +20,8 @@ import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
 import Solution from './components/Pages/Solution'
 import SecurityPhishing from './components/Pages/SecurityPhishing'
+import Blog from './components/Pages/Blog'
+import Careers from './components/Pages/Careers'
 
 
 function App() {
@@ -59,7 +61,9 @@ function App() {
           <Route exact path='/diversity' element={<DiversityPage/>} />
           <Route exact path='/contact-us' element={<Contact/>} />
           <Route exact path='/:id' element={<Solution/>} />
+          <Route exact path='/blog/:id' element={<Blog/>} />
           <Route exact path='/security-phishing' element={<SecurityPhishing/>} />
+          <Route exact path='/careers' element={<Careers/>} />
           
 
         </Routes>
