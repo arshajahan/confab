@@ -95,7 +95,7 @@ const Navbar = () => {
               <img src={logo} alt='Logo' className='w-28' />
             </Link>
             <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>
-              <span className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</span>
+              <HashLink to='/#blogs' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</HashLink>
               <Link onClick={() => menuClicked()} to='/diversity' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</Link>
               <Link onClick={() => menuClicked()} to='/contact-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Contact us</Link>
               <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>

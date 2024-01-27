@@ -22,6 +22,8 @@ import Solution from './components/Pages/Solution'
 import SecurityPhishing from './components/Pages/SecurityPhishing'
 import Blog from './components/Pages/Blog'
 import Careers from './components/Pages/Careers'
+import PrivacyPolicy from './components/Pages/PrivacyPolicy'
+import Terms from './components/Pages/Terms'
 
 
 function App() {
@@ -64,6 +66,8 @@ function App() {
           <Route exact path='/blog/:id' element={<Blog/>} />
           <Route exact path='/security-phishing' element={<SecurityPhishing/>} />
           <Route exact path='/careers' element={<Careers/>} />
+          <Route exact path='/privacy' element={<PrivacyPolicy/>} />
+          <Route exact path='/terms' element={<Terms/>} />
           
 
         </Routes>

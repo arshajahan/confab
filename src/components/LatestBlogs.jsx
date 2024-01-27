@@ -60,12 +60,12 @@ function LatestBlogs() {
             <div className="slider-container">
                 <Slider {...settings} >
                 {Blogs.map((item) => (
-                    <div key={item.id} className='relative h-[520px]'>
+                    <div key={item.id} className='relative h-[540px]'>
                         <img src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
-                        <div className=' shadow-md mx-2 h-[230px]'>
-                            <span className=''>{item.date}</span>
-                            <h2 className="slider-title text-lg ">{item.title}</h2>
-                            <p className="slider-description">{item.description}</p>
+                        <div className='  shadow-md mx-2 h-[250px]'>
+                            {/* <span className=' absolute left-3 text-xs'>{item.date}</span> */}
+                            <h2 className=" text-xs pt-4 pl-3">{item.date}</h2>
+                            <p className="slider-description">{item.title}</p>
                             <Link 
                                 onClick={() => {
                                   window.scrollTo({

@@ -67,7 +67,7 @@ function Diversity() {
           alt='Diversity'
         />
       </div>
-      <span id='#blogs'></span>
+      <span id='blogs'></span>
     </div>
   );
 }
