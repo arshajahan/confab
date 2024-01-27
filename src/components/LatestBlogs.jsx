@@ -63,6 +63,7 @@ function LatestBlogs() {
                     <div key={item.id} className='relative h-[520px]'>
                         <img src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
                         <div className=' shadow-md mx-2 h-[230px]'>
+                            <span className=''>{item.date}</span>
                             <h2 className="slider-title text-lg ">{item.title}</h2>
                             <p className="slider-description">{item.description}</p>
                             <Link 

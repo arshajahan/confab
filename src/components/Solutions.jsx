@@ -30,7 +30,7 @@ function Solutions() {
                                     });
                                     }} 
                                     
-                                    to={`/${solution.path}`} id='sectors' className='text-main font-semibold flex items-center mt-auto'>
+                                    to={`/${solution.path}`} className='text-main font-semibold flex items-center mt-auto'>
                                     <FaChevronCircleRight className='mr-2 text-xl' />
                                     DISCOVER MORE
                                 </Link>
@@ -39,6 +39,7 @@ function Solutions() {
                     ))}
                 </div>
             </WrapperCard>
+            <span id='sectors'></span>
         </div>
     );
 }

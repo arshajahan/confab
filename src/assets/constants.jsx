@@ -5,6 +5,7 @@ import sol3 from '../assets/images/sol3.jpg';
 import kipic from '../assets/images/kipic.png';
 import knpc from '../assets/images/knpc.png';
 import sundrill from '../assets/images/sundrill.png';
+import pravasiwelfare from '../assets/images/pravasiwelfare.png';
 
 export const services = [
     {
@@ -733,11 +734,45 @@ export const solutions = [
 
 export const Blogs = [
   {
+    id: 4,
+    src: pravasiwelfare,    
+    alt: "Pravasi welfare confab",
+    title: "Pravasi Welfare Kuwait and Confab International Join Forces for a Successful Medical Campaign in Abu Halifa, Kuwait",
+    description: "",
+    date: 'Abu Halifa, Kuwait - January 26, 2024',
+    path: 'confab-pravasi-welfare',
+    content: (
+      <div className='py-12 lg:px-48'>
+          <p className=''>
+              In a notable initiative on India's Republic Day, Pravasi Welfare Kuwait, an approved organization in Kuwait, and Confab, a prominent entity, collaborated to execute a commendable medical campaign in Abu Halifa, Kuwait. The campaign, endorsed by the Indian Embassy, had a primary goal of providing healthcare services to workers but extended its reach to the broader community, beyond the confines of the organizational staff.
+          </p><br/>
+          <p className=''>
+              During the event, Mr. Layiq Ahmed, President of Pravasi Welfare Kuwait, expressed his gratitude for Confab's dedicated efforts and substantial contribution to Corporate Social Responsibility (CSR). A significant highlight of the occasion was the honoring of Mr. Thanveer Muhammed Ashraf, Confab's CSR Lead & Operations Head, on behalf of the organization.
+          </p><br/>
+          <p className=''>
+              President Layiq Ahmed's acknowledgment of Confab's CSR initiatives underscores the significance of such endeavors in promoting social responsibility and community welfare. Mr. Thanveer Muhammed Ashraf, representing Confab, graciously accepted the honor, reaffirming the organization's commitment to making a positive impact on society.
+          </p><br/>
+          <p className=''>
+              In a heartfelt message, Mr. Thanveer conveyed his gratitude for the recognition and emphasized the collective efforts that led to the success of the medical campaign in Abu Halifa. He stated, "On behalf of Confab, I am truly honored to accept this award. Our commitment to corporate social responsibility is deeply rooted in our values, and we believe in using our resources to make a meaningful difference in the communities we serve."
+          </p><br/>
+          <p className=''>
+              Continuing, he added, "This campaign in Abu Halifa was a testament to the power of collaboration. Working alongside Pravasi Welfare Kuwait, we were able to extend our reach and provide essential healthcare services to those in need. This award is not just a recognition of Confab but a celebration of the collective impact we can make when organizations come together for a common cause."
+          </p><br/>
+          <p className=''>
+              The accolade stands as a testament to the collaborative efforts of Pravasi Welfare Kuwait and Confab, showcasing their commitment to the betterment of the community. This successful endeavor serves as a shining example of how corporate entities can play a vital role in addressing social issues and making a meaningful impact on the lives of individuals. As we celebrate such initiatives, it is a reminder that collective efforts can create a ripple effect, fostering positive change in communities around the world.
+          </p>
+      </div>
+
+  
+    ),
+  },
+  {
     id: 0,
     src: kipic,    
     alt: "kipic",
     title: "Navigating Success: A Comprehensive Overview of Our Crew Management Project for KIPIC's Jetting and Mooring Contracts with ENASCO",
     description: "",
+    date: "Kuwait - January 1, 2024",
     path: 'kipic',
     content: (
       <div className='py-12 lg:px-48'>
@@ -791,6 +826,7 @@ export const Blogs = [
     alt: "sundrill",
     title: "Confab's Rigorous Staffing Triumph: Sun Drilling's KOC Project",
     description:"",
+    date: "Kuwait - December 2, 2023",
     path: 'sundrill',
     content: (
       <div className='py-12 lg:px-48'>
@@ -859,6 +895,7 @@ export const Blogs = [
     alt: "knpc",
     title: "Confab Celebrates Remarkable Success in Outsourcing Manpower for KNPC Mina Al-Ahmadi Shutdown",
     description: "",
+    date: "Kuwait - November 15, 2023",
     path: 'knpc',
     content: (
       <div className='py-12 lg:px-48'>
@@ -900,15 +937,6 @@ export const Blogs = [
   
     ),
   },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80",
-    alt: "Image 4",
-    title: "Our commitment is to generate sustainable value for all our stakeholders",
-    description: "",
-    path: 'lamborghini'
-  },
- 
 ];
 
 

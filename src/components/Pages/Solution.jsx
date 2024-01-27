@@ -27,7 +27,7 @@ function Solution() {
             {selectedSolution.page}
         </WrapperCard>
 
-
+    
     </div>
   )
 }

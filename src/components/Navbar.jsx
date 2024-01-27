@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className={``}>
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
-                <span className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</span>
+                <HashLink to='/#blogs' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</HashLink>
                 <Link onClick={() => menuClicked()} to='/diversity' className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</Link>
                 <Link onClick={() => menuClicked()} to='/contact-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Contact us</Link>
               </div>
