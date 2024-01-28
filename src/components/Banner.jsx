@@ -115,7 +115,7 @@ function Banner() {
         </WrapperCard>
       </div>
 
-      <WrapperCard className='banner relative'>
+      <WrapperCard className='banner relative z-20'>
         <div className='absolute bottom-10 flex space-x-6'>
             {images.map((_, index) => (
             <button
