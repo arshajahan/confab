@@ -72,7 +72,7 @@ function Banner() {
   return (
     <div className='relative'>
       {/* <Navbar /> */}
-      <div className=' relative h-screen z-auto flex items-center'>
+      <div className=' relative h-screen z-10 flex items-center'>
         {currentPage === 0 ? (
             // <video
             //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
@@ -99,7 +99,7 @@ function Banner() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div></>
         )}
-        <WrapperCard className='banner flex items-center z-auto '>
+        <WrapperCard className='banner flex items-center z-20 '>
           <div className='grid gap-10 py-4'>
             <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
             <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
