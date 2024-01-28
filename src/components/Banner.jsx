@@ -72,7 +72,7 @@ function Banner() {
   return (
     <div className='relative'>
       {/* <Navbar /> */}
-      <div className=' relative h-screen flex items-center'>
+      <div className=' relative h-screen z-auto flex items-center'>
         {currentPage === 0 ? (
             // <video
             //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
@@ -91,11 +91,13 @@ function Banner() {
           />
         
         ) : (
+          <>
           <img
             className='absolute top-0 left-0 w-full h-full object-cover z-0'
             src={images[currentPage]}
             alt={`Slide ${currentPage}`}
           />
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div></>
         )}
         <WrapperCard className='banner flex items-center z-auto '>
           <div className='grid gap-10 py-4'>

@@ -63,7 +63,7 @@ const Navbar = () => {
   return (
     <>
       {showFirstNavbar && !isNavClicked && (
-        <div className={` absolute top-0 w-full z-10 ${isAboutUsPage ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+        <div className={` absolute top-0 w-full z-30 ${isAboutUsPage ? 'bg-white shadow-md' : 'bg-transparent'}`}>
           <div className={``}>
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
@@ -82,7 +82,7 @@ const Navbar = () => {
             </WrapperCard>
           </div>
           <hr className='hidden lg:block' />
-          <WrapperCard className={` z-50 flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
+          <WrapperCard className={`  flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
               <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className={` ${isAboutUsPage ? 'w-28' : 'w-32'}`} />
             </Link>
@@ -90,17 +90,17 @@ const Navbar = () => {
               <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
               <HashLink to='/#solutions' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</HashLink>
               <div
-                className="relative group z-50"
+                className="relative group "
                 onMouseEnter={handleSectorsDropdownEnter}
                 onMouseLeave={handleSectorsDropdownLeave}
               >
                 <HashLink to='/#sectors' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
                 {isSectorsDropdownOpen && (
                   <ul 
-                  className=" z-50 absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
+                  className="  absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
                     {services[2].sub.map((sector, i) => (
                       <li key={i}>
-                        <Link to={`/sectors/${sector.split(' & ').join('')}`} onClick={menuClicked} className=' text-sm w-auto block py-2 px-2 hover:bg-main hover:text-white'>
+                        <Link  to={`/sectors/${sector.split(' & ').join('')}`} onClick={() => {menuClicked()}} className=' text-sm w-auto block py-2 px-2 hover:bg-main hover:text-white'>
                           {sector}
                         </Link>
                       </li>
@@ -141,7 +141,7 @@ const Navbar = () => {
                   <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
                     {services[2].sub.map((sector, i) => (
                       <li key={i}>
-                        <Link to={`/sectors/${sector.split(' & ').join('')}`} onClick={menuClicked} className=' text-sm block py-2 px-4 hover:bg-main hover:text-white'>
+                        <Link  to={`/sectors/${sector.split(' & ').join('')}`} onClick={() => {menuClicked();handleSectorsDropdownLeave();}} className=' text-sm block py-2 px-4 hover:bg-main hover:text-white'>
                           {sector}
                         </Link>
                       </li>
