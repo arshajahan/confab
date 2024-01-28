@@ -1,7 +1,7 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
 import { AiFillInstagram, AiFillFacebook, AiFillLinkedin } from 'react-icons/ai';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/whitelogo.png';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
@@ -42,14 +42,14 @@ function Footer() {
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
           <span className='text-main text-sm font-semibold'>OTHER LINKS</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
-            <li>Media</li>
+            <HashLink to='/#blogs'>Media</HashLink>
             <Link onClick={() => menuClicked()} to='/diversity'>People</Link>
             <Link onClick={() => menuClicked()} to='/contact-us'>Contact us</Link>
           </ul>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
           <Link to='/careers' onClick={() => menuClicked()} className=' text-sm '>CAREERS</Link>
-          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+          <ul className='flex flex-col gap-5 mt-6 lg:mt-4'>
               <div className=' lg:hidden flex flex-col gap-7'>
               <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
               <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>
@@ -69,7 +69,7 @@ function Footer() {
         </div>
         <br/><hr/><br/>
         <div className=' flex flex-col gap-3 text-center'>
-          <p className=' text-main font-semibold text-base'>Confab International</p>
+          <p className=' text-white font-semibold text-base'>Confab International</p>
           <span className=''>Head Office: Block 7, Street 400, East Al-Ahmadi - 64018, Ahmadi, Kuwait.</span>
         </div>
       </WrapperCard>

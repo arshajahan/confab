@@ -43,9 +43,15 @@ const Navbar = () => {
   }, []);
 
   const menuClicked = () => {
+    isNavClicked 
+      ? window.scrollTo({ top: 0, behavior: 'smooth' })
+      : window.scrollTo({ top: 0, behavior: 'instant' });
     if (isNavClicked) navToggle();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
   };
+  
+
+
 
   return (
     <>
@@ -129,38 +135,26 @@ const Navbar = () => {
             {/* Mobile navigation as */}
             <div className="mt-10">
               {services.map((item, i) => (
-                <div className="mt-4 " key={item.id}>
-                  <button
-                    className={`relative w-full py-2 px-2 text-left text-lg hover:bg-main hover:text-white  ${collapsed === i ? 'bg-main text-white' : ''}`}
-                    onClick={() => toggle(i)}
-                  >
-                    <span className="absolute inset-y-0 right-2 flex items-center">{collapsed === i ? '^' : '>'}</span>
-                    {item.question}
-                  </button>
-
-
-                  <div
-                    className="overflow-hidden transition-all duration-700 ease-in-out"
-                    style={{ maxHeight: collapsed === i ? '100vh' : '0', opacity: collapsed === i ? 1 : 0 }}
-                  >
-                    {collapsed === i && (
-                      <div>
-                        {item.answer.map((answer, j) => (
-                          <a
-                            to={`/service/${item.path+':'+answer.split(" ")[0]}`}
-                            key={j}
-                            className="block py-2 px-6 text-main "
-                          
-                          >
-                            {answer}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
+                (item.type === 'page') ? (
+                  <Link to={item.path} onClick={() => menuClicked()} className="mt-4" key={item.id}>
+                    <button
+                      className={`relative w-full py-2 px-2 text-left text-lg hover:bg-main hover:text-white`}
+                    >
+                      {item.question}
+                    </button>
+                  </Link>
+                ) : (
+                  <HashLink to={item.path} onClick={() => menuClicked()} className="mt-4" key={item.id}>
+                    <button
+                      className={`relative w-full py-2 px-2 text-left text-lg hover:bg-main hover:text-white`}
+                    >
+                      {item.question}
+                    </button>
+                  </HashLink>
+                )
               ))}
             </div>
+
             <br/>
             <hr/>
 
@@ -168,7 +162,13 @@ const Navbar = () => {
             <div className="absolute left-0 w-full">
               <ul className=" px-2 mt-16 mb-8 text-main">
                 <li className="mb-4">
-                  <Link onClick={() => menuClicked()} to="/#contact-us">Media</Link>
+                  <HashLink 
+                        onClick={
+                          () => menuClicked()
+                        }
+                        to="/#blogs">
+                          Media
+                  </HashLink>
                 </li>
                 <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/diversity">People</Link>

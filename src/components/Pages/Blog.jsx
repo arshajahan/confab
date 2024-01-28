@@ -18,13 +18,16 @@ function Blog() {
                 src={selectedBlog.src}
                 alt={selectedBlog.path}
                 />
-                <WrapperCard className='z-10 text-white'>
-                <h2 className='text-4xl lg:text-5xl font-semibold lg:w-3/4 '>{selectedBlog.title}</h2>
-                </WrapperCard>
             </div>
 
+            
+
             <WrapperCard className='text-main'>
-                { selectedBlog.content}
+                <div className='py-12 lg:px-48'>
+                    <h1 className=' text-2xl lg:text-4xl'>{selectedBlog.title}</h1><br/>
+                    <p className=''>{selectedBlog.date}</p><br/>
+                    { selectedBlog.content}
+                </div>
             </WrapperCard>
         </div>
     )
