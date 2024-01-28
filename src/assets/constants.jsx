@@ -11,7 +11,7 @@ export const services = [
     {
       id: 0,
       question: "Who We Are",
-      answer: [],
+      sub: [],
       path:'/about-us',
       type: 'page'
       
@@ -21,24 +21,33 @@ export const services = [
       id: 1,
       question: "Solutions",
       path:'/#solutions',
-      answer: [],
+      sub: [],
       type: 'section'
       
     },
 
     {
-      id: 2,
-      question: "Sectors",
-      path:'/#sectors',
-      answer: [],
-      type: 'section'
+        id: 2,
+        question: "Sectors",
+        path: '/#sectors',
+        sub: [
+            'Infrastructure',
+            'Oil & Gas',
+            'Technology',
+            'Engineering',
+            'Logistics & Transportation',
+            'Banking & Finance',
+            'Healthcare',
+            'Utilities'
+        ],
+        type: 'section'
     },
 
     {
       id: 4,
       question: "Blogs",
       path:'/#blogs',
-      answer: [],
+      sub: [],
       type: 'section'
     },
     
@@ -46,7 +55,7 @@ export const services = [
       id: 3,
       question: 'Careers',
       path:'/careers',
-      answer: [],
+      sub: [],
       type: 'page'
     },
   ]
@@ -462,6 +471,17 @@ export const Blogs = [
   },
 ];
 
+
+export const sectorsData = [
+    { id: 'Infrastructure', title: 'Infrastructure', content: 'Content specific to the Infrastructure sector.' },
+    { id: 'OilGas', title: 'Oil & Gas', content: 'Content specific to the Oil & Gas sector.' },
+    { id: 'Technology', title: 'Technology', content: 'Content specific to the Technology sector.' },
+    { id: 'Engineering', title: 'Engineering', content: 'Content specific to the Engineering sector.' },
+    { id: 'LogisticsTransportation', title: 'Logistics & Transportation', content: 'Content specific to the Logistics & Transportation sector.' },
+    { id: 'BankingFinance', title: 'Banking & Finance', content: 'Content specific to the Banking & Finance sector.' },
+    { id: 'Healthcare', title: 'Healthcare', content: 'Content specific to the Healthcare sector.' },
+    { id: 'Utilities', title: 'Utilities', content: 'Content specific to the Utilities sector.' },
+  ];
 
 export const staticCountries = [
   'Afghanistan',

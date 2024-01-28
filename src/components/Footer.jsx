@@ -18,7 +18,7 @@ function Footer() {
           <Link to='/confab' onClick={() => menuClicked()}>
             <img src={logo} className='w-32' alt='confab'/>
           </Link>
-          <div className='flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
+          <div className='ml-1 flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
             <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
               <AiFillLinkedin />
             </a>

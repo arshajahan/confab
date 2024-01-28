@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillInstagram, AiFillLinkedin, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
-import { services } from '../assets/constants';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import whitelogo from '../assets/images/whitelogo.png';
 import WrapperCard from './UI/WrapperCard';
 import { HashLink } from 'react-router-hash-link';
+import { services } from '../assets/constants'
 
 const Navbar = () => {
   const location = useLocation();
@@ -14,14 +14,14 @@ const Navbar = () => {
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
-  const [collapsed, setCollapsed] = useState(null);
+  const [isSectorsDropdownOpen, setSectorsDropdownOpen] = useState(false);
 
   const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
   const navToggle = () => {
     setNavClicked((prev) => !prev);
     document.body.style.overflow = isNavClicked ? 'auto' : 'hidden';
-    if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0 }), 0);
+    if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
   };
 
   const navRef = useRef(null);
@@ -43,14 +43,21 @@ const Navbar = () => {
   }, []);
 
   const menuClicked = () => {
-    isNavClicked 
-      ? window.scrollTo({ top: 0, behavior: 'smooth' })
-      : window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!isNavClicked) window.scrollTo({ top: 0, behavior: 'instant' });
     if (isNavClicked) navToggle();
-    
   };
-  
 
+  const smoothScroll = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSectorsDropdownEnter = () => {
+    setSectorsDropdownOpen(true);
+  };
+
+  const handleSectorsDropdownLeave = () => {
+    setSectorsDropdownOpen(false);
+  };
 
 
   return (
@@ -66,23 +73,41 @@ const Navbar = () => {
               </div>
               <div className='flex gap-3'>
                 <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
-                  <AiFillLinkedin size={25}/>
+                  <AiFillLinkedin size={25} />
                 </a>
                 <a href='https://www.instagram.com/confabint/' target="_blank" rel="noopener noreferrer" >
-                  <AiFillInstagram size={25}/>  
+                  <AiFillInstagram size={25} />
                 </a>
               </div>
             </WrapperCard>
           </div>
           <hr className='hidden lg:block' />
-          <WrapperCard className={`flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
+          <WrapperCard className={` z-50 flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
               <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className={` ${isAboutUsPage ? 'w-28' : 'w-32'}`} />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
               <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
               <HashLink to='/#solutions' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</HashLink>
-              <HashLink to='/#sectors' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
+              <div
+                className="relative group z-50"
+                onMouseEnter={handleSectorsDropdownEnter}
+                onMouseLeave={handleSectorsDropdownLeave}
+              >
+                <HashLink to='/#sectors' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
+                {isSectorsDropdownOpen && (
+                  <ul 
+                  className=" z-50 absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
+                    {services[2].sub.map((sector, i) => (
+                      <li key={i}>
+                        <Link to={`/sectors/${sector.split(' & ').join('')}`} onClick={menuClicked} className=' text-sm w-auto block py-2 px-2 hover:bg-main hover:text-white'>
+                          {sector}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
               <Link onClick={() => menuClicked()} to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
               <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
@@ -106,8 +131,25 @@ const Navbar = () => {
               <Link onClick={() => menuClicked()} to='/contact-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Contact us</Link>
               <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
               <HashLink to='/#solutions' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</HashLink>
-              <HashLink to='/#sectors' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
-              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <div
+                className="relative group"
+                onMouseEnter={handleSectorsDropdownEnter}
+                onMouseLeave={handleSectorsDropdownLeave}
+              >
+                <HashLink to='/#sectors' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
+                {isSectorsDropdownOpen && (
+                  <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
+                    {services[2].sub.map((sector, i) => (
+                      <li key={i}>
+                        <Link to={`/sectors/${sector.split(' & ').join('')}`} onClick={menuClicked} className=' text-sm block py-2 px-4 hover:bg-main hover:text-white'>
+                          {sector}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <HashLink to='/#footer' className='mx-4 cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
               <span className=' text-2xl'><AiOutlineSearch /></span>
@@ -153,21 +195,20 @@ const Navbar = () => {
                   </HashLink>
                 )
               ))}
+           
             </div>
 
-            <br/>
-            <hr/>
+            <br />
+            <hr />
 
             {/* Additional mobile as */}
             <div className="absolute left-0 w-full">
               <ul className=" px-2 mt-16 mb-8 text-main">
                 <li className="mb-4">
-                  <HashLink 
-                        onClick={
-                          () => menuClicked()
-                        }
-                        to="/#blogs">
-                          Media
+                  <HashLink
+                    onClick={() => menuClicked()}
+                    to="/#blogs">
+                    Media
                   </HashLink>
                 </li>
                 <li className="mb-4">

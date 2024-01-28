@@ -14,7 +14,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import LatestBlogs from './components/LatestBlogs'
 import {
-  BrowserRouter as Router, Routes, Route
+  BrowserRouter as Router, Routes, Route, Navigate
 } from "react-router-dom";
 import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
@@ -24,6 +24,7 @@ import Blog from './components/Pages/Blog'
 import Careers from './components/Pages/Careers'
 import PrivacyPolicy from './components/Pages/PrivacyPolicy'
 import Terms from './components/Pages/Terms'
+import SectorsPage from './components/Pages/SectorsPage'
 
 
 function App() {
@@ -68,6 +69,8 @@ function App() {
           <Route exact path='/careers' element={<Careers/>} />
           <Route exact path='/privacy' element={<PrivacyPolicy/>} />
           <Route exact path='/terms' element={<Terms/>} />
+          <Route exact path='/sectors/:id' element={<SectorsPage />} />
+          <Route path='*' element={<Navigate to="/about-us" />} />
           
 
         </Routes>

@@ -97,7 +97,7 @@ function Banner() {
             alt={`Slide ${currentPage}`}
           />
         )}
-        <WrapperCard className='banner flex items-center z-20 '>
+        <WrapperCard className='banner flex items-center z-auto '>
           <div className='grid gap-10 py-4'>
             <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
             <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
