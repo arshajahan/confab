@@ -37,13 +37,13 @@ function VM() {
 
     return (
         <div className='relative'>
-            <WrapperCard className='  py-14 grid gap-12 '
+            <WrapperCard className='text-main  py-14 grid gap-12 '
             >
                 <img
                     className=' opacity-10 absolute top-0 left-0 w-full h-full object-cover z-0'
                     src={dots}
                 />
-                <h2 className='text-main font-bold text-xl lg:text-4xl text-center'>
+                <h2 className=' font-bold text-xl lg:text-4xl text-center'>
                     Engineering Driven staffing for a sustainable future
                 </h2>
                 <div className='flex flex-wrap gap-4 justify-center w-full'>
@@ -60,7 +60,7 @@ function VM() {
                 </div>
 
                 <div className='flex justify-center '>
-                    <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/about-us' id='solutions' className='bg-blue-950 text-white z-10 px-6 py-4 '>
+                    <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/about-us' id='solutions' className='bg-main text-white z-10 px-4 py-2 '>
                     DISCOVER CONFAB
                     </Link>
                 </div>

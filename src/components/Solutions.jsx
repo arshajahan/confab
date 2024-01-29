@@ -8,8 +8,8 @@ function Solutions() {
 
     return (
         <div className='bg-gray-100'>
-            <WrapperCard className='py-14'>
-                <h2 className='text-main font-bold text-4xl text-center'>
+            <WrapperCard className='py-14 text-main'>
+                <h2 className=' font-bold text-4xl text-center'>
                     Our Solutions
                 </h2>
                 <div className='flex justify-between mt-12 gap-6 lg:flex-nowrap flex-wrap'>
@@ -30,7 +30,7 @@ function Solutions() {
                                     });
                                     }} 
                                     
-                                    to={`/${solution.path}`} className='text-main font-semibold flex items-center mt-auto'>
+                                    to={`/${solution.path}`} className=' font-semibold flex items-center mt-auto'>
                                     <FaChevronCircleRight className='mr-2 text-xl' />
                                     DISCOVER MORE
                                 </Link>

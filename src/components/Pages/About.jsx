@@ -47,48 +47,48 @@ function About() {
         </div>
 
         <WrapperCard className=' '>
-           <div className=' py-12 lg:px-48'>
-                <p className=' font-semibold '>
+           <div className=' py-12 lg:px-48 text-main'>
+                <p className=' '>
                 As a distinguished staffing and recruitment firm specializing in STEM-driven solutions, including integrated facility management, we take pride in offering comprehensive services that cover both the sourcing and outsourcing of manpower within the Science, Technology, Engineering, and Mathematics (STEM) sectors. Our dedication to excellence is guided by the vision of "Engineering Excellence, Empowering Futures," ensuring that clients in the Oil and Gas, Power, and broader Energy industries receive tailored and adaptable staffing solutions.                
                 <br/><br/>Our core services encompass:</p><br/>
                 <ul className=' custom-list'>
                     <li>
-                    <span className=' font-semibold text-black text-lg'>STEM Manpower Sourcing Solutions: </span>
+                    <span className=' font-semibold text-lg'>STEM Manpower Sourcing Solutions: </span>
                     We excel in identifying, attracting, and securing top-tier STEM talent for clients in the Oil and Gas, Power, and Energy sectors. Our stringent sourcing process guarantees the provision of professionals with the specific skills and expertise required for diverse projects.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>STEM Manpower Outsourcing Solutions: </span>
+                    <span className=' font-semibold text-lg'>STEM Manpower Outsourcing Solutions: </span>
                     Acknowledging the dynamic nature of the industry, we provide flexible and efficient outsourcing solutions for STEM professionals. Whether clients need short-term project support or long-term staffing solutions, we offer a seamless outsourcing experience aligned with their unique requirements.
                     </li>
             
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Power Generation Manpower Solutions: </span>
+                    <span className=' font-semibold text-lg'>Power Generation Manpower Solutions: </span>
                     Tailored to the Power sector, our sourcing and outsourcing solutions cater to the needs of power generation projects, covering both conventional and renewable energy sources. Our services contribute to the efficiency and success of power-related initiatives.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Oil and Gas Manpower Services: </span>
+                    <span className=' font-semibold text-lg'>Oil and Gas Manpower Services: </span>
                     In the Oil and Gas sector, our sourcing and outsourcing services span a wide range of roles, from exploration and production to refining and distribution. We deliver skilled professionals who significantly contribute to the success of projects within this complex industry.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Renewable Energy Manpower Services: </span>
+                    <span className=' font-semibold text-lg'>Renewable Energy Manpower Services: </span>
                     In the ever-expanding field of renewable energy, our STEM-driven solutions include both sourcing and outsourcing services to support the development and execution of wind, solar, hydropower, and other sustainable energy projects.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Offshore Wind Manpower Solutions: </span>
+                    <span className=' font-semibold text-lg'>Offshore Wind Manpower Solutions: </span>
                     Our specialized services extend to the offshore wind sector, providing sourcing and outsourcing solutions for STEM professionals engaged in offshore wind projects.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Sustainable Infrastructures Staffing for Energy: </span>
+                    <span className=' font-semibold text-lg'>Sustainable Infrastructures Staffing for Energy: </span>
                     With a focus on sustainable practices, our manpower solutions for sustainable infrastructures in the energy sector include both sourcing and outsourcing services, promoting diversity and inclusivity.
                     </li>
 
                     <li>
-                    <span className=' font-semibold text-black text-lg'>Robotics & Industrialized Solutions Manpower Services for Energy: </span>
+                    <span className=' font-semibold text-lg'>Robotics & Industrialized Solutions Manpower Services for Energy: </span>
                     Collaborating with robotics and industrialized solutions, we provide both sourcing and outsourcing solutions for STEM experts, contributing to the development of cutting-edge technologies across the energy sector.
                     </li>
 

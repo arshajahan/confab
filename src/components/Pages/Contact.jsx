@@ -64,7 +64,7 @@ function Contact() {
               Are you interested in one of our services or solutions? Or do you have a general inquiry that we can assist you with? Please use this contact form, and we will promptly route your request to our team of experts.
             </p>
             <p>
-              For job applications or job searches, kindly send your resume to <a href="mailto:jobs@confabint.com" className='text-red-400'>jobs@confabint.com</a> for potential opportunities.
+              For job applications or job searches, kindly send your resume to <a href="mailto:jobs@confabint.com" className='text-red-400'>careers@confabint.com</a> for potential opportunities.
             </p>
           </div>
 

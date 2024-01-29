@@ -54,7 +54,7 @@ function LatestBlogs() {
 
   return (
     <div className='bg-gray-100'>
-      <WrapperCard className='py-14'>
+      <WrapperCard className='py-10'>
         <h2 className='text-main font-bold text-4xl text-center'>Our Latest Blogs</h2>
         <div className="slider-content mt-12">
             <div className="slider-container">
@@ -76,7 +76,7 @@ function LatestBlogs() {
 
                                 to={`/blog/${item.path}`}
 
-                                className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] font-semibold bg-main '
+                                className=' absolute bottom-5 text-white py-1 px-2 ml-[10px] text-sm bg-main '
                             >
                                 Read more
                             </Link>
@@ -86,6 +86,11 @@ function LatestBlogs() {
                 ))}
                 </Slider>
             </div>
+        </div>
+        <div className='flex justify-center mt-8'>
+          <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/blogs' id='solutions' className='bg-main text-white z-10 px-4 py-2 '>
+            View All
+          </Link>
         </div>
       </WrapperCard>
     </div>

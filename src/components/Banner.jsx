@@ -97,7 +97,7 @@ function Banner() {
             src={images[currentPage]}
             alt={`Slide ${currentPage}`}
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div></>
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-15 z-0"></div></>
         )}
         <WrapperCard className='banner flex items-center z-auto '>
           <div className='grid gap-10 py-4'>

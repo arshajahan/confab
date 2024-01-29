@@ -25,6 +25,7 @@ import Careers from './components/Pages/Careers'
 import PrivacyPolicy from './components/Pages/PrivacyPolicy'
 import Terms from './components/Pages/Terms'
 import SectorsPage from './components/Pages/SectorsPage'
+import AllBlogs from './components/Pages/AllBlogs'
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           <Route exact path='/privacy' element={<PrivacyPolicy/>} />
           <Route exact path='/terms' element={<Terms/>} />
           <Route exact path='/sectors/:id' element={<SectorsPage />} />
+          <Route exact path='/blogs' element={<AllBlogs />} />
           <Route path='*' element={<Navigate to="/about-us" />} />
           
 

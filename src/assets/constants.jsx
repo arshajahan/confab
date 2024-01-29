@@ -6,6 +6,14 @@ import kipic from '../assets/images/kipic.png';
 import knpc from '../assets/images/knpc.png';
 import sundrill from '../assets/images/sundrill.png';
 import pravasiwelfare from '../assets/images/pravasiwelfare.png';
+import architect from '../assets/images/architect.png';
+import engineering from '../assets/images/engineering.png';
+import healthcare from '../assets/images/healthcare.png';
+import logistics from '../assets/images/logistics.png';
+import oilpump from '../assets/images/oil-pump.png';
+import touch from '../assets/images/touch.png';
+import utilities from '../assets/images/utilities.png';
+import bank from '../assets/images/bank.png';
 
 export const services = [
     {
@@ -473,15 +481,72 @@ export const Blogs = [
 
 
 export const sectorsData = [
-    { id: 'Infrastructure', title: 'Infrastructure', content: 'Content specific to the Infrastructure sector.' },
-    { id: 'OilGas', title: 'Oil & Gas', content: 'Content specific to the Oil & Gas sector.' },
-    { id: 'Technology', title: 'Technology', content: 'Content specific to the Technology sector.' },
-    { id: 'Engineering', title: 'Engineering', content: 'Content specific to the Engineering sector.' },
-    { id: 'LogisticsTransportation', title: 'Logistics & Transportation', content: 'Content specific to the Logistics & Transportation sector.' },
-    { id: 'BankingFinance', title: 'Banking & Finance', content: 'Content specific to the Banking & Finance sector.' },
-    { id: 'Healthcare', title: 'Healthcare', content: 'Content specific to the Healthcare sector.' },
-    { id: 'Utilities', title: 'Utilities', content: 'Content specific to the Utilities sector.' },
-  ];
+{ 
+    id: 'Infrastructure', 
+    title: 'Infrastructure', 
+    content: 'Content specific to the Infrastructure sector.', 
+    icon: architect, 
+    alt: 'Infrastructure Icon', 
+},
+{ 
+    id: 'OilGas', 
+    title: 'Oil & Gas', 
+    content: 'Content specific to the Oil & Gas sector.', 
+    icon: oilpump, 
+    alt: 'Oil & Gas Icon', 
+  
+},
+{ 
+    id: 'Technology', 
+    title: 'Technology', 
+    content: 'Content specific to the Technology sector.', 
+    icon: touch, 
+    alt: 'Technology Icon', 
+  
+},
+{ 
+    id: 'Engineering', 
+    title: 'Engineering', 
+    content: 'Content specific to the Engineering sector.', 
+    icon: engineering, 
+    alt: 'Engineering Icon', 
+ 
+},
+{ 
+    id: 'LogisticsTransportation', 
+    title: 'Logistics & Transportation', 
+    content: 'Content specific to the Logistics & Transportation sector.', 
+    icon: logistics, 
+    alt: 'Logistics & Transportation Icon', 
+
+},
+{ 
+    id: 'BankingFinance', 
+    title: 'Banking & Finance', 
+    content: 'Content specific to the Banking & Finance sector.', 
+    icon: bank, 
+    alt: 'Banking & Finance Icon', 
+    
+},
+{ 
+    id: 'Healthcare', 
+    title: 'Healthcare', 
+    content: 'Content specific to the Healthcare sector.', 
+    icon: healthcare, 
+    alt: 'Healthcare Icon', 
+ 
+},
+{ 
+    id: 'Utilities', 
+    title: 'Utilities', 
+    content: 'Content specific to the Utilities sector.', 
+    icon: utilities, 
+    alt: 'Utilities Icon', 
+   
+},
+];
+  
+    
 
 export const staticCountries = [
   'Afghanistan',
