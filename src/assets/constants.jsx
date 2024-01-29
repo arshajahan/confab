@@ -1,10 +1,9 @@
 
-import sol1 from '../assets/images/sol1.jpg';
+import sol1 from '../assets/images/sol1.webp';
 import sol2 from '../assets/images/sol2.jpg';
 import sol3 from '../assets/images/sol3.jpg';
 import kipic from '../assets/images/kipic.png';
 import knpc from '../assets/images/knpc.png';
-import sundrill from '../assets/images/sundrill.png';
 import pravasiwelfare from '../assets/images/pravasiwelfare.png';
 import architect from '../assets/images/architect.png';
 import engineering from '../assets/images/engineering.png';
@@ -360,7 +359,7 @@ export const Blogs = [
   },
   {
     id: 1,
-    src: sundrill,
+    src: sol2,
     alt: "sundrill",
     title: "Confab's Rigorous Staffing Triumph: Sun Drilling's KOC Project",
     description:"",

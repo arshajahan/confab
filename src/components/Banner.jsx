@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
 import subImg from '../assets/images/image1.webp';
-import image2 from '../assets/images/image5.webp';
 import image1 from '../assets/images/image2.webp';
 import image3 from '../assets/images/image4.webp';
 import diversity from '../assets/images/diversity.jpg';
