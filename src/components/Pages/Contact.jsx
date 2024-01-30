@@ -7,7 +7,7 @@ import { staticCountries as countries } from '../../assets/constants';
 function Contact() {
   const [isSubmitted, setSubmitted] = useState(false);
   const [showCountryError, setCountryError] = useState(false);
-  const [ firstName, setFirstName ] = useState("");
+  const [firstName, setFirstName ] = useState("");
 
 
   const handleCountryChange = () => {
@@ -38,7 +38,7 @@ function Contact() {
       country: selectedCountry,
       message: e.target['message'].value,
     };
-    setFirstName(firstName);
+    setFirstName(formData.firstName);
     console.log('Form Data:', formData);
 
     // Perform any additional actions (e.g., submit to a backend, show thank-you message)
@@ -74,7 +74,7 @@ function Contact() {
            
             {isSubmitted ? (
               <div className='text-main text-lg my-auto text-center'>
-                😊 Thank you {} for submitting your request. <br/>We will get in touch with you as soon as possible.
+                😊 Thank you {firstName} for submitting your request. <br/>We will get in touch with you as soon as possible.
               </div>
             ) : (
               <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
