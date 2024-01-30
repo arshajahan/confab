@@ -269,12 +269,13 @@ export const solutions = [
 
 export const Blogs = [
   {
-    id: 0,
+    id: 3,
     src: pravasiwelfare,    
     alt: "Pravasi welfare confab",
     title: "Pravasi Welfare Kuwait and Confab International Join Forces for a Successful Medical Campaign in Abu Halifa, Kuwait",
     description: "",
-    date: 'Abu Halifa, Kuwait - January 26, 2024',
+    place: 'Abu Halifa, Kuwait',
+    date: 'November 1, 2023',
     path: 'confab-pravasi-welfare',
     content: (
       <div className='flex flex-col gap-6 '>
@@ -303,12 +304,13 @@ export const Blogs = [
     ),
   },
   {
-    id: 3,
+    id: 0,
     src: kipic,    
     alt: "kipic",
     title: "Navigating Success: A Comprehensive Overview of Our Crew Management Project for KIPIC's Jetting and Mooring Contracts with ENASCO",
     description: "",
-    date: "Kuwait - January 1, 2024",
+    place: 'Kuwait',
+    date: 'January 1, 2024',
     path: 'kipic',
     content: (
       <div className='flex flex-col gap-6 '>
@@ -363,7 +365,8 @@ export const Blogs = [
     alt: "sundrill",
     title: "Confab's Rigorous Staffing Triumph: Sun Drilling's KOC Project",
     description:"",
-    date: "Kuwait - December 2, 2023",
+    place: 'Kuwait',
+    date: 'December 2, 2023',
     path: 'sundrill',
     content: (
       <div className=' flex flex-col gap-6 '>
@@ -433,7 +436,8 @@ export const Blogs = [
     alt: "knpc",
     title: "Confab Celebrates Remarkable Success in Outsourcing Manpower for KNPC Mina Al-Ahmadi Shutdown",
     description: "",
-    date: "Kuwait - November 15, 2023",
+    place: 'Kuwait',
+    date: 'November 15, 2023',
     path: 'knpc',
     content: (
       <div className='flex flex-col gap-6 '>
