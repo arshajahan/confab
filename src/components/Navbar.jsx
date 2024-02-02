@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className={``}>
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
-                <HashLink to='/#blogs' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</HashLink>
+                <HashLink to='/blogs' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</HashLink>
                 <Link onClick={() => menuClicked()} to='/diversity' className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</Link>
                 <Link onClick={() => menuClicked()} to='/contact-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Contact us</Link>
               </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 onMouseEnter={handleSectorsDropdownEnter}
                 onMouseLeave={handleSectorsDropdownLeave}
               >
-                <HashLink to='/#sectors' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
+                <HashLink to='/sectors/Infrastructure' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
                 {isSectorsDropdownOpen && (
                   <ul 
                   className="  absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
@@ -136,7 +136,7 @@ const Navbar = () => {
                 onMouseEnter={handleSectorsDropdownEnter}
                 onMouseLeave={handleSectorsDropdownLeave}
               >
-                <HashLink to='/#sectors' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
+                <HashLink to='/sectors/Infrastructure' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
                 {isSectorsDropdownOpen && (
                   <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
                     {services[2].sub.map((sector, i) => (
@@ -207,7 +207,7 @@ const Navbar = () => {
                 <li className="mb-4">
                   <HashLink
                     onClick={() => menuClicked()}
-                    to="/#blogs">
+                    to="/blogs">
                     Media
                   </HashLink>
                 </li>

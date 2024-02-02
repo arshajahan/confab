@@ -60,28 +60,29 @@ function LatestBlogs() {
             <div className="slider-container">
                 <Slider {...settings} >
                 {Blogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0,4).map((item) => (
-                    <div key={item.id} className='relative h-[540px]'>
+                    <Link 
+                        onClick={() => {
+                          window.scrollTo({
+                              top: 0,
+                              behavior: 'smooth',
+                          });
+                        }} 
+
+                        to={`/blog/${item.path}`} 
+                        key={item.id} className='relative h-[540px]'>
                         <img src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
                         <div className='  shadow-md mx-2 h-[250px]'>
                             {/* <span className=' absolute left-3 text-xs'>{item.date}</span> */}
                             <h2 className=" text-xs pt-4 pl-3">{item.place} - {item.date}</h2>
                             <p className="slider-description">{item.title}</p>
-                            <Link 
-                                onClick={() => {
-                                  window.scrollTo({
-                                      top: 0,
-                                      behavior: 'smooth',
-                                  });
-                                }} 
-
-                                to={`/blog/${item.path}`}
+                            <p
 
                                 className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] text-sm bg-main '
                             >
                                 Read more
-                            </Link>
+                            </p>
                         </div>
-                    </div>
+                    </Link>
                     
                 ))}
                 </Slider>

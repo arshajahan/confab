@@ -18,7 +18,7 @@ function Solution() {
                 src={selectedSolution.image}
                 alt="About confab"
             />
-            <WrapperCard className='z-10 text-white'>
+            <WrapperCard className='z-10 text-white mt-48'>
                 <h2 className='text-5xl w-2/4 font-semibold'>{selectedSolution.title}</h2>
             </WrapperCard>
         </div>

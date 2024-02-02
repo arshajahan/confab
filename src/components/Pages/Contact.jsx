@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import WrapperCard from '../UI/WrapperCard';
-import contactus from '../../assets/images/contactus.png';
+import contactus from '../../assets/images/contactus.jpg';
 import { staticCountries as countries } from '../../assets/constants';
 
 function Contact() {

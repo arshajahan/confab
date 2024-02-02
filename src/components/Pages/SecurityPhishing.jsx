@@ -51,7 +51,7 @@ function SecurityPhishing() {
 
                 <strong>Contact Us</strong>
                 <p>
-                If you would like to report an abuse of the CONFAB name and trademark, please contact the CONFAB office in the country where the incident occurred. If CONFAB does not operate in that country, please send an email to: <a href="mailto:compliance@confabint.com"><span className=' text-blue-700'>compliance@CONFAB.com</span></a> or visit <a href="http://www.confabint.com" target="_blank" rel="noopener noreferrer" className=' text-blue-700'>www.confabint.com</a>.
+                If you would like to report an abuse of the CONFAB name and trademark, please contact the CONFAB office in the country where the incident occurred. If CONFAB does not operate in that country, please send an email to: <a href="mailto:compliance@confabint.com"><span className=' text-blue-700'>compliance@confabint.com</span></a> or visit <a href="http://www.confabint.com" target="_blank" rel="noopener noreferrer" className=' text-blue-700'>www.confabint.com</a>.
                 </p>
 
                 <p>
