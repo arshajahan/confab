@@ -44,7 +44,7 @@ export const services = [
     {
         id: 2,
         question: "Sectors",
-        path: '/#sectors',
+        path: '/sectors/Infrastructure',
         sub: [
             'Infrastructure',
             'Oil & Gas',
@@ -55,7 +55,7 @@ export const services = [
             'Healthcare',
             'Utilities'
         ],
-        type: 'section'
+        type: 'page'
     },
 
     {

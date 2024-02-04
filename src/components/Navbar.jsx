@@ -43,12 +43,13 @@ const Navbar = () => {
   }, []);
 
   const menuClicked = () => {
-    if (!isNavClicked) window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' })); 
     if (isNavClicked) navToggle();
   };
 
-  const smoothScroll = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const hamburgerClicked = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' }); 
+    navToggle();
   };
 
   const handleSectorsDropdownEnter = () => {
@@ -113,7 +114,7 @@ const Navbar = () => {
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
               <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
-              <GiHamburgerMenu className='cursor-pointer' onClick={() => navToggle()} />
+              <GiHamburgerMenu className='cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>
         </div>
@@ -153,7 +154,7 @@ const Navbar = () => {
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
               <span className=' text-2xl'><AiOutlineSearch /></span>
-              <GiHamburgerMenu className=' cursor-pointer' onClick={() => navToggle()} />
+              <GiHamburgerMenu className=' cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>
         </div>
@@ -169,7 +170,7 @@ const Navbar = () => {
             {/* Mobile close button */}
             <div className=" flex justify-between items-center cursor-pointer pt-4">
               <div>
-                <img src={logo} alt='Logo' className='h-10 md:h-14' />
+                <img src={logo} alt='Logo' className='h-10 md:h-14 z-20' />
               </div>
               <AiOutlineClose onClick={navToggle} className='cursor-pointer text-main' size={20} />
             </div>

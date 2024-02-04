@@ -20,9 +20,15 @@ function SectorsPage() {
       navigate(`/sectors/${initialSelectedSector}`);
     }
   }, [id, initialSelectedSector, navigate]);
-  
 
   const currentSectorData = sectorsData.find((sector) => sector.id === selectedSector);
+
+  const handleSectorClick = () => {
+    // Scroll down by 400px if screen size is less than lg
+    if (window.innerWidth < 1024) {
+      window.scrollTo(0, 400);
+    }
+  };
 
   return (
     <div className='pt-32 lg:pt-48 pb-6 text-main'>
@@ -32,7 +38,11 @@ function SectorsPage() {
           <ul className='custom-list '>
             {sectorsData.map((sector) => (
               <li key={sector.id}>
-                <Link to={`/sectors/${sector.id}`} className='font-semibold '>
+                <Link
+                  to={`/sectors/${sector.id}`}
+                  className='font-semibold'
+                  onClick={handleSectorClick}
+                >
                   {sector.title}
                 </Link>
               </li>
