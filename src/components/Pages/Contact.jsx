@@ -1,14 +1,17 @@
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import WrapperCard from '../UI/WrapperCard';
-import contactus from '../../assets/images/contactus.jpg';
+import contactus from '../../assets/images/contactus.webp';
 import { staticCountries as countries } from '../../assets/constants';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [isSubmitted, setSubmitted] = useState(false);
   const [showCountryError, setCountryError] = useState(false);
   const [firstName, setFirstName ] = useState("");
-
+  const form = useRef();
 
   const handleCountryChange = () => {
     // Hide the country error message when a country is selected
@@ -29,20 +32,31 @@ function Contact() {
 
     // If the country is selected, proceed with form submission
     const formData = {
-      firstName: e.target['first-name'].value,
+      firstName: e.target['first_name'].value,
       lastName: e.target['last-name'].value,
-      email: e.target['company-email'].value,
-      companyName: e.target['company-name'].value,
-      jobTitle: e.target['job-title'].value,
-      phoneNumber: e.target['phone-number'].value,
+      email: e.target['company_email'].value,
+      companyName: e.target['company_name'].value,
+      jobTitle: e.target['job_title'].value,
+      phoneNumber: e.target['phone_number'].value,
       country: selectedCountry,
       message: e.target['message'].value,
     };
     setFirstName(formData.firstName);
     console.log('Form Data:', formData);
 
-    // Perform any additional actions (e.g., submit to a backend, show thank-you message)
-    setSubmitted(true);
+  emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_ID)
+    .then((result) => {
+
+        console.log(result.text);
+        toast.success('Email sent successfully!');
+        setSubmitted(true);
+        e.target.reset();
+
+    }, (error) => {
+        console.log(error.text);
+        toast.error('Failed to send email. Please try again.');
+    });
+    
   };
 
   return (
@@ -53,6 +67,7 @@ function Contact() {
           src={contactus}
           alt="About confab"
         />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 z-0"></div>
         <WrapperCard className='z-10 text-white'>
           <h2 className='text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Get in Touch with Us</h2>
         </WrapperCard>
@@ -77,15 +92,15 @@ function Contact() {
                 😊 Thank you {firstName} for submitting your request. <br/>We will get in touch with you as soon as possible.
               </div>
             ) : (
-              <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
+              <form ref={form} className='flex flex-col gap-3' onSubmit={handleSubmit}>
                 <p><span className='text-red-700'>*</span> indicates a required field</p>
 
              
 
                     <div className='flex flex-wrap'>
                     <div className='w-full lg:w-1/2 lg:pr-2'>
-                        <label htmlFor='first-name'>FIRST NAME *</label>
-                        <input type='text' id='first-name' name='first-name' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
+                        <label htmlFor='first_name'>FIRST NAME *</label>
+                        <input type='text' id='first_name' name='first_name' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
                     </div>
                     <div className='w-full lg:w-1/2 lg:pl-2'>
                         <label htmlFor='last-name'>LAST NAME *</label>
@@ -95,26 +110,26 @@ function Contact() {
 
                     <div className='flex flex-wrap'>
                     <div className='w-full'>
-                        <label htmlFor='email'>EMAIL *</label>
-                        <input type='email' id='company-email' name='company-email' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
+                        <label htmlFor='company_email'>EMAIL *</label>
+                        <input type='email' id='company_email' name='company_email' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
                     </div>
                     </div>
 
                     <div className='flex flex-wrap'>
                     <div className='w-full lg:w-1/2 lg:pr-2'>
-                        <label htmlFor='company-name'>COMPANY NAME</label>
-                        <input type='text' id='company-name' name='company-name' className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
+                        <label htmlFor='company_name'>COMPANY NAME</label>
+                        <input type='text' id='company_name' name='company_name' className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
                     </div>
                     <div className='w-full lg:w-1/2 lg:pl-2'>
-                        <label htmlFor='job-title'>JOB TITLE</label>
-                        <input type='text' id='job-title' name='job-title' className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
+                        <label htmlFor='job_title'>JOB TITLE</label>
+                        <input type='text' id='job_title' name='job_title' className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
                     </div>
                     </div>
 
                     <div className='flex flex-wrap'>
                     <div className='w-full'>
-                        <label htmlFor='phone-number'>PHONE NUMBER *</label>
-                        <input type='number' id='phone-number' name='phone-number' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
+                        <label htmlFor='phone_number'>PHONE NUMBER *</label>
+                        <input type='number' id='phone_number' name='phone_number' required className='px-2 w-full h-[35px] border-[1px] border-main focus:border-red-400 focus:outline-none rounded-md' />
                     </div>
                     </div>
 
@@ -144,7 +159,7 @@ function Contact() {
 
                     <div className='form-group '>
                     <label className='flex gap-2 '>
-                        <input className='w-[17px] h-[17px] mt-1' type='checkbox' required />
+                        <input id='checkbox' className='w-[17px] h-[17px] mt-1' type='checkbox' required />
                         <span className=''>I acknowledge that I read and accepted the <a className='text-main underline' href=''>Terms & condition</a> and <a className='text-main underline' href=''>privacy policy</a>.</span>
                     </label>
                     </div>

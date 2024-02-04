@@ -15,7 +15,7 @@ function Sectors() {
             Sectors
           </h2>
           <div className="flex flex-wrap mt-8">
-            {sectorsData.slice(0, 4).map((sector, index) => (
+            {sectorsData.slice(0, 8).map((sector, index) => (
               <div key={index} className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
                 <Link to={`/sectors/${sector.id}`} onClick={ () => smoothScroll()} className="bg-gray-200 py-10 px-4 rounded-lg text-center h-full flex flex-col justify-center">
                   <img src={sector.icon} className='w-24 h-24 mx-auto' alt={sector.alt} />

@@ -37,7 +37,7 @@ const content = [
     title: 'Media',
     description: 'Read our blogs and press releases',
     buttonText: 'Explore',
-    to: '/contact-us',
+    to: '/blogs',
     type: 'page'
   },
 ];
