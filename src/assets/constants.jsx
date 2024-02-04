@@ -13,6 +13,14 @@ import oilpump from '../assets/images/oil-pump.png';
 import touch from '../assets/images/touch.png';
 import utilities from '../assets/images/utilities.png';
 import bank from '../assets/images/bank.png';
+import infrastructure from '../assets/images/infrastructure.webp';
+import oilgas from '../assets/images/oilgas.webp';
+import logisticstransportation from '../assets/images/logisticstransportation.webp';
+import bankingfinance from '../assets/images/bankingfinance.webp';
+import utilitiesImage from '../assets/images/utilities.webp';
+import healthcareImage from '../assets/images/healthcare.webp';
+import engineeringImage from '../assets/images/engineering.webp';
+import technology from '../assets/images/technology.webp';
 
 export const services = [
     {
@@ -496,6 +504,7 @@ export const sectorsData = [
             <p className=''>But what about the long game? Fear not, for we've got that covered too. Our focus extends beyond quick fixes. For long-term recruitment needs, we engage in the art of talent pipeline cultivation. Picture a garden of expertise, where we nurture and grow a pool of qualified individuals who can provide sustained support for your infrastructure development projects. This approach guarantees that you not only meet your immediate staffing needs but also have a reliable source of expertise for the journey ahead.</p>
         </div>
     ), 
+    image: infrastructure,
     icon: architect, 
     alt: 'Infrastructure Icon', 
 },
@@ -530,6 +539,7 @@ export const sectorsData = [
             </p>
             </div>
     ), 
+    image: oilgas,
     icon: oilpump, 
     alt: 'Oil & Gas Icon', 
   
@@ -570,6 +580,7 @@ export const sectorsData = [
             </p>
             </div>
     ), 
+    image: technology,
     icon: touch, 
     alt: 'Technology Icon', 
   
@@ -604,6 +615,7 @@ export const sectorsData = [
             </p>
         </div>
     ), 
+    image: engineeringImage,
     icon: engineering, 
     alt: 'Engineering Icon', 
  
@@ -638,6 +650,7 @@ export const sectorsData = [
             </p>
         </div>
     ), 
+    image: logisticstransportation,
     icon: logistics, 
     alt: 'Logistics & Transportation Icon', 
 
@@ -672,6 +685,7 @@ export const sectorsData = [
             </p>
         </div>
     ), 
+    image: bankingfinance,
     icon: bank, 
     alt: 'Banking & Finance Icon', 
     
@@ -706,6 +720,7 @@ export const sectorsData = [
             </p>
         </div>
     ), 
+    image: healthcareImage,
     icon: healthcare, 
     alt: 'Healthcare Icon', 
  
@@ -728,6 +743,7 @@ export const sectorsData = [
             </p>
         </div>
     ), 
+    image: utilitiesImage,
     icon: utilities, 
     alt: 'Utilities Icon', 
    

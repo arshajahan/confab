@@ -28,7 +28,7 @@ function SectorsPage() {
     <div className='pt-32 lg:pt-48 pb-6 text-main'>
       <WrapperCard className='flex flex-col lg:flex-row justify-between'>
         <div className='mb-8'>
-          <h2 className='text-4xl  font-semibold mb-4'>Sectors</h2>
+          <h2 className='text-4xl font-semibold mb-4'>Sectors</h2>
           <ul className='custom-list '>
             {sectorsData.map((sector) => (
               <li key={sector.id}>
@@ -39,8 +39,11 @@ function SectorsPage() {
             ))}
           </ul>
         </div>
-        <div className='lg:w-1/2 p-8 bg-gray-100'>
-          <h2 className='text-2xl '>{currentSectorData.title}</h2>
+        <div className='lg:w-2/3 p-8 bg-gray-100'>
+          {/* Add the image here */}
+          <img src={currentSectorData.image} alt={currentSectorData.title} className='mb-8' />
+
+          <h2 className='text-3xl'>{currentSectorData.title}</h2>
           <p>{currentSectorData.content}</p>
         </div>
       </WrapperCard>
