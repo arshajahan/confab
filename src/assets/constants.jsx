@@ -487,14 +487,49 @@ export const sectorsData = [
 { 
     id: 'Infrastructure', 
     title: 'Infrastructure', 
-    content: 'Content specific to the Infrastructure sector.', 
+    content: (
+        <div  className=' mt-8 flex flex-col gap-8'>
+            <p className=''>Infrastructure projects are no small feat, and the challenges that come with them can be quite intricate. One significant hurdle is the tight timelines that often accompany these ventures. The need for specialized skills further complicates the task of assembling a competent team swiftly.</p>
+
+            <p className=''>Enter our solution: a well-established network coupled with a meticulous screening process. This dynamic duo allows us to swiftly pinpoint and deploy highly skilled professionals, ensuring that your infrastructure project stays on track, even in the face of tight deadlines.</p>
+
+            <p className=''>But what about the long game? Fear not, for we've got that covered too. Our focus extends beyond quick fixes. For long-term recruitment needs, we engage in the art of talent pipeline cultivation. Picture a garden of expertise, where we nurture and grow a pool of qualified individuals who can provide sustained support for your infrastructure development projects. This approach guarantees that you not only meet your immediate staffing needs but also have a reliable source of expertise for the journey ahead.</p>
+        </div>
+    ), 
     icon: architect, 
     alt: 'Infrastructure Icon', 
 },
 { 
     id: 'OilGas', 
     title: 'Oil & Gas', 
-    content: 'Content specific to the Oil & Gas sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+                Navigating the turbulent waters of the oil and gas industry requires a keen understanding
+                of its volatile nature. The challenge lies not only in the industry's inherent unpredictability
+                but also in the constant demand for specialized expertise in exploration and production.
+                Maintaining operational efficiency and continuity becomes a complex puzzle.
+            </p>
+
+            <p>
+                Here's where we step in with our tailored solutions. In the short term, when urgency is paramount,
+                our staffing solutions embody agility. Whether it's gearing up for drilling campaigns, executing
+                maintenance projects, or responding to sudden demand surges, our approach ensures that your
+                operational needs are met promptly and effectively. Consider us your rapid response team, ready
+                to tackle the immediate challenges that the dynamic oil and gas sector throws your way.
+            </p>
+
+            <p>
+                Now, let's talk long term. Beyond the immediate firefighting, our recruitment efforts take on a
+                strategic hue. We understand that sustaining operational excellence requires not just any talent
+                but the best in the field. Our focus shifts towards securing top-tier professionals who not only
+                bring their expertise to the table but also drive innovation. This dual-purpose approach ensures
+                that your exploration and production efforts not only weather industry fluctuations but also
+                thrive amidst them. Think of it as future-proofing your operations with a powerhouse of talent
+                poised to lead your endeavors into new frontiers.
+            </p>
+            </div>
+    ), 
     icon: oilpump, 
     alt: 'Oil & Gas Icon', 
   
@@ -502,7 +537,39 @@ export const sectorsData = [
 { 
     id: 'Technology', 
     title: 'Technology', 
-    content: 'Content specific to the Technology sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+                In the rapidly evolving world of technology, the challenges are as diverse as the coding languages themselves. Sourcing and
+                retaining top-tier talent, keeping pace with technological advancements, and fostering a culture of innovation are not just
+                hurdles but an integral part of the tech sector's DNA.
+            </p>
+
+            <p>
+                Our approach to staffing and recruitment in the technology sector is a finely tuned symphony, harmonizing with the dynamic
+                nature of the industry. In the short term, we're your tech conductors, orchestrating the swift deployment of specialized
+                professionals. Whether it's addressing immediate project needs or bridging skill gaps, we ensure that your technology projects
+                not only keep up but surge ahead, even in the face of tight deadlines or the ever-evolving technical requirements. Think of us
+                as the troubleshooters of the tech world, ensuring that your projects not only meet expectations but exceed them.
+            </p>
+
+            <p>
+                Now, let's talk about the future movements of this tech symphony. Our long-term recruitment efforts are a strategic composition.
+                We're not just matching skills to job descriptions; we're curating a roster of individuals who aren't just proficient in
+                current technologies but are visionaries poised to lead in emerging ones. It's like building a tech dynasty, where each team
+                member isn't just an employee but a key player in driving innovation and adaptability within your organization. This
+                forward-thinking approach ensures that your organization isn't just riding the waves of technological changes but becomes a
+                navigator, steering towards new horizons of success in the tech sector.
+            </p>
+
+            <p>
+                Consider us your tech talent scouts, equipped with the latest in recruitment algorithms and industry insights. We're not just
+                filling seats; we're shaping a technology dream team. Our goal is not just to meet your staffing needs but to propel your
+                organization to the forefront of the tech industry, where success, adaptability, and innovation are not just goals but the very
+                essence of your technological landscape.
+            </p>
+            </div>
+    ), 
     icon: touch, 
     alt: 'Technology Icon', 
   
@@ -510,7 +577,33 @@ export const sectorsData = [
 { 
     id: 'Engineering', 
     title: 'Engineering', 
-    content: 'Content specific to the Engineering sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+            Embarking on engineering projects is akin to orchestrating a symphony, with each instrument
+            representing a unique skill set and expertise. The challenge lies in harmonizing these diverse
+            elements, especially when the tempo varies between short-term projects and long-term organizational goals.
+            </p>
+    
+            <p>
+            For the short-term cadence, our staffing solutions are like a conductor bringing together a specialized
+            ensemble. Picture us as the maestro swiftly assembling a team with precisely the right instruments for
+            your project's specific requirements. Whether it's civil, mechanical, electrical, or any other engineering
+            discipline, our approach ensures that the team is not just a collection of individuals but a high-performing
+            unit geared towards efficient project delivery.
+            </p>
+    
+            <p>
+            Now, let's shift our focus to the long-term movement of this symphony. Beyond the immediate project
+            crescendos, our recruitment services delve into the art of identifying and retaining top engineering talent.
+            We're not just matching skills to job descriptions; we're cultivating a roster of professionals who become
+            the virtuosos of your organization. This isn't just about filling seats; it's about fostering continuity,
+            inspiring innovation, and fueling growth across diverse industries. Think of it as building a legacy, where
+            every engineer isn't just an employee but a cornerstone in the architectural masterpiece of your organization's
+            success.
+            </p>
+        </div>
+    ), 
     icon: engineering, 
     alt: 'Engineering Icon', 
  
@@ -518,7 +611,33 @@ export const sectorsData = [
 { 
     id: 'LogisticsTransportation', 
     title: 'Logistics & Transportation', 
-    content: 'Content specific to the Logistics & Transportation sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+                In the dynamic realm of logistics and transportation, the challenges are as varied as the routes they traverse.
+                The constant ebb and flow of market demands, coupled with the intricate dance of supply chain and transportation
+                management, requires a nuanced approach to overcome hurdles and keep operations finely tuned to meet customer expectations.
+            </p>
+
+            <p>
+                For the short-term choreography, imagine us as the choreographers of a logistics ballet. Our short-term staffing
+                solutions are the nimble dancers capable of adapting to the ever-changing tempo of seasonal fluctuations, peak
+                demand periods, or sudden operational challenges. We bring flexibility to the stage, ensuring that your logistics
+                operations not only stay afloat but pirouette with efficiency and grace. Picture it as a well-coordinated
+                performance where every step is synchronized to maintain continuity and meet the demands of the logistics landscape.
+            </p>
+
+            <p>
+                Now, let's switch to the long-haul journey. Beyond the immediate movements, our recruitment efforts become a quest
+                for top talent, the conductors of the logistics and transportation orchestra. We're not just filling positions;
+                we're sourcing professionals who become the architects of innovation and sustainability in your logistics network.
+                It's about assembling a team that doesn't just navigate the roads and seas but charts new paths, driving your
+                organization toward a future where logistics isn't just a function but a strategic asset. In essence, think of it
+                as building a fleet of professionals who not only keep the wheels turning but also steer your organization towards
+                new horizons in logistics excellence.
+            </p>
+        </div>
+    ), 
     icon: logistics, 
     alt: 'Logistics & Transportation Icon', 
 
@@ -526,7 +645,33 @@ export const sectorsData = [
 { 
     id: 'BankingFinance', 
     title: 'Banking & Finance', 
-    content: 'Content specific to the Banking & Finance sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+                Navigating the intricate landscape of banking and finance requires a keen understanding of the delicate balance between
+                stringent regulatory requirements, evolving market trends, and the ever-growing demand for specialized financial expertise.
+                The challenges are multi-faceted, ranging from maintaining compliance to driving strategic growth initiatives.
+            </p>
+
+            <p>
+                Picture our short-term staffing solutions as financial lifelines during periods of heightened workload or unexpected staff
+                absences. We act as the reinforcements, seamlessly integrating into your team to ensure operational continuity and steadfast
+                regulatory compliance. It's like having a team of financial first responders, ready to tackle any surge in demand or unforeseen
+                challenges with precision and expertise. Consider us the custodians of your financial integrity during the hectic rhythms of
+                the financial world.
+            </p>
+
+            <p>
+                Now, let's delve into the strategic symphony of long-term recruitment. Beyond the immediate financial notes, our efforts are
+                focused on securing top-tier talent that transcends routine tasks. We're not just filling seats in your financial institution;
+                we're handpicking professionals who become the architects of strategic initiatives, the guardians of risk management, and the
+                trailblazers of innovation. It's about building a financial dream team that doesn't just react to market trends but actively
+                shapes them. Think of it as an investment in the future, where every financial expert isn't just an employee but a key player in
+                driving your institution toward new heights of success, resilience, and strategic brilliance in the ever-evolving world of banking
+                and finance.
+            </p>
+        </div>
+    ), 
     icon: bank, 
     alt: 'Banking & Finance Icon', 
     
@@ -534,7 +679,33 @@ export const sectorsData = [
 { 
     id: 'Healthcare', 
     title: 'Healthcare', 
-    content: 'Content specific to the Healthcare sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+            The healthcare landscape is a complex and dynamic ecosystem, with challenges arising from staffing shortages, fluctuating
+            patient volumes, and the ever-evolving demands for quality care amidst the intricate web of healthcare regulations and
+            advancements.
+            </p>
+    
+            <p>
+            Enter our short-term staffing solutions, acting as the healthcare cavalry ready to swiftly respond to the frontline. We provide
+            the rapid deployment of qualified healthcare professionals to address staffing shortages and meet temporary support needs.
+            Picture us as the healthcare workforce architects, strategically placing skilled individuals where they are needed the most. This
+            ensures not only the continuity of operations but also upholds the highest standards of quality care, even in the face of
+            unpredictable patient volumes and regulatory intricacies. Think of it as a healthcare triage, where our short-term solutions
+            become the critical support system, ensuring that the heartbeat of healthcare facilities remains steady and resilient.
+            </p>
+    
+            <p>
+            Now, let's shift our focus to the long-term prognosis. Beyond the immediate healthcare interventions, our recruitment efforts
+            take on a strategic vision. We're not just filling positions; we're sourcing and retaining skilled professionals who become the
+            pillars of excellence, innovation, and patient-centered care within healthcare organizations. It's about cultivating a healthcare
+            dream team that doesn't just adapt to advancements but actively shapes the future of healthcare. Think of it as an investment in
+            a healthier tomorrow, where every healthcare professional isn't just an employee but a guardian of well-being, driving your
+            healthcare organization towards new horizons of success, compassion, and healthcare brilliance.
+            </p>
+        </div>
+    ), 
     icon: healthcare, 
     alt: 'Healthcare Icon', 
  
@@ -542,7 +713,35 @@ export const sectorsData = [
 { 
     id: 'Utilities', 
     title: 'Utilities', 
-    content: 'Content specific to the Utilities sector.', 
+    content: (
+        <div className="mt-8 flex flex-col gap-8">
+            <p>
+            In the dynamic realm of utilities, the challenges are as varied as the services they provide. Managing and optimizing utility
+            operations, ensuring reliability, and adapting to evolving environmental standards require a strategic and versatile approach.
+            </p>
+    
+            <p>
+            Our short-term utility solutions act as swift responders during peaks in demand or unexpected operational challenges. Think of
+            us as the utility superheroes ready to ensure seamless operations and maintain compliance with regulatory standards. Whether
+            it's managing sudden demand surges or addressing unexpected setbacks, our short-term solutions are tailored to keep your
+            utility services flowing smoothly.
+            </p>
+    
+            <p>
+            Now, let's dive into the long-term rhythm. Beyond immediate challenges, our recruitment efforts focus on securing top-tier
+            talent. We're not just filling positions; we're cultivating a team of professionals who become the architects of sustainable
+            utility practices. It's about building a powerhouse that not only adapts to changing standards but actively contributes to
+            environmental stewardship and operational excellence. Think of it as investing in a sustainable future, where every utility
+            professional isn't just an employee but a guardian of reliability, innovation, and efficiency in your utility operations.
+            </p>
+    
+            <p>
+            Consider us your utility partners, equipped with the expertise to navigate the complex landscape of utility services. We're
+            not just addressing immediate challenges; we're strategically positioning your organization for long-term success in the
+            ever-evolving utilities industry.
+            </p>
+        </div>
+    ), 
     icon: utilities, 
     alt: 'Utilities Icon', 
    

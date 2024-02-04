@@ -1,6 +1,6 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
-import diversity from '../assets/images/diversity.jpg';
+import diversity from '../assets/images/diversity.webp';
 import dots from '../assets/images/dots.svg';
 import { FaChevronCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';

@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import WrapperCard from '../UI/WrapperCard';
 import contactus from '../../assets/images/contactus.webp';
 import { staticCountries as countries } from '../../assets/constants';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 
@@ -42,12 +42,17 @@ function Contact() {
       message: e.target['message'].value,
     };
     setFirstName(formData.firstName);
-    console.log('Form Data:', formData);
+
+    window.scrollTo({
+      top: 600,
+      behavior: 'smooth',
+    });
+    // console.log('Form Data:', formData);
 
   emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_ID)
     .then((result) => {
 
-        console.log(result.text);
+        // console.log(result.text);
         toast.success('Email sent successfully!');
         setSubmitted(true);
         e.target.reset();
@@ -86,6 +91,7 @@ function Contact() {
           </div>
 
           <div className='basis-1/2 p-4 lg:p-10 bg-gray-100 grid gap-7'>
+            <ToastContainer/>
            
             {isSubmitted ? (
               <div className='text-main text-lg my-auto text-center'>

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner'
 import VM from './components/VM'

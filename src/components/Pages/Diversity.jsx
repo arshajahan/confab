@@ -1,5 +1,5 @@
 import React from 'react'
-import diversity from '../../assets/images/diversity.jpg'
+import diversity from '../../assets/images/diversity.webp'
 import WrapperCard from '../UI/WrapperCard'
 
 function Diversity() {

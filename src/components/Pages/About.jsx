@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import about from '../../assets/images/image0.jpg'
+import about from '../../assets/images/aboutus.webp'
 import dots from '../../assets/images/dots.svg'
 import WrapperCard from '../UI/WrapperCard'
 

@@ -4,7 +4,7 @@ import videoSrc from '../assets/videos/banvid.webm';
 import subImg from '../assets/images/image1.webp';
 import image1 from '../assets/images/image2.webp';
 import image3 from '../assets/images/image4.webp';
-import diversity from '../assets/images/diversity.jpg';
+import diversity from '../assets/images/diversity.webp';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
