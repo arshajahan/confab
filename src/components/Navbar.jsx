@@ -49,7 +49,7 @@ const Navbar = () => {
 
   const hamburgerClicked = () => {
     window.scrollTo({ top: 0, behavior: 'instant' }); 
-    navToggle();
+    menuClicked();
   };
 
   const handleSectorsDropdownEnter = () => {
