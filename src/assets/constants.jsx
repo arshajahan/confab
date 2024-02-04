@@ -275,7 +275,7 @@ export const Blogs = [
     title: "Pravasi Welfare Kuwait and Confab International Join Forces for a Successful Medical Campaign in Abu Halifa, Kuwait",
     description: "",
     place: 'Abu Halifa, Kuwait',
-    date: 'November 1, 2023',
+    date: 'January 14, 2024',
     path: 'confab-pravasi-welfare',
     content: (
       <div className='flex flex-col gap-6 '>
