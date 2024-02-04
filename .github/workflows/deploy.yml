@@ -53,3 +53,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - name: Update Custom Domain
+        run: |
+          echo "confabint.com" > CNAME
+          git add CNAME
+          git commit -m "Update CNAME"
+          git push
+        
