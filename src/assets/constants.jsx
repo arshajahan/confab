@@ -61,9 +61,9 @@ export const services = [
     {
       id: 4,
       question: "Blogs",
-      path:'/#blogs',
+      path:'/blogs',
       sub: [],
-      type: 'section'
+      type: 'page'
     },
     
     {

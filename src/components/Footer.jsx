@@ -52,7 +52,7 @@ function Footer() {
           <ul className='flex flex-col gap-5 mt-6 lg:mt-4'>
               <div className=' lg:hidden flex flex-col gap-7'>
               <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
-              <Link onClick={() => menuClicked()} to='/terms-conditions'>Terms & Conditions</Link>
+              <Link onClick={() => menuClicked()} to='/terms'>Terms & Conditions</Link>
               <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
           </div>
           </ul>

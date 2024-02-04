@@ -206,17 +206,13 @@ const Navbar = () => {
             <div className="absolute left-0 w-full">
               <ul className=" px-2 mt-16 mb-8 text-main">
                 <li className="mb-4">
-                  <Link
-                    onClick={() => menuClicked()}
-                    to="/blogs">
-                    Media
-                  </Link>
-                </li>
-                <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/diversity">People</Link>
                 </li>
                 <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/sustainability">Sustainability</Link>
+                </li>
+                <li className="mb-4">
+                  <Link onClick={() => menuClicked()} to="/security-phishing">Security & Phishing</Link>
                 </li>
                 <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/contact-us">Contact us</Link>
