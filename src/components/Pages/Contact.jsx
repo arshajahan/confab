@@ -74,7 +74,7 @@ function Contact() {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 z-0"></div>
         <WrapperCard className='z-10 text-white'>
-          <h2 className='text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Get in Touch with Us</h2>
+          <h2 className='text-4xl lg:text-5xl font-semibold mt-28 lg:w-3/4 '>Get in Touch with Us</h2>
         </WrapperCard>
       </div>
 

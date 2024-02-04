@@ -47,8 +47,8 @@ function Footer() {
             <Link onClick={() => menuClicked()} to='/contact-us'>Contact us</Link>
           </ul>
         </div>
-        <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <Link to='/careers' onClick={() => menuClicked()} className=' text-sm '>CAREERS</Link>
+        <div className='mt-6 lg:mt-10 lg:basis-1/4 text-sm'>
+          <Link to='/careers' onClick={() => menuClicked()} className=''>CAREERS</Link>
           <ul className='flex flex-col gap-5 mt-6 lg:mt-4'>
               <div className=' lg:hidden flex flex-col gap-7'>
               <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
