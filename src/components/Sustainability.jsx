@@ -10,7 +10,7 @@ function Sustainability() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
-    <div className='relative bg-green-100 '>
+    <div className='relative bg-green-100'>
       {/* For screen sizes above 'md' */}
       <WrapperCard className='hidden lg:block relative mx-20 py-14'>
         <div className='flex'>
@@ -40,7 +40,7 @@ function Sustainability() {
         </div>
       </WrapperCard>
       {/* For screen sizes below 'lg' */}
-      <div className='lg:hidden my-8 flex-col'>
+      <div className='lg:hidden mt-8 flex-col'>
         <img
           className='w-full h-auto object-cover z-0'
           src={sustainability}
