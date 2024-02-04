@@ -25,14 +25,14 @@ function SectorsPage() {
   const currentSectorData = sectorsData.find((sector) => sector.id === selectedSector);
 
   return (
-    <div className='pt-32 lg:pt-48 pb-6'>
+    <div className='pt-32 lg:pt-48 pb-6 text-main'>
       <WrapperCard className='flex flex-col lg:flex-row justify-between'>
         <div className='mb-8'>
-          <h2 className='text-4xl text-main font-semibold mb-4'>Sectors</h2>
+          <h2 className='text-4xl  font-semibold mb-4'>Sectors</h2>
           <ul className='custom-list '>
             {sectorsData.map((sector) => (
               <li key={sector.id}>
-                <Link to={`/sectors/${sector.id}`} className='font-semibold text-main'>
+                <Link to={`/sectors/${sector.id}`} className='font-semibold '>
                   {sector.title}
                 </Link>
               </li>
@@ -40,7 +40,7 @@ function SectorsPage() {
           </ul>
         </div>
         <div className='lg:w-1/2 p-8 bg-gray-100'>
-          <h2 className='text-2xl text-main'>{currentSectorData.title}</h2>
+          <h2 className='text-2xl '>{currentSectorData.title}</h2>
           <p>{currentSectorData.content}</p>
         </div>
       </WrapperCard>

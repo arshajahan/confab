@@ -714,31 +714,17 @@ export const sectorsData = [
     id: 'Utilities', 
     title: 'Utilities', 
     content: (
-        <div className="mt-8 flex flex-col gap-8">
+        <div className='mt-8 flex flex-col gap-8'>
             <p>
-            In the dynamic realm of utilities, the challenges are as varied as the services they provide. Managing and optimizing utility
-            operations, ensuring reliability, and adapting to evolving environmental standards require a strategic and versatile approach.
+                In the intricate world of utilities, where reliability, efficiency, and safety are paramount, challenges emerge from the ever-evolving landscape of regulatory requirements, technological advancements, and the ongoing demands of infrastructure maintenance.
             </p>
-    
+
             <p>
-            Our short-term utility solutions act as swift responders during peaks in demand or unexpected operational challenges. Think of
-            us as the utility superheroes ready to ensure seamless operations and maintain compliance with regulatory standards. Whether
-            it's managing sudden demand surges or addressing unexpected setbacks, our short-term solutions are tailored to keep your
-            utility services flowing smoothly.
+                Our short-term staffing solutions act as the rapid responders in times of urgency. Picture us as the utility first-aid team, providing immediate support for emergency response, maintenance projects, and temporary operational needs. Whether it's restoring services during unforeseen outages or tackling essential maintenance tasks, our approach ensures continuity and reliability in utility services. Consider us the guardians of the utility grid, ensuring that the lights stay on, water flows, and essential services remain uninterrupted even in the face of unforeseen challenges.
             </p>
-    
+
             <p>
-            Now, let's dive into the long-term rhythm. Beyond immediate challenges, our recruitment efforts focus on securing top-tier
-            talent. We're not just filling positions; we're cultivating a team of professionals who become the architects of sustainable
-            utility practices. It's about building a powerhouse that not only adapts to changing standards but actively contributes to
-            environmental stewardship and operational excellence. Think of it as investing in a sustainable future, where every utility
-            professional isn't just an employee but a guardian of reliability, innovation, and efficiency in your utility operations.
-            </p>
-    
-            <p>
-            Consider us your utility partners, equipped with the expertise to navigate the complex landscape of utility services. We're
-            not just addressing immediate challenges; we're strategically positioning your organization for long-term success in the
-            ever-evolving utilities industry.
+                Now, let's delve into the long-term blueprint. Beyond the immediate utility interventions, our recruitment efforts become a strategic investment. We're not just filling positions; we're securing experienced professionals who become the architects of innovation, efficiency, and sustainability in utility operations. Think of us as the engineers of the utility future, where each professional isn't just maintaining the status quo but actively driving your utility services towards new frontiers of excellence. It's about safeguarding essential services for communities and industries alike, ensuring that your organization isn't just a utility provider but a cornerstone in the foundation of societal well-being.
             </p>
         </div>
     ), 
