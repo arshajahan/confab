@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className={``}>
             <WrapperCard className={`hidden lg:flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between gap-4 py-3 text-md`}>
               <div className='flex gap-6 font-semibold'>
-                <HashLink to='/blogs' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</HashLink>
+                <Link onClick={() => menuClicked()}  to='/blogs' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Media</Link>
                 <Link onClick={() => menuClicked()} to='/diversity' className=' cursor-pointer hover:text-main hover:bg-white p-2'>People</Link>
                 <Link onClick={() => menuClicked()} to='/contact-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Contact us</Link>
               </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 onMouseEnter={handleSectorsDropdownEnter}
                 onMouseLeave={handleSectorsDropdownLeave}
               >
-                <HashLink to='/sectors/Infrastructure' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</HashLink>
+                <Link to='/sectors/Infrastructure' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sectors</Link>
                 {isSectorsDropdownOpen && (
                   <ul 
                   className="  absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
@@ -126,7 +126,7 @@ const Navbar = () => {
               <img src={logo} alt='Logo' className='w-28' />
             </Link>
             <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>
-              <HashLink to='/#blogs' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</HashLink>
+              <Link onClick={() => menuClicked()} to='/blogs' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</Link>
               <Link onClick={() => menuClicked()} to='/diversity' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</Link>
               <Link onClick={() => menuClicked()} to='/contact-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Contact us</Link>
               <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
@@ -136,7 +136,7 @@ const Navbar = () => {
                 onMouseEnter={handleSectorsDropdownEnter}
                 onMouseLeave={handleSectorsDropdownLeave}
               >
-                <HashLink to='/sectors/Infrastructure' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</HashLink>
+                <Link to='/sectors/Infrastructure' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Sectors</Link>
                 {isSectorsDropdownOpen && (
                   <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-200 text-main group-hover:block">
                     {services[2].sub.map((sector, i) => (
@@ -205,11 +205,11 @@ const Navbar = () => {
             <div className="absolute left-0 w-full">
               <ul className=" px-2 mt-16 mb-8 text-main">
                 <li className="mb-4">
-                  <HashLink
+                  <Link
                     onClick={() => menuClicked()}
                     to="/blogs">
                     Media
-                  </HashLink>
+                  </Link>
                 </li>
                 <li className="mb-4">
                   <Link onClick={() => menuClicked()} to="/diversity">People</Link>
