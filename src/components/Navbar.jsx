@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillInstagram, AiFillLinkedin, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/images/logo.png';
-import whitelogo from '../assets/images/whitelogo.png';
+import logo from '../assets/images/logo.webp';
+import whitelogo from '../assets/images/whitelogo.webp';
 import WrapperCard from './UI/WrapperCard';
 import { HashLink } from 'react-router-hash-link';
 import { services } from '../assets/constants'
@@ -20,8 +20,8 @@ const Navbar = () => {
 
   const navToggle = () => {
     setNavClicked((prev) => !prev);
-    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden';
     if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden';
   };
 
   const navRef = useRef(null);

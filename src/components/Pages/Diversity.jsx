@@ -5,33 +5,20 @@ import WrapperCard from '../UI/WrapperCard'
 function Diversity() {
   return (
     <div>
-      <div className='lg:flex hidden relative h-screen  items-center'>
+      <div className='flex  relative h-[600px] lg:h-screen  items-center'>
             <img
                 className='absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={diversity}
                 alt="About confab"
             />
-            <WrapperCard className='z-10 text-white'>
-                <h2 className='  text-5xl font-semibold w-3/4 '>Diversity, Equity, Inclusion</h2>
-                <p className='w-2/3 text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
+            <WrapperCard className='z-10 text-white mt-60'>
+                <h2 className=' text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Diversity, Equity, Inclusion</h2>
+                <p className='lg:w-2/3 lg:text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
             </WrapperCard>
         </div>
-
-        <div className='lg:hidden relative h-[600px] flex items-center'>
-            <img
-                className='absolute top-0 left-0 w-full h-full object-cover z-0'
-                src={diversity}
-                alt="About confab"
-            />
-            <WrapperCard className='z-10 text-white'>
-                <h2 className=' text-4xl font-semibold '>Diversity, Equity, Inclusion</h2>
-                <p className='w-2/3 text-lg font-semibold mt-8'>We emphasize diversity and actively foster an inclusive culture within our globally-focused business.</p>
-            </WrapperCard>
-        </div>
-
 
         <WrapperCard className=' '>
-           <div className=' py-12 lg:px-48 grid gap-8 text-lg'>
+           <div className=' py-12 lg:px-48 grid gap-8 text-main lg:text-lg'>
                 <h2 className=' text-4xl font-semibold'>OUR SUSTAINABLE JOURNEY</h2>
                 <p>
                     Confab is unwavering in its commitment to recognizing and celebrating the inherent value that individuals bring to our organization. We hold firm in the belief that diverse backgrounds, varied leadership styles, and individual conduct all contribute to the rich tapestry that defines our company. At Confab, we understand that each person possesses the unique potential to generate significant value for our organization, and we actively cultivate an environment that harnesses and amplifies these diverse talents.

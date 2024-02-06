@@ -1,7 +1,7 @@
 import React from 'react';
 import WrapperCard from './UI/WrapperCard';
 import { AiFillInstagram, AiFillFacebook, AiFillLinkedin } from 'react-icons/ai';
-import logo from '../assets/images/whitelogo.png';
+import logo from '../assets/images/whitelogo.webp';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ function Footer() {
           <span className='text-main text-sm font-semibold'>DISCOVER CONFAB</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/about-us'>About us</Link>
-            <HashLink to='/#sectors'>Sectors</HashLink>
+            <Link onClick={() => menuClicked()} to='/sectors/Infrastructure'>Sectors</Link>
             <HashLink to='/#solutions'>Solutions</HashLink>
             <Link onClick={() => menuClicked()} to='/sustainability'>Sustainability</Link>
           </ul>
@@ -42,7 +42,7 @@ function Footer() {
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
           <span className='text-main text-sm font-semibold'>OTHER LINKS</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
-            <HashLink to='/#blogs'>Media</HashLink>
+            <Link onClick={() => menuClicked()} to='/blogs'>Media</Link>
             <Link onClick={() => menuClicked()} to='/diversity'>People</Link>
             <Link onClick={() => menuClicked()} to='/contact-us'>Contact us</Link>
           </ul>

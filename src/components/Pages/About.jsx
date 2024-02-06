@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import about from '../../assets/images/aboutus.webp'
+import croppedabout from '../../assets/images/croppedabout.webp'
 import dots from '../../assets/images/dots.svg'
 import WrapperCard from '../UI/WrapperCard'
 
@@ -23,27 +24,22 @@ function About() {
 
   return (
     <div className='relative'>
-        <div className='relative h-screen hidden lg:flex items-center'>
+        <div className='relative h-[600px] lg:h-screen flex items-center'>
+
             <img
-                className='absolute top-0 left-0 w-full h-full object-cover z-0'
+                className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}
                 alt="About confab"
             />
-            <WrapperCard className='z-10 text-white'>
+            <img
+                className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
+                src={croppedabout}
+                alt="About confab"
+            />
+            <WrapperCard className='z-10 text-white mt-60'>
                 <h2 className='text-5xl font-semibold'>About Us</h2>
             </WrapperCard>
             
-        </div>
-
-        <div className='lg:hidden relative h-[600px] flex items-center'>
-            <img
-                className='absolute top-0 left-0 w-full h-full object-cover z-0'
-                src={about}
-                alt="About confab"
-            />
-            <WrapperCard className='z-50 mt-52 text-white'>
-                <h2 className='text-5xl font-semibold'>About Us</h2>
-            </WrapperCard>
         </div>
 
         <WrapperCard className=' '>

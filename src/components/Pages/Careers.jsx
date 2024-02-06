@@ -1,6 +1,6 @@
 import React from 'react';
 import WrapperCard from '../UI/WrapperCard';
-import career from '../../assets/images/career.jpg';
+import career from '../../assets/images/career.webp';
 
 function Careers() {
   const backgroundImageStyle = 'absolute top-0 left-0 w-full h-full object-cover z-0';

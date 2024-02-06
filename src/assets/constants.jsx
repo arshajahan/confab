@@ -1,18 +1,18 @@
 
 import sol1 from '../assets/images/sol1.webp';
-import sol2 from '../assets/images/sol2.jpg';
-import sol3 from '../assets/images/sol3.jpg';
-import kipic from '../assets/images/kipic.png';
-import knpc from '../assets/images/knpc.png';
-import pravasiwelfare from '../assets/images/pravasiwelfare.png';
-import architect from '../assets/images/architect.png';
-import engineering from '../assets/images/engineering.png';
-import healthcare from '../assets/images/healthcare.png';
-import logistics from '../assets/images/logistics.png';
-import oilpump from '../assets/images/oil-pump.png';
-import touch from '../assets/images/touch.png';
-import utilities from '../assets/images/utilities.png';
-import bank from '../assets/images/bank.png';
+import sol2 from '../assets/images/sol2.webp';
+import sol3 from '../assets/images/sol3.webp';
+import kipic from '../assets/images/kipic.webp';
+import knpc from '../assets/images/knpc.webp';
+import pravasiwelfare from '../assets/images/pravasiwelfare.webp';
+import architect from '../assets/images/architect.webp';
+import engineering from '../assets/images/engineeringIcon.webp';
+import healthcare from '../assets/images/healthcareIcon.webp';
+import logistics from '../assets/images/logistics.webp';
+import oilpump from '../assets/images/oil-pump.webp';
+import touch from '../assets/images/touch.webp';
+import utilities from '../assets/images/utilitiesIcon.webp';
+import bank from '../assets/images/bank.webp';
 import infrastructure from '../assets/images/infrastructure.webp';
 import oilgas from '../assets/images/oilgas.webp';
 import logisticstransportation from '../assets/images/logisticstransportation.webp';
@@ -283,7 +283,7 @@ export const Blogs = [
     title: "Pravasi Welfare Kuwait and Confab International Join Forces for a Successful Medical Campaign in Abu Halifa, Kuwait",
     description: "",
     place: 'Abu Halifa, Kuwait',
-    date: 'January 14, 2024',
+    date: 'January 27, 2024',
     path: 'confab-pravasi-welfare',
     content: (
       <div className='flex flex-col gap-6 '>

@@ -1,9 +1,9 @@
 import React from 'react'
 import WrapperCard from './UI/WrapperCard'
-import bulb from '../assets/images/bulb.png'
-import expenditure from '../assets/images/expenditure.png'
-import nooil from '../assets/images/nooil.png'
-import zero from '../assets/images/zero.png'
+import bulb from '../assets/images/bulb.webp'
+import expenditure from '../assets/images/expenditure.webp'
+import nooil from '../assets/images/nooil.webp'
+import zero from '../assets/images/zero.webp'
 import dots from '../assets/images/dots.svg'
 import { Link } from 'react-router-dom'
 

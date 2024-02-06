@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import WrapperCard from './UI/WrapperCard';
 import videoSrc from '../assets/videos/banvid.webm';
-import subImg from '../assets/images/image1.webp';
-import image1 from '../assets/images/image2.webp';
-import image3 from '../assets/images/image4.webp';
+import solution from '../assets/images/solution.webp';
+import main from '../assets/images/main.webp';
+import media from '../assets/images/media.webp';
 import diversity from '../assets/images/diversity.webp';
+import croppedsolution from '../assets/images/croppedsolution.webp';
+import croppedmain from '../assets/images/croppedmain.webp';
+import croppedmedia from '../assets/images/croppedmedia.webp';
+import croppeddiversity from '../assets/images/croppeddiversity.webp';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-// const images = [videoSrc, image1, image2, image3];
-const images = [image1, subImg, diversity, image3];
+// const images = [videoSrc, main, image2, media];
+const images = [main, solution, diversity, media];
+const croppedImages = [croppedmain, croppedsolution, croppeddiversity, croppedmedia];
+
 
 const content = [
   {
@@ -83,24 +89,36 @@ function Banner() {
             //       <source src={images[currentPage]} type='video/mp4' />
             //       Your browser does not support the video tag.
             // </video>
-            <img
-            className='absolute top-0 left-0 w-full h-full object-cover z-0'
-            src={image1}
-            alt={`Slide ${currentPage}`}
-          />
+            <>
+              <img
+                className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
+                src={main}
+                alt={`Slide ${currentPage}`}
+              />
+              <img
+                className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
+                src={croppedmain}
+                alt={`Slide ${currentPage}`}
+              />
+            </>
         
         ) : (
           <>
           <img
-            className='absolute top-0 left-0 w-full h-full object-cover z-0'
+            className='hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0'
             src={images[currentPage]}
+            alt={`Slide ${currentPage}`}
+          />
+          <img
+            className='md:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
+            src={croppedImages[currentPage]}
             alt={`Slide ${currentPage}`}
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-15 z-0"></div></>
         )}
         <WrapperCard className='banner flex items-center z-20 '>
-          <div className='grid gap-10 py-4'>
-            <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
+          <div className='grid gap-10 py-4 mt-12'>
+            <h2 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h2>
             <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
             <div className='flex mt-4'>
               <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
