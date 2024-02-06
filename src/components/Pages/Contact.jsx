@@ -103,7 +103,7 @@ function Contact() {
 
              
 
-                    <div className='flex flex-wrap'>
+                    <div className='flex gap-4 lg:gap-0 flex-wrap'>
                     <div className='w-full lg:w-1/2 lg:pr-2'>
                         <label htmlFor='first_name'>FIRST NAME *</label>
                         <input type='text' id='first_name' name='first_name' required className='px-2 w-full h-[35px] border-[1px] border-gray-300 focus:border-red-400 focus:outline-none rounded-md' />
@@ -121,7 +121,7 @@ function Contact() {
                     </div>
                     </div>
 
-                    <div className='flex flex-wrap'>
+                    <div className='flex gap-4 lg:gap-0 flex-wrap'>
                     <div className='w-full lg:w-1/2 lg:pr-2'>
                         <label htmlFor='company_name'>COMPANY NAME</label>
                         <input type='text' id='company_name' name='company_name' className='px-2 w-full h-[35px] border-[1px] border-gray-300 focus:border-red-400 focus:outline-none rounded-md' />
