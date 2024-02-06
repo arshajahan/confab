@@ -49,7 +49,7 @@ function SectorsPage() {
             ))}
           </ul>
         </div>
-        <div className='lg:w-2/3 p-8 bg-gray-100'>
+        <div className='lg:w-2/3 p-4 bg-gray-100'>
           {/* Add the image here */}
           <img src={currentSectorData.image} alt={currentSectorData.title} className='mb-8' />
 
