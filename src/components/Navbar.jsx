@@ -89,7 +89,7 @@ const Navbar = () => {
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
               <Link onClick={() => menuClicked()} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
-              <HashLink to='/#solutions' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</HashLink>
+              <HashLink to='/#solutions' onClick={menuClicked} className=' cursor-pointer hover:text-main hover:bg-white p-2'>Solutions</HashLink>
               <div
                 className="relative group "
                 onMouseEnter={handleSectorsDropdownEnter}
@@ -131,7 +131,7 @@ const Navbar = () => {
               <Link onClick={() => menuClicked()} to='/diversity' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>People</Link>
               <Link onClick={() => menuClicked()} to='/contact-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Contact us</Link>
               <Link onClick={() => menuClicked()} to='/about-us' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>About Us</Link>
-              <HashLink to='/#solutions' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</HashLink>
+              <HashLink to='/#solutions' onClick={menuClicked} className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Solutions</HashLink>
               <div
                 className="relative group"
                 onMouseEnter={handleSectorsDropdownEnter}
