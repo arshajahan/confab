@@ -10,7 +10,7 @@ import { services } from '../assets/constants'
 
 const Navbar = () => {
   const location = useLocation();
-  const isAboutUsPage = location.pathname !== '/confab' && location.pathname !== '/' && location.pathname !== '/confab/';
+  const isAboutUsPage = location.pathname !== '/';
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
@@ -48,8 +48,8 @@ const Navbar = () => {
   };
 
   const hamburgerClicked = () => {
-    window.scrollTo({ top: 0, behavior: 'instant' }); 
     navToggle();
+    window.scrollTo({ top: 0, behavior: 'instant' }); 
   };
 
   const handleSectorsDropdownEnter = () => {
@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
           <hr className='hidden lg:block' />
           <WrapperCard className={`  flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
-            <Link onClick={() => menuClicked()} to="/confab" className='flex items-center'>
+            <Link onClick={() => menuClicked()} to="/" className='flex items-center'>
               <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className={` ${isAboutUsPage ? 'w-28' : 'w-32'}`} />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
@@ -123,7 +123,7 @@ const Navbar = () => {
       {!showFirstNavbar && !isNavClicked && (
         <div className='fixed top-0 w-full z-30 bg-white'>
           <WrapperCard className='flex justify-between items-center h-[5em] py-6'>
-            <Link onClick={() => menuClicked()} to='/confab' className='flex items-center'>
+            <Link onClick={() => menuClicked()} to='/' className='flex items-center'>
               <img src={logo} alt='Logo' className='w-28' />
             </Link>
             <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>

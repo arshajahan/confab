@@ -35,18 +35,6 @@ function App() {
       <Navbar/>
         <Routes>
           
-          <Route path='/confab' 
-            element={
-              <>
-                <Banner/>
-                <VM/>
-                <Solutions/>
-                <Sectors/>
-                <Sustainability/>
-                <Diversity/>
-                <LatestBlogs/>
-              </>
-          } />
           <Route path='/' 
             element={
               <>
