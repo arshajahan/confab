@@ -19,7 +19,7 @@ const Navbar = () => {
   const navToggle = () => {
     setNavClicked((prev) => !prev);
     if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }),50);
-    document.body.style.overflow = !isNavClicked ? 'auto' : 'hidden';
+    document.body.style.overflow = isNavClicked ? 'auto' : 'hidden';
   };
 
   const navRef = useRef(null);
@@ -47,10 +47,8 @@ const Navbar = () => {
 
   const hamburgerClicked = () => {
     setNavClicked(true);
-    // if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    // document.body.style.overflow = 'auto';
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }),100);
-    
+    document.body.style.overflow = !isNavClicked ? 'auto' : 'hidden';
   };
 
   const handleSectorsDropdownEnter = () => {
