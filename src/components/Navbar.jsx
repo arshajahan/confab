@@ -29,7 +29,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleNavAnimation = () => {
       navRef.current.style.height = isNavClicked ? '100vh' : '0';
-      if (!isNavClicked) document.body.style.overflow = 'auto';
+      document.body.style.overflow = !isNavClicked ? 'auto' : 'scroll';
     };
 
     handleNavAnimation();
