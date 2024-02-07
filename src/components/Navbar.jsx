@@ -110,10 +110,10 @@ const Navbar = () => {
                 )}
               </div>
               <Link onClick={() => menuClicked()} to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
-              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' onClick={menuClicked} className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
-              <HashLink to='/#footer' className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' onClick={menuClicked} className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
               <GiHamburgerMenu className='cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>
@@ -150,10 +150,10 @@ const Navbar = () => {
                   </ul>
                 )}
               </div>
-              <HashLink to='/#footer' className='mx-4 cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' onClick={menuClicked} className='mx-4 cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
-              <span className=' text-2xl'><AiOutlineSearch /></span>
+              <HashLink to='/#footer' onClick={menuClicked} className=' text-2xl'><AiOutlineSearch /></HashLink>
               <GiHamburgerMenu className=' cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>
