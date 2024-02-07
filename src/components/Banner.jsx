@@ -124,9 +124,9 @@ function Banner() {
               <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
                 {content[currentPage].buttonText}
               </Link>
-              <HashLink to={content[currentPage].to} className={` ${content[currentPage].type === 'page' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
+              <Link  to={content[currentPage].to} className={` ${content[currentPage].type === 'page' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
                 {content[currentPage].buttonText}
-              </HashLink>
+              </Link>
             </div>
           </div>
         </WrapperCard>
