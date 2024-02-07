@@ -29,7 +29,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleNavAnimation = () => {
       navRef.current.style.height = isNavClicked ? '100vh' : '0';
-      document.body.style.overflow = !isNavClicked ? 'auto' : '';
+      if (!isNavClicked) document.body.style.overflow = 'auto';
       if(isNavClicked)  window.scrollTo({ top: 0, behavior: 'instant' });
     };
 
