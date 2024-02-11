@@ -10,11 +10,13 @@ import { services } from '../assets/constants'
 
 const Navbar = () => {
   const location = useLocation();
-  const isAboutUsPage = location.pathname !== '/';
+  const isAboutUsPage = location.pathname !== '/confab' && location.pathname !== '/' && location.pathname !== '/confab/';
 
   const [showFirstNavbar, setShowFirstNavbar] = useState(true);
   const [isNavClicked, setNavClicked] = useState(false);
   const [isSectorsDropdownOpen, setSectorsDropdownOpen] = useState(false);
+
+  const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
 
   const navToggle = () => {
     setNavClicked((prev) => !prev);
@@ -41,14 +43,12 @@ const Navbar = () => {
   }, []);
 
   const menuClicked = () => {
-    if (isNavClicked) navToggle();
     if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' })); 
+    if (isNavClicked) navToggle();
   };
 
   const hamburgerClicked = () => {
-    setNavClicked(true);
-    // if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    // document.body.style.overflow = 'auto';
+    navToggle();
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }),100);
     
   };
