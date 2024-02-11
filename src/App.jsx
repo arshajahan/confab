@@ -59,7 +59,6 @@ function App() {
           <Route exact path='/terms' element={<Terms/>} />
           <Route exact path='/sectors/:id' element={<SectorsPage />} />
           <Route exact path='/blogs' element={<AllBlogs />} />
-          <Route path='*' element={<Navigate to="/about-us" />} />
           
 
         </Routes>
