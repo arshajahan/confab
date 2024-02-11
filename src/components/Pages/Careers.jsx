@@ -1,12 +1,22 @@
 import React from 'react';
 import WrapperCard from '../UI/WrapperCard';
 import career from '../../assets/images/career.webp';
+import { Helmet } from 'react-helmet-async';
 
 function Careers() {
   const backgroundImageStyle = 'absolute top-0 left-0 w-full h-full object-cover z-0';
   const cardStyle = 'text-white text-5xl font-semibold';
 
   return (
+    <>
+    <Helmet>
+      <title>Careers at Confab International</title>
+      <meta 
+        name='description'
+        content='Join Confab International: Explore Exciting STEM Career Opportunities'
+      />
+      <link rel='canonical' href='/careers'/>
+    </Helmet>
     <div>
       {/* Desktop View */}
       <div className='relative h-[550px] hidden lg:flex items-center'>
@@ -33,6 +43,7 @@ function Careers() {
         </div>
       </WrapperCard>
     </div>
+    </>
   );
 }
 

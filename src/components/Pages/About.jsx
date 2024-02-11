@@ -3,6 +3,7 @@ import about from '../../assets/images/aboutus.webp'
 import croppedabout from '../../assets/images/croppedabout.webp'
 import dots from '../../assets/images/dots.svg'
 import WrapperCard from '../UI/WrapperCard'
+import { Helmet } from 'react-helmet-async'
 
 function About() {
 
@@ -23,6 +24,15 @@ function About() {
     
 
   return (
+    <>
+    <Helmet>
+        <title>About Confab</title>
+        <meta 
+            name='description' 
+            content='Confab International: Leading staffing and recruitment firm specializing in STEM solutions for a sustainable future.'
+        />
+        <link rel='canonical' href='/about-us'/>
+    </Helmet>
     <div className='relative'>
         <div className='relative h-[600px] lg:h-screen flex items-center'>
 
@@ -134,6 +144,8 @@ function About() {
       </WrapperCard>
 
     </div>
+    </>
+    
   )
 }
 
