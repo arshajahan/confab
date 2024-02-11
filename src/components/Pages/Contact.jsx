@@ -1,7 +1,6 @@
 
 import React, { useRef, useState } from 'react';
 import WrapperCard from '../UI/WrapperCard';
-import contactus from '../../assets/images/contactus.webp';
 import { staticCountries as countries } from '../../assets/constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

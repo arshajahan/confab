@@ -25,6 +25,7 @@ jobs:
           echo "VITE_EMAILJS_ID=${{ secrets.EMAILJS_ID }}" >> $GITHUB_ENV
           echo "VITE_SERVICE_ID=${{ secrets.SERVICE_ID }}" >> $GITHUB_ENV
           echo "VITE_TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "VITE_GTM_ID=${{ secrets.GTM_ID }}" >> $GITHUB_ENV
 
       - name: Build project
         run: npm run build
