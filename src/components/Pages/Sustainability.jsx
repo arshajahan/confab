@@ -10,7 +10,7 @@ function Sustainability() {
             <title>Sustainability at Confab International</title>
             <meta 
             name='description'
-            content="Discover our sustainability efforts and initiatives at Confab International, promoting environmental responsibility and social equity."
+            content="Discover our sustainability efforts and initiatives at Confab International, promoting environmental responsibility and social equity"
             />
             <link rel='canonical' href='/sustainability'/>
         </Helmet>

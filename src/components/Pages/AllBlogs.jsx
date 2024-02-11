@@ -12,7 +12,7 @@ function AllBlogs() {
           <title>Confab International Media</title>
           <meta 
               name='description' 
-              content='Explore the latest STEM insights and industry news on the Confab International blog.'
+              content='Explore the latest STEM insights and industry news on the Confab International blog'
           />
           <link rel='canonical' href='/blogs'/>
       </Helmet>

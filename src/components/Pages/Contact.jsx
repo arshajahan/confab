@@ -70,7 +70,7 @@ function Contact() {
           <title>Expert Staffing Solutions</title>
           <meta 
             name='description'
-            content='Contact Confab International for tailored staffing solutions in STEM sectors. Reach out for inquiries or collaborations.'
+            content='Contact Confab International for tailored staffing solutions in STEM sectors. Reach out for inquiries or collaborations'
           />
           <link rel='canonical' href='/contact-us'/>
         </Helmet>

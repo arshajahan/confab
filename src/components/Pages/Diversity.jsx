@@ -10,7 +10,7 @@ function Diversity() {
             <title>Diversity at Confab International</title>
             <meta 
             name='description'
-            content='Explore our commitment to diversity and inclusion in STEM. Learn how we drive innovation through inclusivity initiatives.'
+            content='Explore our commitment to diversity and inclusion in STEM | Learn how we drive innovation through inclusivity initiatives'
             />
             <link rel='canonical' href='/diversity'/>
         </Helmet>

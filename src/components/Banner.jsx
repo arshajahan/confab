@@ -11,6 +11,7 @@ import croppedmedia from '../assets/images/croppedmedia.webp';
 import croppeddiversity from '../assets/images/croppeddiversity.webp';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { Helmet } from 'react-helmet-async';
 
 // const images = [videoSrc, main, image2, media];
 const images = [main, solution, diversity, media];
@@ -75,89 +76,100 @@ function Banner() {
 
  
   return (
-    <div className='relative'>
-      {/* <Navbar /> */}
-      <div className=' relative h-screen z-10 flex items-center'>
-        {currentPage === 0 ? (
-            // <video
-            //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
-            //     autoPlay
-            //     muted
-            //     loop
-            //     playsInline  // Adding playsInline can also help on iOS Safari
-            // >
-            //       <source src={images[currentPage]} type='video/mp4' />
-            //       Your browser does not support the video tag.
-            // </video>
+    <>
+        <Helmet>
+          <title>Confab International</title>
+          <meta 
+          name='description'
+          content="Engineering Driven Staffing for a sustainable future"
+          />
+          <link rel='canonical' href='/'/>
+        </Helmet>
+
+      <div className='relative'>
+        {/* <Navbar /> */}
+        <div className=' relative h-screen z-10 flex items-center'>
+          {currentPage === 0 ? (
+              // <video
+              //     className='absolute top-0 left-0 w-full h-full object-cover z-0'
+              //     autoPlay
+              //     muted
+              //     loop
+              //     playsInline  // Adding playsInline can also help on iOS Safari
+              // >
+              //       <source src={images[currentPage]} type='video/mp4' />
+              //       Your browser does not support the video tag.
+              // </video>
+              <>
+                <img
+                  className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
+                  src={main}
+                  alt={`Slide ${currentPage}`}
+                />
+                <img
+                  className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
+                  src={croppedmain}
+                  alt={`Slide ${currentPage}`}
+                />
+              </>
+          
+          ) : (
             <>
-              <img
-                className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
-                src={main}
-                alt={`Slide ${currentPage}`}
-              />
-              <img
-                className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
-                src={croppedmain}
-                alt={`Slide ${currentPage}`}
-              />
-            </>
-        
-        ) : (
-          <>
-          <img
-            className='hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0'
-            src={images[currentPage]}
-            alt={`Slide ${currentPage}`}
-          />
-          <img
-            className='md:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
-            src={croppedImages[currentPage]}
-            alt={`Slide ${currentPage}`}
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-15 z-0"></div></>
-        )}
-        <WrapperCard className='banner flex items-center z-20 '>
-          <div className='grid gap-10 py-4 mt-12'>
-            <h2 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h2>
-            <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
-            <div className='flex mt-4'>
-              <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
-                {content[currentPage].buttonText}
-              </Link>
-              <HashLink  to={content[currentPage].to} className={` ${content[currentPage].type === 'page' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
-                {content[currentPage].buttonText}
-              </HashLink>
+            <img
+              className='hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0'
+              src={images[currentPage]}
+              alt={`Slide ${currentPage}`}
+            />
+            <img
+              className='md:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
+              src={croppedImages[currentPage]}
+              alt={`Slide ${currentPage}`}
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-15 z-0"></div></>
+          )}
+          <WrapperCard className='banner flex items-center z-20 '>
+            <div className='grid gap-10 py-4 mt-12'>
+              <h2 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h2>
+              <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
+              <div className='flex mt-4'>
+                <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
+                  {content[currentPage].buttonText}
+                </Link>
+                <HashLink  to={content[currentPage].to} className={` ${content[currentPage].type === 'page' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
+                  {content[currentPage].buttonText}
+                </HashLink>
+              </div>
             </div>
+          </WrapperCard>
+        </div>
+
+        <WrapperCard className='banner relative z-20'>
+          <div className='absolute bottom-10 flex space-x-6'>
+              {images.map((_, index) => (
+              <button
+                  key={index}
+                  onClick={() => handlePageClick(index)}
+                  className={`${
+                  currentPage === index ? 'bg-white border-black text-gray-700' : 'text-white bg-transparent border-2 border-white'
+                  } rounded-full w-12 h-12 flex items-center justify-center`}
+              >
+                  {index + 1}
+              </button>
+              ))}
           </div>
-        </WrapperCard>
+
+          <div className=' banner hidden absolute bottom-10 right-4 lg:flex space-x-4'>
+              <button onClick={handlePrev} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
+              {'<'}
+              </button>
+              <button onClick={handleNext} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
+              {'>'}
+              </button>
+          </div>
+      </WrapperCard>
+
       </div>
-
-      <WrapperCard className='banner relative z-20'>
-        <div className='absolute bottom-10 flex space-x-6'>
-            {images.map((_, index) => (
-            <button
-                key={index}
-                onClick={() => handlePageClick(index)}
-                className={`${
-                currentPage === index ? 'bg-white border-black text-gray-700' : 'text-white bg-transparent border-2 border-white'
-                } rounded-full w-12 h-12 flex items-center justify-center`}
-            >
-                {index + 1}
-            </button>
-            ))}
-        </div>
-
-        <div className=' banner hidden absolute bottom-10 right-4 lg:flex space-x-4'>
-            <button onClick={handlePrev} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
-            {'<'}
-            </button>
-            <button onClick={handleNext} className='bg-transparent border-2 border-white text-white px-6 py-4 rounded-full'>
-            {'>'}
-            </button>
-        </div>
-     </WrapperCard>
-
-    </div>
+    </>
   );
 }
 

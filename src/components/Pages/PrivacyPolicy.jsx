@@ -11,7 +11,7 @@ function PrivacyPolicy() {
           <title>Privacy Policy | Confab</title>
           <meta 
           name='description'
-          content="Read Confab International's privacy policy to understand how we handle your personal information. Your privacy matters to us, and we are committed to protecting it."
+          content="Read Confab International's privacy policy to understand how we handle your personal information | Your privacy matters to us, and we are committed to protecting it"
           />
           <link rel='canonical' href='/privacy'/>
         </Helmet>

@@ -11,7 +11,7 @@ function SecurityPhishing() {
             <title>Security & Phishing Awareness</title>
             <meta 
             name='description'
-            content="Discover how we prioritize cybersecurity to protect our clients, employees, and data from online threats."
+            content="Discover how we prioritize cybersecurity to protect our clients, employees, and data from online threats"
             />
             <link rel='canonical' href='/security-phishing'/>
         </Helmet>

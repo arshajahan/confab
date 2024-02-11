@@ -10,7 +10,7 @@ function Terms() {
           <title>Terms & Conditions | Confab International</title>
           <meta 
           name='description'
-          content="Read Confab International's terms and conditions covering website and service usage. Understand our policies regarding privacy, data usage, and user conduct."
+          content="Read Confab International's terms and conditions covering website and service usage. Understand our policies regarding privacy, data usage, and user conduct"
           />
           <link rel='canonical' href='/terms'/>
         </Helmet>

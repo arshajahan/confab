@@ -29,7 +29,7 @@ function About() {
         <title>About Confab</title>
         <meta 
             name='description' 
-            content='Confab International: Leading staffing and recruitment firm specializing in STEM solutions for a sustainable future.'
+            content='Confab International: Leading staffing and recruitment firm specializing in STEM solutions for a sustainable future'
         />
         <link rel='canonical' href='/about-us'/>
     </Helmet>
