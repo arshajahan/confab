@@ -18,7 +18,7 @@ function Sectors() {
             {sectorsData.slice(0, 8).map((sector, index) => (
               <div key={index} className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-4">
                 <Link to={`/sectors/${sector.id}`} onClick={ () => smoothScroll()} className="bg-gray-200 py-10 px-4 rounded-lg text-center h-full flex flex-col justify-center">
-                  <img src={sector.icon} className='w-24 h-24 mx-auto' alt={sector.alt} />
+                  <img height={100} width={100} loading='auto' title={sector.alt} src={sector.icon} className='w-24 h-24 mx-auto' alt={sector.alt} />
                   <p className="text-gray-800 mt-2 text-sm font-semibold">{sector.title}</p>
                 </Link>
               </div>

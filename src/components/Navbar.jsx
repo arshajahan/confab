@@ -86,7 +86,7 @@ const Navbar = () => {
           <hr className='hidden lg:block' />
           <WrapperCard className={`  flex ${isAboutUsPage ? 'text-main' : 'text-white'} justify-between items-center h-[5em] py-6 bg-transparent`}>
             <Link onClick={menuClicked} to="/" className='flex items-center'>
-              <img src={isAboutUsPage ? logo : whitelogo} alt='Logo' className={` ${isAboutUsPage ? 'w-28' : 'w-32'}`} />
+              <img height={100} width={100} loading='eager' title='Confab International' src={isAboutUsPage ? logo : whitelogo} alt='Confab Logo' className={` ${isAboutUsPage ? 'w-28' : 'w-32'}`} />
             </Link>
             <div className={`hidden lg:flex text-lg justify-between my-auto items-center basis-3/6  font-medium`}>
               <Link onClick={menuClicked} to='/about-us' className=' cursor-pointer hover:text-main hover:bg-white p-2'>About us</Link>
@@ -125,7 +125,15 @@ const Navbar = () => {
         <div className='fixed top-0 w-full z-30 bg-white'>
           <WrapperCard className='flex justify-between items-center h-[5em] py-6'>
             <Link onClick={menuClicked} to='/' className='flex items-center'>
-              <img src={logo} alt='Logo' className='w-28' />
+            <img
+              loading='eager'
+              title='Confab International'
+              src={logo}
+              alt='Confab Logo'
+              className='w-28'
+              width={100}
+              height={100}
+            />
             </Link>
             <div className=' basis-10/12 hidden lg:flex justify-between text-xs lg:text-base items-center w-full text-main lg:font-semibold'>
               <Link onClick={menuClicked} to='/blogs' className='mx-4 cursor-pointer hover:text-white hover:bg-main p-2'>Media</Link>
@@ -171,7 +179,7 @@ const Navbar = () => {
             {/* Mobile close button */}
             <div className=" flex justify-between items-center cursor-pointer pt-4">
               <div>
-                <img src={logo} alt='Logo' className='h-10 md:h-14 z-20' />
+                <img height={100} width={100} loading='eager' title='Confab International' src={logo} alt='Confab Logo' className='h-10 md:h-14 z-20' />
               </div>
               <AiOutlineClose onClick={navToggle} className='cursor-pointer text-main' size={20} />
             </div>

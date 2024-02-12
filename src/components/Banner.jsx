@@ -20,7 +20,7 @@ const croppedImages = [croppedmain, croppedsolution, croppeddiversity, croppedme
 
 const content = [
   {
-    title: 'Confab',
+    title: 'Confab International',
     description: 'Engineering Driven Staffing for a sustainable future.',
     buttonText: 'Discover Confab',
     to: '/about-us',
@@ -102,11 +102,17 @@ function Banner() {
               // </video>
               <>
                 <img
+                  height={100} width={100}
+                  loading='eager'
+                  title='Confab International'
                   className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
                   src={main}
                   alt={`Slide ${currentPage}`}
                 />
                 <img
+                  height={100} width={100}
+                  loading='eager'
+                  title='Confab International'
                   className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
                   src={croppedmain}
                   alt={`Slide ${currentPage}`}
@@ -116,11 +122,17 @@ function Banner() {
           ) : (
             <>
             <img
+              height={100} width={100}
+              loading='eager'
+              title='Confab International'
               className='hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0'
               src={images[currentPage]}
               alt={`Slide ${currentPage}`}
             />
             <img
+              height={100} width={100}
+              loading='eager'
+              title='Confab International'
               className='md:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
               src={croppedImages[currentPage]}
               alt={`Slide ${currentPage}`}
@@ -129,7 +141,7 @@ function Banner() {
           )}
           <WrapperCard className='banner flex items-center z-20 '>
             <div className='grid gap-10 py-4 mt-12'>
-              <h2 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h2>
+              <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
               <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
               <div className='flex mt-4'>
                 <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>

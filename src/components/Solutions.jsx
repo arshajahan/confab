@@ -24,9 +24,12 @@ function Solutions() {
                             to={`/${solution.path}`}
                             key={solution.id} className='basis-full lg:basis-1/3 border-1 flex flex-col'>
                             <img 
+                                height={100} width={100}
+                                loading='auto'
+                                title='Confab International Solutions'
                                 src={solution.image} 
                                 className='h-60 3xl:h-72 w-full object-cover' 
-                                alt='' 
+                                alt='Confab solution' 
                                 style={{ minHeight: '250px' }} // Optional: Specify a minimum height to avoid content jumping
                             />
                             <div className='p-6 flex flex-col justify-between border-2 gap-8 flex-grow'>

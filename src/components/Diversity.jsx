@@ -35,6 +35,9 @@ function Diversity() {
             </Link>
           </div>
           <img
+            height={100} width={100}
+            loading='auto'
+            title='Diversity at Confab International'
             className='w-1/2  h-[500px] object-cover z-0'
             src={diversity}
             alt='Diversity'
@@ -62,6 +65,9 @@ function Diversity() {
           </Link>
         </div>
         <img
+          height={100} width={100}
+          loading='auto'
+          title='Diversity at Confab International'
           className='w-full h-auto object-cover z-0'
           src={diversity}
           alt='Diversity'

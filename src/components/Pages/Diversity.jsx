@@ -18,9 +18,12 @@ function Diversity() {
         <div>
         <div className='flex  relative h-[600px] lg:h-screen  items-center'>
                 <img
+                    loading='eager'
+                    title='About Confab International'
                     className='absolute top-0 left-0 w-full h-full object-cover z-0'
                     src={diversity}
                     alt="About confab"
+                    height={100} width={100}
                 />
                 <WrapperCard className='z-10 text-white mt-60'>
                     <h2 className=' text-4xl lg:text-5xl font-semibold lg:w-3/4 '>Diversity, Equity, Inclusion</h2>

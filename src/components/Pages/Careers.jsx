@@ -20,7 +20,7 @@ function Careers() {
     <div>
       {/* Desktop View */}
       <div className='relative h-[550px] hidden lg:flex items-center'>
-        <img className={backgroundImageStyle} src={career} alt="career confab" />
+        <img height={100} width={100} title='Confab Careers' className={backgroundImageStyle} src={career} alt="career confab" />
         <WrapperCard className={`z-10 ${cardStyle}`}>
           <h2>Careers</h2>
         </WrapperCard>
@@ -28,7 +28,7 @@ function Careers() {
 
       {/* Mobile View */}
       <div className='lg:hidden relative h-[600px] flex items-center'>
-        <img className={backgroundImageStyle} src={career} alt="About confab" />
+        <img height={100} width={100} title='Confab Careers' className={backgroundImageStyle} src={career} alt="About confab" />
         <WrapperCard className='z-50 mt-52 text-white'>
           <h2 className='text-5xl font-semibold'>Careers</h2>
         </WrapperCard>

@@ -33,7 +33,7 @@ function AllBlogs() {
 
                   key={blog.id} className="bg-white px-6 py-8 rounded-lg shadow-lg"
               >
-                  <img src={blog.src} alt={blog.alt} className="w-full h-36 object-cover mb-4 rounded-md" />
+                  <img src={blog.src} title={blog.alt} height={100} width={100} alt={blog.alt} className="w-full h-36 object-cover mb-4 rounded-md" />
                   <div className=' flex-col flex justify-between h-1/2 '>
                       <h3 className="text-lg mb-2">{blog.title}</h3>
                       {/* <p className="text-gray-600 mb-4">{blog.description}</p> */}

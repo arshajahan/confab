@@ -16,7 +16,7 @@ function Footer() {
       <WrapperCard className='flex flex-col lg:flex-row justify-between w-full '>
         <div className='flex flex-col items-left  gap-5 lg:basis-1/4'>
           <Link to='/' onClick={() => menuClicked()}>
-            <img src={logo} className='w-32' alt='confab'/>
+            <img height={100} width={100} loading='auto' title='Confab International' src={logo} className='w-32' alt='confab logo'/>
           </Link>
           <div className='ml-1 flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
             <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >

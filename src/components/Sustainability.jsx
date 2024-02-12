@@ -15,6 +15,9 @@ function Sustainability() {
       <WrapperCard className='hidden lg:block relative mx-20 py-14'>
         <div className='flex'>
           <img
+            height={100} width={100}
+            loading='auto'
+            title='Confab International Sustainability'
             className='w-1/2 h-[500px] object-cover z-0 shadow-xl'
             src={sustainability}
             alt='Sustainability'
@@ -42,6 +45,9 @@ function Sustainability() {
       {/* For screen sizes below 'lg' */}
       <div className='lg:hidden mt-8 flex-col'>
         <img
+          height={100} width={100}
+          loading='auto'
+          title='Confab International Sustainability'
           className='w-full h-auto object-cover z-0'
           src={sustainability}
           alt='Sustainability'

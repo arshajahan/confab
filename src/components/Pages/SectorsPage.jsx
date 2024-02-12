@@ -64,7 +64,7 @@ function SectorsPage() {
           </div>
           <div className='lg:w-2/3 p-4 bg-gray-100'>
             {/* Add the image here */}
-            <img src={currentSectorData.image} alt={currentSectorData.title} className='mb-8' />
+            <img loading='eager' height={100} width={100} title={currentSectorData.title} src={currentSectorData.image} alt={currentSectorData.title} className='mb-8' />
 
             <h2 className='text-3xl'>{currentSectorData.title}</h2>
             <p>{currentSectorData.content}</p>

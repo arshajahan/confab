@@ -24,9 +24,11 @@ function Blog() {
             <div>
                 <div className='relative h-[600px] lg:h-screen flex items-center'>
                     <img
+                    title={selectedBlog.title}
                     className='absolute top-0 left-0 w-full h-full object-cover z-0'
                     src={selectedBlog.src}
                     alt={selectedBlog.path}
+                    height={100} width={100}
                     />
                 </div>
 

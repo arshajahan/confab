@@ -40,11 +40,15 @@ function About() {
                 className='hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={about}
                 alt="About confab"
+                height={100} width={100}
+                title='Confab International'
             />
             <img
                 className='sm:hidden absolute top-0 left-0 w-full h-full object-cover z-0'
                 src={croppedabout}
                 alt="About confab"
+                height={100} width={100}
+                title='Confab International'
             />
             <WrapperCard className='z-10 text-white mt-60'>
                 <h2 className='text-5xl font-semibold'>About Us</h2>

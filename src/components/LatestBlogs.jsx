@@ -70,7 +70,7 @@ function LatestBlogs() {
 
                         to={`/blog/${item.path}`} 
                         key={item.id} className='relative h-[540px]'>
-                        <img src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
+                        <img height={100} width={100} loading='auto' title={item.alt} src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
                         <div className='  shadow-md mx-2 h-[250px]'>
                             {/* <span className=' absolute left-3 text-xs'>{item.date}</span> */}
                             <h2 className=" text-xs pt-4 pl-3">{item.place} - {item.date}</h2>

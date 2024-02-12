@@ -18,9 +18,12 @@ function Sustainability() {
         <div className=' text-main'>
             <div className='flex relative h-screen items-center'>
                 <img
+                    loading='eager'
+                    title='sustainability'
                     className='absolute top-0 left-0 object-cover  w-full h-full z-0'
                     src={sustainability}
                     alt="About confab"
+                    height={100} width={100}
                 />
                 <WrapperCard className='z-10 text-white mt-60'>
                     <h2 className=' text-5xl lg:text-6xl font-semibold lg:w-1/2 '>Confab's drive for sustainability</h2>
