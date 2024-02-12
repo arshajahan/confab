@@ -141,8 +141,8 @@ function Banner() {
           )}
           <WrapperCard className='banner flex items-center z-20 '>
             <div className='grid gap-10 py-4 mt-12'>
-              <h1 className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</h1>
-              <p className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</p>
+              <p className=' text-4xl lg:text-6xl w-11/12 text-white font-semibold'>{content[currentPage].title}</p>
+              <h1 className=' text-lg lg:text-xl font-bold text-white'>{content[currentPage].description}</h1>
               <div className='flex mt-4'>
                 <Link to={content[currentPage].to} className={` ${content[currentPage].type === 'hash' ? 'hidden' : '' } bg-white text-main font-semibold px-6 py-3`}>
                   {content[currentPage].buttonText}
