@@ -32,30 +32,30 @@ function Footer() {
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
           <span className='text-white font-semibold'>DISCOVER CONFAB</span>
-          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+          <div className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/about-us'>About us</Link>
             <Link onClick={() => menuClicked()} to='/sectors/Infrastructure'>Sectors</Link>
             <HashLink to='/#solutions'>Solutions</HashLink>
             <Link onClick={() => menuClicked()} to='/sustainability'>Sustainability</Link>
-          </ul>
+          </div>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
           <span className='text-white font-semibold'>OTHER LINKS</span>
-          <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
+          <div className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/blogs'>Media</Link>
             <Link onClick={() => menuClicked()} to='/diversity'>People</Link>
             <Link onClick={() => menuClicked()} to='/contact-us'>Contact us</Link>
-          </ul>
+          </div>
         </div>
         <div className='mt-6 lg:mt-10 lg:basis-1/4 text-sm'>
           <Link to='/careers' onClick={() => menuClicked()} className=''>CAREERS</Link>
-          <ul className='flex flex-col gap-5 mt-6 lg:mt-4'>
+          <div className='flex flex-col gap-5 mt-6 lg:mt-4'>
             <span className=' lg:hidden flex flex-col gap-7'>
                 <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
                 <Link onClick={() => menuClicked()} to='/terms'>Terms & Conditions</Link>
                 <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
             </span>
-          </ul>
+          </div>
         </div>
       </WrapperCard>
       <WrapperCard className='mt-9 text-xs'>
