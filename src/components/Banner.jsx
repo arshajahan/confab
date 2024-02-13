@@ -83,7 +83,7 @@ function Banner() {
           name='description'
           content="Engineering Driven Staffing for a sustainable future"
           />
-          <link rel='canonical' href='/'/>
+          <link rel='canonical' href='https://confabint.com'/>
         </Helmet>
 
       <div className='relative'>

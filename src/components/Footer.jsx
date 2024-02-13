@@ -50,11 +50,11 @@ function Footer() {
         <div className='mt-6 lg:mt-10 lg:basis-1/4 text-sm'>
           <Link to='/careers' onClick={() => menuClicked()} className=''>CAREERS</Link>
           <ul className='flex flex-col gap-5 mt-6 lg:mt-4'>
-              <div className=' lg:hidden flex flex-col gap-7'>
-              <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
-              <Link onClick={() => menuClicked()} to='/terms'>Terms & Conditions</Link>
-              <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
-          </div>
+            <span className=' lg:hidden flex flex-col gap-7'>
+                <Link onClick={() => menuClicked()} to='/privacy'>Privacy</Link>
+                <Link onClick={() => menuClicked()} to='/terms'>Terms & Conditions</Link>
+                <Link onClick={() => menuClicked()} to='/security-phishing'>Security & Phishing</Link>
+            </span>
           </ul>
         </div>
       </WrapperCard>
