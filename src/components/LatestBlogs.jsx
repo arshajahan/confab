@@ -70,14 +70,14 @@ function LatestBlogs() {
 
                         to={`/blog/${item.path}`} 
                         key={item.id} className='relative h-[540px]'>
-                        <img height={100} width={100} loading='auto' title={item.alt} src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
+                        <img height={100} width={100} loading='lazy' title={item.alt} src={item.src} alt={item.alt} className="slider-img shadow-lg object-cover" />
                         <div className='  shadow-md mx-2 h-[250px]'>
                             {/* <span className=' absolute left-3 text-xs'>{item.date}</span> */}
                             <h2 className=" text-xs pt-4 pl-3">{item.place} - {item.date}</h2>
                             <p className="slider-description">{item.title}</p>
                             <p
 
-                                className=' absolute bottom-5 text-white py-2 px-3 ml-[10px] text-sm bg-main '
+                                className=' absolute bottom-5 text-white py-3 px-4 ml-[10px] bg-main '
                             >
                                 Read more
                             </p>
@@ -89,7 +89,7 @@ function LatestBlogs() {
             </div>
         </div>
         <div className='flex justify-center mt-8'>
-          <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/blogs' id='solutions' className='bg-main text-white z-10 px-4 py-2 '>
+          <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/blogs' className='bg-main text-white z-10 px-5 py-3 '>
             View All
           </Link>
         </div>

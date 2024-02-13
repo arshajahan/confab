@@ -16,8 +16,6 @@ const Navbar = () => {
   const [isNavClicked, setNavClicked] = useState(false);
   const [isSectorsDropdownOpen, setSectorsDropdownOpen] = useState(false);
 
-  const toggle = (i) => setCollapsed((prev) => (prev === i ? null : i));
-
   const navToggle = () => {
     setNavClicked((prev) => !prev);
     if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -43,7 +41,7 @@ const Navbar = () => {
   }, []);
 
   const menuClicked = () => {
-    if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' })); 
+    if (!isNavClicked) setTimeout(() => window.scrollTo({ top: 0})); 
     if (isNavClicked) navToggle();
   };
 
@@ -111,10 +109,16 @@ const Navbar = () => {
                 )}
               </div>
               <Link onClick={menuClicked} to='/sustainability' className=' cursor-pointer hover:text-main hover:bg-white p-2'>Sustainability</Link>
-              <HashLink to='/#footer' onClick={menuClicked} className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' className=' cursor-pointer text-2xl'>
+                <span className="sr-only">Search</span>
+                <AiOutlineSearch />
+              </HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl '>
-              <HashLink to='/#footer' onClick={menuClicked} className=' cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' className=' cursor-pointer text-2xl'>
+                <span className="sr-only">Search</span>
+                <AiOutlineSearch />
+              </HashLink>
               <GiHamburgerMenu className='cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>
@@ -159,10 +163,16 @@ const Navbar = () => {
                   </ul>
                 )}
               </div>
-              <HashLink to='/#footer' onClick={menuClicked} className='mx-4 cursor-pointer text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' className='mx-4 cursor-pointer text-2xl'>
+                <span className="sr-only">Search</span>
+                <AiOutlineSearch />
+              </HashLink>
             </div>
             <div className='lg:hidden flex gap-6 text-xl text-main'>
-              <HashLink to='/#footer' onClick={menuClicked} className=' text-2xl'><AiOutlineSearch /></HashLink>
+              <HashLink to='/#footer' className=' text-2xl'>
+                <span className="sr-only">Search</span>
+                <AiOutlineSearch />
+              </HashLink>
               <GiHamburgerMenu className=' cursor-pointer' onClick={hamburgerClicked} />
             </div>
           </WrapperCard>

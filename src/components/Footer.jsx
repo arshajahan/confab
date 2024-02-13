@@ -12,11 +12,11 @@ function Footer() {
   };
 
   return (
-    <div id='footer' className='bg-[#628e9e] py-14 text-white overflow-hidden'>
+    <div id='footer' className='bg-main py-14 text-white overflow-hidden'>
       <WrapperCard className='flex flex-col lg:flex-row justify-between w-full '>
         <div className='flex flex-col items-left  gap-5 lg:basis-1/4'>
           <Link to='/' onClick={() => menuClicked()}>
-            <img height={100} width={100} loading='auto' title='Confab International' src={logo} className='w-32' alt='confab logo'/>
+            <img height={100} width={100} loading='lazy' title='Confab International' src={logo} className='w-32' alt='confab logo'/>
           </Link>
           <div className='ml-1 flex text-3xl lg:gap-3 mt-3 lg:mt-0'>
             <a href='https://www.linkedin.com/company/confab-international-llc' target="_blank" rel="noopener noreferrer" >
@@ -31,7 +31,7 @@ function Footer() {
           </div>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-main text-sm font-semibold'>DISCOVER CONFAB</span>
+          <span className='text-white font-semibold'>DISCOVER CONFAB</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/about-us'>About us</Link>
             <Link onClick={() => menuClicked()} to='/sectors/Infrastructure'>Sectors</Link>
@@ -40,7 +40,7 @@ function Footer() {
           </ul>
         </div>
         <div className='mt-6 lg:mt-0 lg:basis-1/4'>
-          <span className='text-main text-sm font-semibold'>OTHER LINKS</span>
+          <span className='text-white font-semibold'>OTHER LINKS</span>
           <ul className='flex flex-col gap-5 mt-2 lg:mt-4'>
             <Link onClick={() => menuClicked()} to='/blogs'>Media</Link>
             <Link onClick={() => menuClicked()} to='/diversity'>People</Link>

@@ -16,7 +16,7 @@ function Sustainability() {
         <div className='flex'>
           <img
             height={100} width={100}
-            loading='auto'
+            loading='lazy'
             title='Confab International Sustainability'
             className='w-1/2 h-[500px] object-cover z-0 shadow-xl'
             src={sustainability}
@@ -46,7 +46,7 @@ function Sustainability() {
       <div className='lg:hidden mt-8 flex-col'>
         <img
           height={100} width={100}
-          loading='auto'
+          loading='lazy'
           title='Confab International Sustainability'
           className='w-full h-auto object-cover z-0'
           src={sustainability}

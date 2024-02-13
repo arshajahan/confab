@@ -36,7 +36,7 @@ function Diversity() {
           </div>
           <img
             height={100} width={100}
-            loading='auto'
+            loading='lazy'
             title='Diversity at Confab International'
             className='w-1/2  h-[500px] object-cover z-0'
             src={diversity}
@@ -73,7 +73,7 @@ function Diversity() {
           alt='Diversity'
         />
       </div>
-      <span id='blogs'></span>
+      <span></span>
     </div>
   );
 }

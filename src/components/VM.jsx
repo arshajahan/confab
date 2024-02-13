@@ -64,7 +64,7 @@ function VM() {
                 </div>
 
                 <div className='flex justify-center '>
-                    <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/about-us' id='solutions' className='bg-main text-white z-10 px-4 py-2 '>
+                    <Link onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/about-us' id='solutions' className='bg-main text-white z-10 px-5 py-3 '>
                     DISCOVER CONFAB
                     </Link>
                 </div>
