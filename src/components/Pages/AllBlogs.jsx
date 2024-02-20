@@ -1,11 +1,18 @@
-// AllBlogs.js
 import React from 'react';
 import { Blogs } from '../../assets/constants';
 import WrapperCard from '../UI/WrapperCard';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
 
 function AllBlogs() {
+  // Function to handle WhatsApp sharing
+  const shareViaWhatsApp = (title, path) => {
+    const message = `Check out this blog: ${title} - ${window.location.origin}/blog/${path}`;
+    const text = encodeURIComponent(message);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+  };
+
   return (
     <>
       <Helmet>
@@ -21,26 +28,32 @@ function AllBlogs() {
           <h2 className="lg:text-4xl text-2xl font-bold mb-8">Our Blogs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {Blogs.map((blog) => (
-              <Link
-                  onClick={() => {
-                      window.scrollTo({
-                          top: 0,
-                          behavior: 'smooth',
-                      });
-                  }} 
-
-                  to={`/blog/${blog.path}`}
-
-                  key={blog.id} className="bg-white px-6 py-8 rounded-lg shadow-lg"
+              <div 
+                onClick={() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth',
+                    });
+                }}
+                key={blog.id} 
+                className="bg-white px-6 py-8 rounded-lg shadow-lg relative"
               >
-                  <img src={blog.src} title={blog.alt} height={100} width={100} alt={blog.alt} className="w-full h-36 object-cover mb-4 rounded-md" />
-                  <div className=' flex-col flex justify-between h-1/2 '>
-                      <h3 className="text-lg mb-2">{blog.title}</h3>
-                      {/* <p className="text-gray-600 mb-4">{blog.description}</p> */}
-                      <span className="text-gray-500">{blog.date}</span>
-                  </div>
-                  {/* Add other blog details here */}
-              </Link>
+                <Link to={`/blog/${blog.path}`} className="block w-full h-full absolute inset-0"></Link>
+                <img src={blog.src} title={blog.alt} height={100} width={100} alt={blog.alt} className="w-full h-36 object-cover mb-4 rounded-md" />
+                <div className=' flex-col flex justify-between h-1/2'>
+                  <h3 className="text-lg mb-2">{blog.title}</h3>
+                  <span className="text-gray-500">{blog.date}</span>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      shareViaWhatsApp(blog.title, blog.path);
+                    }} 
+                    className="absolute bottom-4 right-4 bg-green-500 text-white rounded-full p-2 hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-200"
+                  >
+                    <FaWhatsapp />
+                  </button>
+                </div>
+              </div>
               ))}
           </div>
         </WrapperCard>
