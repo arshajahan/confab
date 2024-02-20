@@ -8,7 +8,7 @@ import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
 function AllBlogs() {
   // Function to handle WhatsApp sharing
   const shareViaWhatsApp = (title, path) => {
-    const message = `Check out this blog: ${title} - ${window.location.origin}/blog/${path}`;
+    const message = `Check out this blog:\n\n${title}\n\n${window.location.origin}/blog/${path}`;
     const text = encodeURIComponent(message);
     window.open(`https://wa.me/?text=${text}`, '_blank');
   };
@@ -39,14 +39,14 @@ function AllBlogs() {
                 className="bg-white px-6 py-8 rounded-lg shadow-lg relative"
               >
               <Helmet>
-                <meta name='description' content={selectedBlog.title} />
-                <meta property='og:title' content={selectedBlog.title} />
-                <meta property='og:description' content={selectedBlog.title} />
-                <meta property='og:image' content={selectedBlog.src} />
-                <meta property='og:url' content={`https://confabint.com/blog/${selectedBlog.path}`} />
+                <meta name='description' content={blog.title} />
+                <meta property='og:title' content={blog.title} />
+                <meta property='og:description' content={blog.title} />
+                <meta property='og:image' content={blog.src} />
+                <meta property='og:url' content={`https://confabint.com/blog/${blog.path}`} />
                 <meta property='og:type' content='article' />
               </Helmet>
-              
+
                 <Link to={`/blog/${blog.path}`} className="block w-full h-full absolute inset-0"></Link>
                 <img src={blog.src} title={blog.alt} height={100} width={100} alt={blog.alt} className="w-full h-36 object-cover mb-4 rounded-md" />
                 <div className=' flex-col flex justify-between h-1/2'>

@@ -10,7 +10,7 @@ function Blog() {
 
     // Function to handle WhatsApp sharing
     const shareViaWhatsApp = () => {
-        const message = `Check out this blog: ${selectedBlog.title} - ${window.location.href}`;
+        const message = `Check out this blog:\n\n${title}\n\n${window.location.origin}/blog/${path}`;
         const text = encodeURIComponent(message);
         window.open(`https://wa.me/?text=${text}`, '_blank');
     };
