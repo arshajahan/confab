@@ -3,7 +3,7 @@ import { Blogs } from '../../assets/constants';
 import WrapperCard from '../UI/WrapperCard';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
+import { FaWhatsapp, FaFacebook, FaLinkedin } from 'react-icons/fa'; // Import icons for WhatsApp, Facebook, and LinkedIn
 
 function AllBlogs() {
   // Function to handle WhatsApp sharing
@@ -11,6 +11,18 @@ function AllBlogs() {
     const message = `Check out this blog:\n\n${title}\n\n${window.location.origin}/blog/${path}`;
     const text = encodeURIComponent(message);
     window.open(`https://wa.me/?text=${text}`, '_blank');
+  };
+
+  // Function to handle Facebook sharing
+  const shareViaFacebook = (title, path) => {
+    const url = encodeURIComponent(`${window.location.origin}/blog/${path}`);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+  };
+
+  // Function to handle LinkedIn sharing
+  const shareViaLinkedIn = (title, path) => {
+    const url = encodeURIComponent(`${window.location.origin}/blog/${path}`);
+    window.open(`https://www.linkedin.com/shareArticle?url=${url}`, '_blank');
   };
 
   return (
@@ -52,15 +64,35 @@ function AllBlogs() {
                 <div className=' flex-col flex justify-between h-1/2'>
                   <h3 className="text-lg mb-2">{blog.title}</h3>
                   <span className="text-gray-500">{blog.date}</span>
-                  <button 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      shareViaWhatsApp(blog.title, blog.path);
-                    }} 
-                    className="absolute bottom-4 right-4 bg-green-500 text-white rounded-full p-2 hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-200"
-                  >
-                    <FaWhatsapp />
-                  </button>
+                  <div className="flex space-x-2 absolute bottom-4 right-4">
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        shareViaWhatsApp(blog.title, blog.path);
+                      }} 
+                      className="bg-green-500 text-white rounded-full p-2 hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-200"
+                    >
+                      <FaWhatsapp />
+                    </button>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        shareViaFacebook(blog.title, blog.path);
+                      }} 
+                      className="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-200"
+                    >
+                      <FaFacebook />
+                    </button>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        shareViaLinkedIn(blog.title, blog.path);
+                      }} 
+                      className="bg-blue-800 text-white rounded-full p-2 hover:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-300"
+                    >
+                      <FaLinkedin />
+                    </button>
+                  </div>
                 </div>
               </div>
               ))}
