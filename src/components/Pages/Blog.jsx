@@ -17,7 +17,7 @@ function Blog() {
                 <meta name='description' content={selectedBlog.title} />
                 <meta property='og:title' content={selectedBlog.title} />
                 <meta property='og:description' content={selectedBlog.title} />
-                <meta property='og:image' content={`https://confabint.com/logo.webp`} />
+                <meta property='og:image' content={selectedBlog.src} />
                 <meta property='og:url' content={`https://confabint.com/blog/${selectedBlog.path}`} />
                 <meta property='og:type' content='article' />
             </Helmet>
