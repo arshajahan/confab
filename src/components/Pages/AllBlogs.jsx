@@ -4,27 +4,9 @@ import WrapperCard from '../UI/WrapperCard';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp, FaFacebook, FaLinkedin } from 'react-icons/fa'; // Import icons for WhatsApp, Facebook, and LinkedIn
+import { WhatsappShareButton, FacebookShareButton, LinkedinShareButton } from 'react-share'; // Import share buttons
 
 function AllBlogs() {
-  // Function to handle WhatsApp sharing
-  const shareViaWhatsApp = (title, path) => {
-    const message = `Check out this blog:\n\n${title}\n\n${window.location.origin}/blog/${path}`;
-    const text = encodeURIComponent(message);
-    window.open(`https://wa.me/?text=${text}`, '_blank');
-  };
-
-  // Function to handle Facebook sharing
-  const shareViaFacebook = (title, path) => {
-    const url = encodeURIComponent(`${window.location.origin}/blog/${path}`);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-  };
-
-  // Function to handle LinkedIn sharing
-  const shareViaLinkedIn = (title, path) => {
-    const url = encodeURIComponent(`${window.location.origin}/blog/${path}`);
-    window.open(`https://www.linkedin.com/shareArticle?url=${url}`, '_blank');
-  };
-
   return (
     <>
       <Helmet>
@@ -65,33 +47,30 @@ function AllBlogs() {
                   <h3 className="text-lg mb-2">{blog.title}</h3>
                   <span className="text-gray-500">{blog.date}</span>
                   <div className="flex space-x-2 absolute bottom-4 right-4">
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        shareViaWhatsApp(blog.title, blog.path);
-                      }} 
-                      className="bg-green-500 text-white rounded-full p-2 hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-200"
-                    >
-                      <FaWhatsapp />
-                    </button>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        shareViaFacebook(blog.title, blog.path);
-                      }} 
-                      className="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-200"
-                    >
-                      <FaFacebook />
-                    </button>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        shareViaLinkedIn(blog.title, blog.path);
-                      }} 
-                      className="bg-blue-800 text-white rounded-full p-2 hover:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-300"
-                    >
-                      <FaLinkedin />
-                    </button>
+                    <WhatsappShareButton
+                        url={`https://confabint.com/blog/${blog.path}`}
+                        title={blog.title}
+                        style={{ backgroundColor: '#00FF00', color: '#FFFFFF' }}
+                        className='text-xs px-4 py-4 rounded-sm '
+                        >
+                        <FaWhatsapp style={{ fontSize: '24px' }} />
+                    </WhatsappShareButton>
+                    <LinkedinShareButton
+                        url={`https://confabint.com/blog/${blog.path}`}
+                        title={blog.title}
+                        style={{ backgroundColor: '#FFFF', color: '#0000FF' }}
+                        className='text-xs px-4 py-4 rounded-sm '
+                        >
+                        <FaLinkedin style={{ fontSize: '24px' }}/>
+                    </LinkedinShareButton>
+                    <FacebookShareButton
+                        url={`https://confabint.com/blog/${blog.path}`}
+                        quote={blog.title}
+                        style={{ backgroundColor: '#FFFF', color: '#0000FF' }}
+                        className='text-xs px-4 py-4 rounded-sm'
+                        >
+                        <FaFacebook style={{ fontSize: '24px' }}/>
+                    </FacebookShareButton>
                   </div>
                 </div>
               </div>
